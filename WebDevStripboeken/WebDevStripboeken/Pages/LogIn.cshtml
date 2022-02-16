@@ -1,0 +1,29 @@
+﻿@page
+@model WebDevStripboeken.Pages.LogIn
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Log-In";
+}
+<div class="row">
+    <div class="col-6 content" id="sign-up">
+        <h1>SIGN-UP</h1>
+        <form method="post" id="SignUp">
+            <input type="text" name="newUser"/>
+            <input type="text" name="newWw"/>
+
+            <button type="submit" asp-page-handler="Signup">Submit</button>
+        </form>
+    </div>
+
+    <div class="col-6 content" id="log-in">
+        <h1>LOG-IN</h1>
+        <form method="post" id="LogIn">
+            <input type="text" name="User"/>
+            <input type="text" name="Ww"/>
+
+            <button type="submit" asp-page-handler="Login">Submit</button>
+        </form>
+    </div>
+</div>
+@Model.User --- @Model.WW
