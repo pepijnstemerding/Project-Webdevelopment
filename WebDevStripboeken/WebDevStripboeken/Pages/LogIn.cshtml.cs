@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebDevStripboeken.Pages;
@@ -6,7 +7,7 @@ namespace WebDevStripboeken.Pages;
 public class LogIn : PageModel
 {
     [BindProperty]
-    public string User { get; set; }
+    public string Gebruiker { get; set; } ="Gast";
     public string WW { get; set; }
     public void OnGet()
     {
@@ -15,12 +16,12 @@ public class LogIn : PageModel
 
     public void OnPostSignup([FromForm] string newUser, [FromForm] string newWW)
     {
-        User = newUser;
+        Gebruiker = newUser;
         WW = newWW;
     }
     public void OnPostLogin([FromForm] string User, [FromForm] string WW)
     {
-        this.User = User;
+        this.Gebruiker = User;
         this.WW = WW;
     }
 }

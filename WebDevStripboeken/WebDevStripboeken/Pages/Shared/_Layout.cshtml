@@ -11,9 +11,21 @@
 <body>
 <header>
     <<div class="row content">
-         <div class="col-4">Hello, Guest</div>
-         <div class="col-4">basic search form</div>
-         <div class="col-4"><a asp-page="Log-In">Log-In</a></div>
+        <div class="col-4">Hello, @ViewData["User"]</div>
+        <div class="col-4">basic search form</div>
+        @switch (ViewData["Title"])
+            {
+                case "Home":
+                    <div class="col-4"><a asp-page="LogIn">Log-In</a>
+                    </div>
+                    break;
+                case "Log-In":
+                    <div class="col-4"><a asp-page="Home">Back</a>
+                    </div>
+                    break;
+            }
+        
+         
      </div>
 </header>
 <div class="container">

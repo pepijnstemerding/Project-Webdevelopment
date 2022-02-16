@@ -4,13 +4,14 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Log-In";
+    ViewData["User"] = Model.Gebruiker;
 }
 <div class="row">
     <div class="col-6 content" id="sign-up">
         <h1>SIGN-UP</h1>
         <form method="post" id="SignUp">
-            <input type="text" name="newUser"/>
-            <input type="text" name="newWw"/>
+            <input type="text" name="newUser" placeholder="Username"/>
+            <input type="text" name="newWw" placeholder="Password"/>
 
             <button type="submit" asp-page-handler="Signup">Submit</button>
         </form>
@@ -19,11 +20,11 @@
     <div class="col-6 content" id="log-in">
         <h1>LOG-IN</h1>
         <form method="post" id="LogIn">
-            <input type="text" name="User"/>
-            <input type="text" name="Ww"/>
+            <input type="text" name="User" placeholder="Username"/>
+            <input type="text" name="Ww" placeholder="Password"/>
 
             <button type="submit" asp-page-handler="Login">Submit</button>
         </form>
     </div>
 </div>
-@Model.User --- @Model.WW
+<p>@Model.Gebruiker --- @Model.WW</p>
