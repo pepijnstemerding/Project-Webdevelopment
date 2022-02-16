@@ -12,13 +12,6 @@
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +77,7 @@
       <updated>1644951919200</updated>
       <workItem from="1644951925037" duration="446000" />
       <workItem from="1644999508830" duration="11243000" />
-      <workItem from="1645012624022" duration="3339000" />
+      <workItem from="1645012624022" duration="3695000" />
     </task>
     <servers />
   </component>
