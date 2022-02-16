@@ -2,21 +2,21 @@
 @model WebDevStripboeken.Pages.Home
 
 @{
-    Layout = null;
+    Layout = "_Layout";
+    ViewData["Title"] = "Home";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
 <div class="row">
-    <p>lorem ipsum</p>
+    <div class="col-4">Hello, Guest</div>
+    <div class="col-4">basic search form</div>
+    <div class="col-4">Log-In</div>
 </div>
 <div class="row">
-    <p>lorem ipsum</p>
+    <h1>ALLE STRIPBOEKEN</h1><h6>(in de hele database...)</h6>
+    <div class="col-8">
+        <ul>
+            <li>Stripboek 1</li>
+            <li>Stripboek 2</li>
+        </ul>
+    </div>
+    <div class="col-4">Selected Stripboek info</div>
 </div>
-</body>
-</html>
