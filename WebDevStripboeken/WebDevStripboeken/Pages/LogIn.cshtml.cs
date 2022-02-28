@@ -7,21 +7,16 @@ namespace WebDevStripboeken.Pages;
 public class LogIn : PageModel
 {
     [BindProperty]
-    public string Gebruiker { get; set; } ="Gast";
-    public string WW { get; set; }
+    public string gebruiker { get; set; } ="Gast";
+    public string ww { get; set; }
     public void OnGet()
     {
         
     }
-
-    public void OnPostSignup([FromForm] string newUser, [FromForm] string newWW)
+    
+    public void OnPostLogIn([FromForm] string User, [FromForm] string WW)
     {
-        Gebruiker = newUser;
-        WW = newWW;
-    }
-    public void OnPostLogin([FromForm] string User, [FromForm] string WW)
-    {
-        this.Gebruiker = User;
-        this.WW = WW;
+        this.gebruiker = User;
+        this.ww = WW;
     }
 }

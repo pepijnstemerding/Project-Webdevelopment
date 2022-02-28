@@ -1,0 +1,21 @@
+﻿@page
+@model WebDevStripboeken.Pages.SignUp
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Log-In";
+}
+
+<div class="row">
+    <h1>SIGN-UP</h1>
+    <div class="col-12 content">
+        <form method="post" id="SignUp">
+            <input type="text" placeholder="Username"/>
+            <input type="text" placeholder="E-mail"/>
+            <input type="password" placeholder="Password"/>
+            <input type="password" placeholder="Confirm password"/>
+            <button type="submit" asp-page-handler="Signup">Sign up</button>
+        </form>
+        <p>@Model.gebruiker -- @Model.ww -- @Model.email</p>
+    </div>
+</div>

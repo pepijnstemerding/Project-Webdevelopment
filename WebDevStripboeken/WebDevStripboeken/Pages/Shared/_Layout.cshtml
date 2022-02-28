@@ -10,10 +10,12 @@
 </head>
 <body>
 <header>
-    <<div class="row content">
-        <div class="col-4">Hello, @ViewData["User"]</div>
-        <div class="col-4">basic search form</div>
-        @switch (ViewData["Title"])
+    <<div class="row">
+        <div class="col-2 content">Sitenaam/Logo</div>
+        <div class="col-2 content">HomeButton</div>
+        <div class="col-2 content">My shelfs</div>
+        <div class="col-4 content">Searchbar</div>
+        <!--@switch (ViewData["Title"])
             {
                 case "Home":
                     <div class="col-4"><a asp-page="LogIn">Log-In</a>
@@ -23,7 +25,8 @@
                     <div class="col-4"><a asp-page="Home">Back</a>
                     </div>
                     break;
-            }
+            }-->
+        <div class="col-2 content">Hello, @ViewData["User"] (dropdown)</div>
     </div>
 </header>
 <div class="container">
