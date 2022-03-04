@@ -12,7 +12,7 @@
 <header>
     <<div class="row">
         <div class="col-2 content">Sitenaam/Logo</div>
-        <div class="col-2 content">HomeButton</div>
+        <div class="col-2 content"><a href="../home">HomeButton</a></div>
         <div class="col-2 content">My shelfs</div>
         <div class="col-4 content">Searchbar</div>
         <!--@switch (ViewData["Title"])
@@ -26,7 +26,24 @@
                     </div>
                     break;
             }-->
-        <div class="col-2 content">Hello, @ViewData["User"] (dropdown)</div>
+        <div class="col-2 content">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Hello @ViewData["User"]
+              </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                @switch (ViewData["User"])
+                {
+                    case "Guest":
+                        <li><a class="dropdown-item" href="../login">Log-In</a></li>
+                        break;
+                    default:
+                        <li><a class="dropdown-item" href="../profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="../settings">User settings</a></li>
+                        <li><a class="dropdown-item" href="#">Log-Out (delete and renew cookie)</a></li>
+                        break;
+                }
+            </ul>
+        </div>
     </div>
 </header>
 <div class="container">

@@ -4,18 +4,19 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Log-In";
+    ViewData["User"] = @Model.currentUser.userName;
 }
 <div class="row">
     <h1>LOG-IN</h1>
     <div class="col-12 content" id="sign-up">
         <form method="post" id="LogIn">
-            <input type="text" name="newUser" placeholder="Username"/>
-            <input type="text" name="newWw" placeholder="Password"/>
+            <input type="text" name="User" placeholder="Username"/>
+            <input type="text" name="WW" placeholder="Password"/>
             <p>Don't got an account yet?</p>
-            <p>Sign up now</p>
+            <p><a href="../signup">Sign up now</a></p>
             <p>Forgot password?</p>
-            <button type="submit" asp-page-handler="Login">Log-In</button>
+            <button type="submit" name="action">Log-In</button>
         </form>
     </div>
 </div>
-<p>@Model.gebruiker --- @Model.ww</p>
+<p>@Model.currentUser.userName --- </p>

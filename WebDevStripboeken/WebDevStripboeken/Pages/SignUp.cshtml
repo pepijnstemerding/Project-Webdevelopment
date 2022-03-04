@@ -4,6 +4,7 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Sign-Up";
+    ViewData["User"] = @Model.currentUser.userName;
 }
 
 <div class="row">
@@ -16,6 +17,6 @@
             <input type="password" placeholder="Confirm password"/>
             <button type="submit" asp-page-handler="Signup">Sign up</button>
         </form>
-        <p>@Model.gebruiker -- @Model.ww -- @Model.email</p>
+        
     </div>
 </div>

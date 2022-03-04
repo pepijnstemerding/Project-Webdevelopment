@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "P2OY99JH3hWrhLMuYHloRn0QL01LBkdT7U+UWVaS12FCQ4+Lu+aXi+KgbmZXDVnC0gJN42ktaMzcsnqmSQF6Fw==",
+  "dgSpecHash": "vsQREeRYM0JjSqRWBbNS/DMBSF7lx0cirkyYQ4ThQK6w2wFe4Z0l/XG3MtsC2Oz2tV9SvOXWTpcwWTqVFu8xbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\marte\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
