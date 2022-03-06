@@ -1,0 +1,19 @@
+﻿@page
+@model WebDevStripboeken.Pages.Profile
+
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Profile";
+    ViewData["User"] = @Model.currentUser.userName;
+}
+
+<div class="row">
+    <div class="col-4 content">
+        <div class="row content"><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="row content"><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="row content"><p>Lorem ipsum dolor sit amet.</p></div>
+    </div>
+    <div class="col-4 content">Your activity</div>
+    <div class="col-4 content">Profile info</div>
+</div>

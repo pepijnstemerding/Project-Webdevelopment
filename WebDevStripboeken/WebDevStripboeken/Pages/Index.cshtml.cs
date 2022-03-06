@@ -1,10 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
+using WebDevStripboeken.Pages.Shared;
+using Newtonsoft.Json;
 
 namespace WebDevStripboeken.Pages;
 
+public class myUser : IamUser
+{
+    public string userName { get; set; } = "Guest";
+    public string passWord { get; set; }
+    public string eMail { get; set; }
+}
 public class IndexModel : PageModel
+
 {
     private readonly ILogger<IndexModel> _logger;
 
@@ -13,6 +22,8 @@ public class IndexModel : PageModel
         _logger = logger;
     }
 
+    [BindProperty(SupportsGet = true)]  //global get
+    public myUser currentUser { get; set; }
     public void OnGet()
     {
         #region MySQL stuff

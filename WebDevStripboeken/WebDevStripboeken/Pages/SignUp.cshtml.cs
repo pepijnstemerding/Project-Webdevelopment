@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace WebDevStripboeken.Pages;
 
-public class Home : PageModel
+public class SignUp : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
