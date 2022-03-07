@@ -34,66 +34,124 @@ public class IndexModel : PageModel
             connection.Open();
             Console.WriteLine($"MySQL version: {connection.ServerVersion}");
 
-            using (var createUserTableQuery = new MySqlCommand(
+            using (var createGebruikerTableQuery = new MySqlCommand(
                        @"
-            CREATE TABLE IF NOT EXISTS `User` (
-                `user_id`           INT AUTO_INCREMENT,        -- Unieke gebruikers ID
-                `naam`              VARCHAR(70) NOT NULL,      -- Gebruikersnaam
-                `wachtwoord`        VARCHAR(30) NOT NULL,      -- Wachtwoord van de gebruiker
-                `is_administrator`  BOOL NOT NULL,             -- Of de gebruiker administrator permissies heeft
-                `profile_visiblity` TINYINT UNSIGNED NOT NULL, -- 0 als niemand je naam en geboortedatum kan zien, 1 als iedereen hem kan zien (uitbreid mogenlijkheid)
-                `shelve_visibility` TINYINT UNSIGNED NOT NULL, -- 0 als niemand je shelves kan zien, 1 als iedereen hem kan zien
-                `geboorte_datum`    DATE,                      -- Geboorte datum van gebruiker
-                PRIMARY KEY (`user_id`)
+            CREATE TABLE IF NOT EXISTS `Gebruiker` (
+                `Gebruikers_id`               INT AUTO_INCREMENT NOT NULL,  -- Unieke gebruikers ID
+                `Gebruikersnaam`              VARCHAR(32) NOT NULL,         -- Gebruikersnaam
+                `Email`                       VARCHAR(100) NOT NULL,        -- Email van de gebruiker
+                `Wachtwoord`                  VARCHAR(30) NOT NULL,         -- Wachtwoord van de gebruiker
+                `Is_admin`                    BOOL NOT NULL,                -- Of de gebruiker administrator permissies heeft
+                `Profiel_zichtbaarheid`       TINYINT UNSIGNED NOT NULL,    -- 0 als niemand je naam en geboortedatum kan zien, 1 als iedereen hem kan zien (uitbreid mogenlijkheid)
+                `Collectie_zichtbaarheid`     TINYINT UNSIGNED NOT NULL,    -- 0 als niemand je collecties kan zien, 1 als iedereen ze kan zien
+                `Geboorte_datum`              DATE NOT NULL,                -- Geboorte datum van gebruiker
+                `Beveiligingsvraag`           VARCHAR NOT NULL,             -- Antwoord op de beveiligingsvraag voor ww reset 
+                PRIMARY KEY (`Gebruikers_id`)
             );", connection))
             {
-                createUserTableQuery.ExecuteNonQuery();
+                createGebruikerTableQuery.ExecuteNonQuery();
             }
             
-            using (var createShelfTableQuery = new MySqlCommand(
+            using (var createCollectieTableQuery = new MySqlCommand(
                        @"
-            CREATE TABLE IF NOT EXISTS `Shelf` (
-                `shelf_id` INT AUTO_INCREMENT,   -- Unieke shelf ID
-                `naam`     VARCHAR(15) NOT NULL, -- Naam van de shelf, standaard 'Mijn stripboeken'
-                PRIMARY KEY (`shelf_id`)
+            CREATE TABLE IF NOT EXISTS `Collectie` (
+                `Collectie_id`     INT AUTO_INCREMENT NOT NULL,   -- Uniek collectie ID
+                `Collectie_naam`   VARCHAR(30) NOT NULL,          -- Naam van de collectie, standaard 'Mijn stripboeken'
+                `Gebruikers_id`    int(255) NOT NULL,             -- ID van de gebruiker
+                PRIMARY KEY (`Collectie_id`)
             );", connection))
             {
-                createShelfTableQuery.ExecuteNonQuery();
+                createCollectieTableQuery.ExecuteNonQuery();
             }
             
-            using (var createComicTableQuery = new MySqlCommand(
+            using (var createStripboekTableQuery = new MySqlCommand(
                        @"
-            CREATE TABLE IF NOT EXISTS `Comic` (
-                `boek_id`          INT AUTO_INCREMENT, -- Unieke stripboek ID
-                `reeks`            TINYTEXT NOT NULL,  -- Reeks van boek, bijvoorbeeld 'Luc Orient'
-                `titel`            TINYTEXT NOT NULL,  -- Titel van boek, bijvoorbeeld '24 uur voor de planeet aarde'
-                `isbn`             VARCHAR(17),        -- Internationaal Standaard Boeknummer van boek 
-                `jaar_v_uitgave`   YEAR(4),            -- Jaar wanneer het stripboek werd uitgegeven
-                `auteur`           TINYTEXT,           -- De auteur van het boek
-                `tekenaar`         TINYTEXT,           -- De tekenaar van de illustraties in het boek
-                `uitgever`         TINYTEXT,           -- De uitgever van het boek
-                `locatie`          TINYTEXT,           -- De locatie van het boek, bijvoorbeeld kast 3A
-                `afbeelding_urls`  TEXT,               -- Directe links naar afbeeldingen van het boek (met comma gesepareerd)
-                `waarde_schatting` DECIMAL(10, 2),     -- Schatting van de waarde van het stripboek
-                PRIMARY KEY (`boek_id`)
+            CREATE TABLE IF NOT EXISTS `Stripboek` (
+                `Boek_id`          INT AUTO_INCREMENT NOT NULL, -- Unieke stripboek ID
+                `Reeks`            TINYTEXT NOT NULL,           -- Reeks van boek, bijvoorbeeld 'Luc Orient'
+                `Titel`            TINYTEXT NOT NULL,           -- Titel van boek, bijvoorbeeld '24 uur voor de planeet aarde'
+                `ISBN`             VARCHAR(17),                 -- Internationaal Standaard Boeknummer van boek 
+                `Jaar_v_Uitgave`   YEAR(4),                     -- Jaar wanneer het stripboek werd uitgegeven
+                `Auteur`           TINYTEXT,                    -- De auteur van het boek
+                `Tekenaar`         TINYTEXT,                    -- De tekenaar van de illustraties in het boek
+                `Uitgever`         TINYTEXT,                    -- De uitgever van het boek
+                `Locatie`          TINYTEXT,                    -- De locatie van het boek, bijvoorbeeld kast 3A
+                `Afbeelding_urls`  TEXT,                        -- Directe links naar afbeeldingen van het boek (met comma gesepareerd)
+                `Waarde_schatting` DECIMAL(10, 2),              -- Schatting van de waarde van het stripboek
+                PRIMARY KEY (`Boek_id`)
             );", connection))
             {
-                createComicTableQuery.ExecuteNonQuery();
+                createStripboekTableQuery.ExecuteNonQuery();
             }
             
-            using (var createHasTableQuery = new MySqlCommand(
+            using (var createBezitTableQuery = new MySqlCommand(
                        @"
-            CREATE TABLE IF NOT EXISTS `has` (
-                `user_id`  INT NOT NULL, -- Het ID van de gebruiker waarvan dit stripboek is
-                `boek_id`  INT NOT NULL, -- Het ID van het boek waar het om gaat
-                `shelf_id` INT NOT NULL, -- De shelf waarin het boek zich bevindt
-                PRIMARY KEY (`boek_id`, `user_id`),
-                FOREIGN KEY (`boek_id`) REFERENCES `Comic`(`boek_id`),
-                FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`),
-                FOREIGN KEY (`shelf_id`) REFERENCES `Shelf`(`shelf_id`)
+            CREATE TABLE IF NOT EXISTS `Bezit` (
+                `Gebruikers_id`    INT NOT NULL, -- Het ID van de gebruiker waarvan dit stripboek is
+                `Boek_id`          INT NOT NULL, -- Het ID van het boek waar het om gaat
+                `Locatie`          TINYTEXT,     -- locatie waar het boek zich bevindt
+                `Status_exemplaar` TINYTEXT,     -- De status/qualiteit van het fysieke exemplaar
+                `Gekocht_voor`     VALUE,        -- De prijs waarvoor de gebruiker het boek heeft gekocht
+                PRIMARY KEY (`Boek_id`, `Gebruikers_id`),
+                FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
+                FOREIGN KEY (`Gebruikers_id`) REFERENCES `Gebruiker`(`Gebruikers_id`),
+                FOREIGN KEY (`Collectie_id`) REFERENCES `Collectie`(`Collectie_id`)
             );", connection))
             {
-                createHasTableQuery.ExecuteNonQuery();
+                createBezitTableQuery.ExecuteNonQuery();
+            }
+            
+            using (var createZitInTableQuery = new MySqlCommand(
+                       @"
+            CREATE TABLE IF NOT EXISTS `Zit_in` (
+                `Boek_id`       INT NOT NULL,
+                `Collectie_id`  INT NOT NULL,
+                PRIMARY KEY (`Boek_id`, `Collectie_id`)
+            );", connection))
+            {
+                createZitInTableQuery.ExecuteNonQuery();
+            }
+            
+            using (var createAuteurTableQuery = new MySqlCommand(
+                       @"
+            CREATE TABLE IF NOT EXISTS `Auteur` (
+                `Naam`          TEXT(50) NOT NULL,  -- Naam van de auteur
+                PRIMARY KEY (`Naam`)
+            );", connection))
+            {
+                createAuteurTableQuery.ExecuteNonQuery();
+            }
+            
+            using (var createTekenaarTableQuery = new MySqlCommand(
+                       @"
+            CREATE TABLE IF NOT EXISTS `Tekenaar` (
+                `Naam`          TEXT(50) NOT NULL,  -- Naam van de tekenaar
+                PRIMARY KEY (`Naam`)
+            );", connection))
+            {
+                createTekenaarTableQuery.ExecuteNonQuery();
+            }
+            
+            using (var createGetekendDoorTableQuery = new MySqlCommand(
+                       @"
+            CREATE TABLE IF NOT EXISTS `Getekend_door` (
+                `Boek_id`       INT NOT NULL,       -- ID van het boek getekend door de tekenaar
+                `Naam`          TEXT(50) NOT NULL,  -- Naam van de tekenaar
+                PRIMARY KEY (`Naam`, `Boek_id`)
+            );", connection))
+            {
+                createGetekendDoorTableQuery.ExecuteNonQuery();
+            }
+            
+            using (var createGeschrevenDoorTableQuery = new MySqlCommand(
+                       @"
+            CREATE TABLE IF NOT EXISTS `Geschreven_door` (
+                `Boek_id`       INT NOT NULL,       -- ID van het boek geschreven door de auteur
+                `Naam`          TEXT(50) NOT NULL,  -- Naam van de auteur
+                PRIMARY KEY (`Naam`, `Boek_id`)
+            );", connection))
+            {
+                createGeschrevenDoorTableQuery.ExecuteNonQuery();
             }
             
             #region Fill db with default data
@@ -101,58 +159,62 @@ public class IndexModel : PageModel
             bool fillWithDummyData = true;
             if (fillWithDummyData)
             {
-                int userID;
-                int shelfID;
-                int comicID;
+                int GebruikersID;
+                int CollectieID;
+                int BoekID;
                 
                 // Voeg nieuwe gebruiker toe onder naam Bas
-                using (var insertUserQuery = new MySqlCommand(
+                using (var insertGebruikerQuery = new MySqlCommand(
                            @"
-                INSERT INTO `User` (
-                    naam,
-                    wachtwoord,
-                    is_administrator,
-                    profile_visiblity,
-                    shelve_visibility,
-                    geboorte_datum
+                INSERT INTO `Gebruiker` (
+                    Gebruikersnaam,
+                    Wachtwoord,
+                    Email,
+                    Is_admin,
+                    Profiel_zichtbaarheid,
+                    Collectie_zichtbaarheid,
+                    Geboorte_datum,
+                    Beveiligingsvraag
                 ) VALUES (
                     'Bas',
                     'password123',
+                    'bas.van.hensbergen@nhlstenden.com'
                     true,
                     1,
                     1,
                     1967
+                    'Pietje'
                 ) SELECT LAST_INSERT_ID();", connection))
                 {
-                    userID = insertUserQuery.ExecuteNonQuery();
+                    GebruikersID = insertGebruikerQuery.ExecuteNonQuery();
                 }
                 
                 // Voeg nieuwe shelf toe onder naam 'Nu lezen'
-                using (var insertShelfQuery = new MySqlCommand(
+                using (var insertCollectieQuery = new MySqlCommand(
                            @"
-                INSERT INTO `Shelf` (
-                    naam
+                INSERT INTO `Collectie` (
+                    Collectie_naam
                 ) VALUES (
                     'Nu lezen'
                 ) SELECT LAST_INSERT_ID();", connection))
                 {
-                    shelfID = insertShelfQuery.ExecuteNonQuery();
+                    CollectieID = insertCollectieQuery.ExecuteNonQuery();
                 }
                 
-                // Voeg nieuwe Comic toe met naam 'Walli de walvis' en behorende data
-                using (var insertComicQuery = new MySqlCommand(
+                // Voeg nieuw stripboek toe met naam 'Walli de walvis' en behorende data
+                using (var insertStripboekQuery = new MySqlCommand(
                            @"
-                INSERT INTO `Shelf` (
-                    reeks,
-                    titel,
-                    isbn,
-                    jaar_v_uitgave,
-                    auteur,
-                    tekenaar,
-                    uitgever,
-                    locatie,
-                    afbeelding_urls,
-                    waarde_schatting
+                INSERT INTO `Stripboek` (
+                    Reeks,
+                    Titel,
+                    ISBN,
+                    Jaar_v_Uitgave,
+                    Auteur,
+                    Tekenaar,
+                    Uitgever,
+                    Locatie,
+                    Afbeelding_urls,
+                    Waarde_schatting
                 ) VALUES (
                     'Suske en Wiske',
                     'Walli de walvis',
@@ -166,26 +228,26 @@ public class IndexModel : PageModel
                     16.94
                 ) SELECT LAST_INSERT_ID();", connection))
                 {
-                    comicID = insertComicQuery.ExecuteNonQuery();
+                    BoekID = insertStripboekQuery.ExecuteNonQuery();
                 }
                 
                 // Leg de connectie tussen de nieuwe gebruiker, shelf en comic met has table
-                using (var insertHasQuery = new MySqlCommand(
+                using (var insertBezitQuery = new MySqlCommand(
                            @"
                 INSERT INTO `Shelf` (
-                    user_id,
-                    boek_id,
-                    shelf_id
+                    Gebruikers_id,
+                    Boek_id,
+                    Collectie_id
                 ) VALUES (
-                    @user_id,
-                    @boek_id,
-                    @shelf_id
+                    @Gebruikers_id,
+                    @Boek_id,
+                    @Collectie_id
                 );", connection))
                 {
-                    insertHasQuery.Parameters.AddWithValue("@user_id", userID);
-                    insertHasQuery.Parameters.AddWithValue("@boek_id", comicID);
-                    insertHasQuery.Parameters.AddWithValue("@shelf_id", shelfID);
-                    insertHasQuery.ExecuteNonQuery();
+                    insertBezitQuery.Parameters.AddWithValue("@Gebruikers_id", GebruikersID);
+                    insertBezitQuery.Parameters.AddWithValue("@Boek_id", BoekID);
+                    insertBezitQuery.Parameters.AddWithValue("@Collectie_id", CollectieID);
+                    insertBezitQuery.ExecuteNonQuery();
                 }
             }
             
