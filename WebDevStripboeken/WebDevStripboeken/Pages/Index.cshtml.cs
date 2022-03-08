@@ -1,17 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
+using WebDevStripboeken.Models;
 using WebDevStripboeken.Pages.Shared;
 using Newtonsoft.Json;
 
 namespace WebDevStripboeken.Pages;
 
-public class myUser : IamUser
-{
-    public string userName { get; set; } = "Guest";
-    public string passWord { get; set; }
-    public string eMail { get; set; }
-}
 public class IndexModel : PageModel
 
 {
