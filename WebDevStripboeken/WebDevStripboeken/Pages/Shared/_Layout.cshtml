@@ -29,7 +29,7 @@
         <div class="col-2 content">
             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Hello @ViewData["User"]
-              </button>
+            </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 @switch (ViewData["User"])
                 {
@@ -46,16 +46,18 @@
         </div>
     </div>
 </header>
+
 <div class="container">
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
 </div>
-<!--<footer class="border-top footer text-muted">
+
+<footer class="border-top footer text-muted">
     <div class="container">
         &copy; 2022 - WebDevStripboeken - <a asp-area="" asp-page="/Privacy">Privacy</a>
     </div>
-</footer>-->
+</footer>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,19 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
-using WebDevStripboeken.Pages.Shared;
 
 namespace WebDevStripboeken.Pages;
-public class myUser : IamUser
-{
-    public string userName { get; set; } = "Guest";
-    public string passWord { get; set; }
-    public string eMail { get; set; }
-}
 
 public class Home : PageModel
 {
-    [BindProperty(SupportsGet = true)]
+    [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
     public void OnGet()
     {

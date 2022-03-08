@@ -6,7 +6,7 @@ namespace WebDevStripboeken.Pages;
 
 public class SignUp : PageModel
 {
-    [BindProperty(SupportsGet = true)]
+    [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
     public void OnGet()
     {
@@ -23,6 +23,4 @@ public class SignUp : PageModel
         }
         currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
     }
-
-    
 }

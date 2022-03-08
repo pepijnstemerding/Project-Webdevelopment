@@ -1,18 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WebDevStripboeken.Pages.Shared;
 using Newtonsoft.Json;
 
 namespace WebDevStripboeken.Pages;
 
-
-
 public class LogIn : PageModel
 {
-    
-    [BindProperty(SupportsGet = true)]
+    [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    
     public void OnGet()
     {
         string jsonUser = Request.Cookies["user"];
@@ -22,15 +17,13 @@ public class LogIn : PageModel
             //string json = JsonConverter.SerializeObject(userName);
             jsonUser = JsonConvert.SerializeObject(currentUser);
             Response.Cookies.Append("user", jsonUser, new CookieOptions()
-                {
-                    Expires = DateTimeOffset.Now.AddDays(30)
-                });
+            {
+                Expires = DateTimeOffset.Now.AddDays(30)
+            });
         }
         currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
     }
-
     
-
     public void OnPost([FromForm] string User/*, [FromForm] string WW*/)
     {
         string json = Request.Cookies["user"];
