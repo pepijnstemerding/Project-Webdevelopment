@@ -14,7 +14,7 @@ public class SignUp : PageModel
         string jsonUser = Request.Cookies["user"];
         if (jsonUser == null) //sets first cookie
         {
-            myUser.setCookies();
+            jsonUser = myUser.setCookies();
         }
         currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
     }
