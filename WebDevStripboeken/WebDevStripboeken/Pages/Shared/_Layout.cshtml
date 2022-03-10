@@ -29,7 +29,7 @@
         <div class="col-2 content">
             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Hello @ViewData["User"]
-              </button>
+            </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 @switch (ViewData["User"])
                 {
@@ -46,6 +46,7 @@
         </div>
     </div>
 </header>
+
 <div class="container">
     <main role="main" class="pb-3">
         @RenderBody()
