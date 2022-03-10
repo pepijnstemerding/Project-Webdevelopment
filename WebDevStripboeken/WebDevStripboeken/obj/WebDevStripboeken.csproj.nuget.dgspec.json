@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jason\\Desktop\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj": {}
+    "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jason\\Desktop\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj": {
+    "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jason\\Desktop\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
+        "projectUniqueName": "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
         "projectName": "WebDevStripboeken",
-        "projectPath": "C:\\Users\\jason\\Desktop\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
-        "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jason\\Desktop\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\",
+        "projectPath": "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
+        "packagesPath": "C:\\Users\\marte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
-          "C:\\Users\\jason\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -44,7 +45,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Newtonsoft.Json": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "MySql.Data": {
               "target": "Package",
               "version": "[8.0.28, )"
             },

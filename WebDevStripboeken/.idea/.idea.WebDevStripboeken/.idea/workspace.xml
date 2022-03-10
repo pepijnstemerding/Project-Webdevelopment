@@ -6,40 +6,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="467364c9-f42c-4ac8-be29-8f1e05393c5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/IamUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/Newtonsoft.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/BouncyCastle.Crypto.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/Dapper.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/Google.Protobuf.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/K4os.Compression.LZ4.Streams.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/K4os.Compression.LZ4.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/K4os.Hash.xxHash.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/MySql.Data.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/System.Drawing.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/System.Security.Permissions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/System.Windows.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/Ubiety.Dns.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ZstdNet.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Models/myUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Models/myUser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Privacy.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Privacy.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Profile.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Profile.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Profile.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Profile.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/SignUp.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/SignUp.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/SignUp.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/SignUp.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/WebDevStripboeken.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/WebDevStripboeken.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/Newtonsoft.Json.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.runtimeconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +53,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7ed6f5e3b5f78ae215ce2f37f9ca779fea6e31feb6dfdf8b5683b9b27ba54/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b465074a760e4888b4567b10f655c096da00/50/1bfeaa6c/Response.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/982b7aa07be88fd96f55c1e9bf6ec5d9ac1fd3a01d9a3344dabc943a4c72/ValidationUtils.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -117,6 +122,8 @@
       <workItem from="1646078740282" duration="739000" />
       <workItem from="1646400918135" duration="540000" />
       <workItem from="1646402283250" duration="7564000" />
+      <workItem from="1646736106749" duration="4969000" />
+      <workItem from="1646813874403" duration="1983000" />
     </task>
     <servers />
   </component>
@@ -140,102 +147,5 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\Pages\LogIn.cshtml.cs" initialLine="22" containingFunctionPresentation="method 'OnGet'">
-            <startOffsets>
-              <option value="339" />
-            </startOffsets>
-            <endOffsets>
-              <option value="381" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs</url>
-          <line>28</line>
-          <properties documentPath="C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\Pages\LogIn.cshtml.cs" initialLine="33" containingFunctionPresentation="method 'OnGet'">
-            <startOffsets>
-              <option value="807" />
-            </startOffsets>
-            <endOffsets>
-              <option value="869" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\Pages\LogIn.cshtml.cs" initialLine="25" containingFunctionPresentation="method 'OnGet'">
-            <startOffsets>
-              <option value="454" />
-            </startOffsets>
-            <endOffsets>
-              <option value="481" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs</url>
-          <line>22</line>
-          <properties documentPath="C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\Pages\LogIn.cshtml.cs" initialLine="27" containingFunctionPresentation="method 'OnGet'">
-            <startOffsets>
-              <option value="563" />
-            </startOffsets>
-            <endOffsets>
-              <option value="615" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs</url>
-          <line>36</line>
-          <properties documentPath="C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\Pages\LogIn.cshtml.cs" initialLine="41" containingFunctionPresentation="method 'OnPost'">
-            <startOffsets>
-              <option value="1017" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1082" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs</url>
-          <line>43</line>
-          <properties documentPath="C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\Pages\LogIn.cshtml.cs" initialLine="48" containingFunctionPresentation="method 'OnPost'">
-            <startOffsets>
-              <option value="1235" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1261" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\Pages\LogIn.cshtml.cs" initialLine="43" containingFunctionPresentation="method 'OnPost'">
-            <startOffsets>
-              <option value="1092" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1120" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

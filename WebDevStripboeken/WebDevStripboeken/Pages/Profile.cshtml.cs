@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using WebDevStripboeken.Models;
 
 namespace WebDevStripboeken.Pages;
 
@@ -13,13 +14,7 @@ public class Profile : PageModel
         string jsonUser = Request.Cookies["user"];
         if (jsonUser == null) //sets first cookie
         {
-            currentUser = new myUser();
-            //string json = JsonConverter.SerializeObject(userName);
-            jsonUser = JsonConvert.SerializeObject(currentUser);
-            Response.Cookies.Append("user", jsonUser, new CookieOptions()
-            {
-                Expires = DateTimeOffset.Now.AddDays(30)
-            });
+            jsonUser = myUser.setCookies();
         }
         currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
     }
