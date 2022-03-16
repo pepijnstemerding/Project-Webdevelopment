@@ -24,7 +24,7 @@ public class IndexModel : PageModel
         #region MySQL stuff
         
         using (var connection = new MySqlConnection(
-                   "Server=127.0.0.1;Database=stripboekdatabase;Uid=root;Pwd=j9muMb2002;Port=3306"))
+                   "Server=127.0.0.1;Database=MySQL;Uid=root;Pwd=Test@1234!;Port=3306"))
         {
             connection.Open();
             Console.WriteLine($"MySQL version: {connection.ServerVersion}");
@@ -40,7 +40,7 @@ public class IndexModel : PageModel
                 `Profiel_zichtbaarheid`       TINYINT UNSIGNED NOT NULL,    -- 0 als niemand je naam en geboortedatum kan zien, 1 als iedereen hem kan zien (uitbreid mogenlijkheid)
                 `Collectie_zichtbaarheid`     TINYINT UNSIGNED NOT NULL,    -- 0 als niemand je collecties kan zien, 1 als iedereen ze kan zien
                 `Geboorte_datum`              DATE NOT NULL,                -- Geboorte datum van gebruiker
-                `Beveiligingsvraag`           VARCHAR NOT NULL,             -- Antwoord op de beveiligingsvraag voor ww reset 
+                `Beveiligingsvraag`           VARCHAR(20) NOT NULL,         -- Antwoord op de beveiligingsvraag voor ww reset 
                 PRIMARY KEY (`Gebruikers_id`)
             );", connection))
             {
@@ -84,9 +84,9 @@ public class IndexModel : PageModel
             CREATE TABLE IF NOT EXISTS `Bezit` (
                 `Gebruikers_id`    INT NOT NULL, -- Het ID van de gebruiker waarvan dit stripboek is
                 `Boek_id`          INT NOT NULL, -- Het ID van het boek waar het om gaat
-                `Locatie`          TINYTEXT,     -- locatie waar het boek zich bevindt
+                `Collectie_id`     INT NOT NULL, -- locatie waar het boek zich bevindt
                 `Status_exemplaar` TINYTEXT,     -- De status/qualiteit van het fysieke exemplaar
-                `Gekocht_voor`     VALUE,        -- De prijs waarvoor de gebruiker het boek heeft gekocht
+                `Gekocht_voor`     DOUBLE,       -- De prijs waarvoor de gebruiker het boek heeft gekocht
                 PRIMARY KEY (`Boek_id`, `Gebruikers_id`),
                 FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
                 FOREIGN KEY (`Gebruikers_id`) REFERENCES `Gebruiker`(`Gebruikers_id`),
@@ -110,8 +110,8 @@ public class IndexModel : PageModel
             using (var createAuteurTableQuery = new MySqlCommand(
                        @"
             CREATE TABLE IF NOT EXISTS `Auteur` (
-                `Naam`          TEXT(50) NOT NULL,  -- Naam van de auteur
-                PRIMARY KEY (`Naam`)
+                `Naam_Autheur`          VARCHAR(50) NOT NULL,  -- Naam van de auteur
+                PRIMARY KEY (`Naam_Autheur`)
             );", connection))
             {
                 createAuteurTableQuery.ExecuteNonQuery();
@@ -120,8 +120,8 @@ public class IndexModel : PageModel
             using (var createTekenaarTableQuery = new MySqlCommand(
                        @"
             CREATE TABLE IF NOT EXISTS `Tekenaar` (
-                `Naam`          TEXT(50) NOT NULL,  -- Naam van de tekenaar
-                PRIMARY KEY (`Naam`)
+                `Naam_Tekenaar`          VARCHAR(50) NOT NULL,  -- Naam van de tekenaar
+                PRIMARY KEY (`Naam_Tekenaar`)
             );", connection))
             {
                 createTekenaarTableQuery.ExecuteNonQuery();
@@ -131,8 +131,8 @@ public class IndexModel : PageModel
                        @"
             CREATE TABLE IF NOT EXISTS `Getekend_door` (
                 `Boek_id`       INT NOT NULL,       -- ID van het boek getekend door de tekenaar
-                `Naam`          TEXT(50) NOT NULL,  -- Naam van de tekenaar
-                PRIMARY KEY (`Naam`, `Boek_id`)
+                `Naam_Tekenaar`          VARCHAR(50) NOT NULL,  -- Naam van de tekenaar
+                PRIMARY KEY (`Naam_Tekenaar`, `Boek_id`)
             );", connection))
             {
                 createGetekendDoorTableQuery.ExecuteNonQuery();
@@ -142,8 +142,8 @@ public class IndexModel : PageModel
                        @"
             CREATE TABLE IF NOT EXISTS `Geschreven_door` (
                 `Boek_id`       INT NOT NULL,       -- ID van het boek geschreven door de auteur
-                `Naam`          TEXT(50) NOT NULL,  -- Naam van de auteur
-                PRIMARY KEY (`Naam`, `Boek_id`)
+                `Naam_Autheur`          VARCHAR(50) NOT NULL,  -- Naam van de auteur
+                PRIMARY KEY (`Naam_Autheur`, `Boek_id`)
             );", connection))
             {
                 createGeschrevenDoorTableQuery.ExecuteNonQuery();
@@ -151,7 +151,7 @@ public class IndexModel : PageModel
             
             #region Fill db with default data
 
-            bool fillWithDummyData = true;
+            bool fillWithDummyData = false;
             if (fillWithDummyData)
             {
                 int GebruikersID;
