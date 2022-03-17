@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 using WebDevStripboeken.Models;
-using WebDevStripboeken.Pages.Shared;
+using WebDevStripboeken.Repositories;
 using Newtonsoft.Json;
 
 namespace WebDevStripboeken.Pages;
@@ -23,13 +23,12 @@ public class IndexModel : PageModel
     {
         #region MySQL stuff
         
-        using (var connection = new MySqlConnection(
-                   "Server=127.0.0.1;Database=MySQL;Uid=root;Pwd=Test@1234!;Port=3306"))
+        using MySqlConnection connection = DbConnection.connect();
         {
-            connection.Open();
+            //connection.Open();
             Console.WriteLine($"MySQL version: {connection.ServerVersion}");
 
-            using (var createGebruikerTableQuery = new MySqlCommand(
+            /*using (MySqlCommand createGebruikerTableQuery = new MySqlCommand(
                        @"
             CREATE TABLE IF NOT EXISTS `Gebruiker` (
                 `Gebruikers_id`               INT AUTO_INCREMENT NOT NULL,  -- Unieke gebruikers ID
@@ -147,7 +146,7 @@ public class IndexModel : PageModel
             );", connection))
             {
                 createGeschrevenDoorTableQuery.ExecuteNonQuery();
-            }
+            }*/
             
             #region Fill db with default data
 

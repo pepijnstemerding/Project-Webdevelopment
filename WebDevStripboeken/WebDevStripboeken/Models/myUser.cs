@@ -11,7 +11,6 @@ public class myUser
     public string passWord { get; set; }
     public string eMail { get; set; }
     
-
     public static string setCookies()
     {
         myUser currentUser = new myUser();
