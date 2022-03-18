@@ -6,6 +6,7 @@ public class DbConnection
 {
     public static MySqlConnection connect()
     {
+        // database part of string correct???
         return new MySqlConnection
         ("Server=127.0.0.1;" +
          "Database=MySQL;" +
