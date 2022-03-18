@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@localhost" uuid="c980c337-4596-4d72-a021-0e75f6917d50">
+    <data-source source="LOCAL" name="stripboekendb" uuid="a3397fb1-a7c6-4d4f-b442-2a0ed35d03cb">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
