@@ -26,7 +26,6 @@ CREATE TABLE IF NOT EXISTS `Stripboek` (
 `ISBN`             VARCHAR(17),                 -- Internationaal Standaard Boeknummer van boek 
 `Jaar_v_Uitgave`   YEAR(4),                     -- Jaar wanneer het stripboek werd uitgegeven
 `Uitgever`         TINYTEXT,                    -- De uitgever van het boek
-`Locatie`          TINYTEXT,                    -- De locatie van het boek, bijvoorbeeld kast 3A
 -- Combineren door middel van Json?
 `Afbeelding_urls`  TEXT,                        -- Directe links naar afbeeldingen van het boek (met comma gesepareerd)
 `Waarde_schatting` DECIMAL(10, 2),              -- Schatting van de waarde van het stripboek
