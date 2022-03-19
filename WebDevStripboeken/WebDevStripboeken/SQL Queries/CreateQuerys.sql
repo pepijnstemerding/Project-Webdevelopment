@@ -1,5 +1,5 @@
 -- need double checking foreing keys (aantal lijken niet gedefineerd)
-
+use stripboek;
 CREATE TABLE IF NOT EXISTS `Gebruiker` (
 `Gebruikers_id`               INT AUTO_INCREMENT NOT NULL,  -- Unieke gebruikers ID
 `Gebruikersnaam`              VARCHAR(32) NOT NULL,         -- Gebruikersnaam

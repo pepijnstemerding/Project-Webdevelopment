@@ -26,7 +26,7 @@ public class IndexModel : PageModel
         using MySqlConnection connection = DbConnection.connect();
         {
             //connection.Open();
-            Console.WriteLine($"MySQL version: {connection.ServerVersion}");
+            //Console.WriteLine($"MySQL version: {connection.ServerVersion}");
 
             /*using (MySqlCommand createGebruikerTableQuery = new MySqlCommand(
                        @"
