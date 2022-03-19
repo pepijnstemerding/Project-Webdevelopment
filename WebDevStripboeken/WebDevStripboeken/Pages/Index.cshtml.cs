@@ -23,7 +23,7 @@ public class IndexModel : PageModel
     {
         #region MySQL stuff
         
-        using MySqlConnection connection = DbConnection.connect();
+        //using MySqlConnection connection = DbConnection.connect();
         {
             //connection.Open();
             //Console.WriteLine($"MySQL version: {connection.ServerVersion}");
@@ -146,7 +146,7 @@ public class IndexModel : PageModel
             );", connection))
             {
                 createGeschrevenDoorTableQuery.ExecuteNonQuery();
-            }*/
+            }
             
             #region Fill db with default data
 
@@ -246,8 +246,10 @@ public class IndexModel : PageModel
             }
             
             #endregion
+            */
         }
         
         #endregion
+        
     }
 }

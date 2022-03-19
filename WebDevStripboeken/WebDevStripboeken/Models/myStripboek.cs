@@ -7,11 +7,8 @@ public class myStripboek
     public string Titel;
     public string ISBN;
     public int Jaar_v_Uitgave;
-    
-    //outdated implementatie?? like maybe List<Auteur> en List<Tekenaar> met info uit de tabellen?
-    public string Auteur;
-    public string Tekenaar;
-    
+    public List<myAuteur> MyAuteurs;
+    public List<myTekenaar> MyTekenaars;
     public string Uitgever;
     public string Locatie;
     public string Afbeelding_urls; //meervoud so maybe List<string> ?
