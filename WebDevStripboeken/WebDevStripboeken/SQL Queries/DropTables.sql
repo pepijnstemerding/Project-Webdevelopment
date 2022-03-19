@@ -1,3 +1,4 @@
+USE website;
 DROP TABLE IF EXISTS 
     auteur,
     bezit,
