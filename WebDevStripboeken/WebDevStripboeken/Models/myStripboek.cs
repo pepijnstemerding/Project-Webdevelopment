@@ -7,10 +7,10 @@ public class myStripboek
     public string Titel;
     public string ISBN;
     public int Jaar_v_Uitgave;
-    public List<myAuteur> MyAuteurs;
-    public List<myTekenaar> MyTekenaars;
+    //public List<myAuteur> MyAuteurs;
+    //public List<myTekenaar> MyTekenaars;
     public string Uitgever;
-    public string Locatie;
+    //public string Locatie;
     public string Afbeelding_urls; //meervoud so maybe List<string> ?
     public double Waarde_schatting;
     

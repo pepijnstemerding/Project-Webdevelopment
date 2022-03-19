@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net;
-
+using System.Web;
 namespace WebDevStripboeken.Models;
 
 public class myUser
 {
-    [BindProperty]
-    public string userName { get; set; }
+    [BindProperty] 
+    public string userName { get; set; } = "Guest";
     public string passWord { get; set; }
     public string eMail { get; set; }
     
@@ -21,5 +21,11 @@ public class myUser
         };
 
         return JsonConvert.SerializeObject(user);
+    }
+
+    public static void delCookies()
+    {
+        Cookie del = new Cookie();
+        del.Discard = true;
     }
 }

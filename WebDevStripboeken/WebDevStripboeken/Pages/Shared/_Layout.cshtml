@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Net
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -28,7 +29,7 @@
                     default:
                         <li><a class="dropdown-item" href="../profile">Profile</a></li>
                         <li><a class="dropdown-item" href="../settings">User settings</a></li>
-                        <li><a class="dropdown-item" href="#">Log-Out (delete and renew cookie)</a></li>
+                        <li><a class="dropdown-item" href="#">Log-Out (delete and renew cookie)</a></li><!--Context.Response.Cookies.Delete("user") -->
                         break;
                 }
             </ul>

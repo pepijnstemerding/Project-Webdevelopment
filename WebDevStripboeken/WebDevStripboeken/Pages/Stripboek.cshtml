@@ -1,19 +1,22 @@
-﻿@page
+﻿@page "{Boekid}"
+@using WebDevStripboeken.Pages.Shared
 @model WebDevStripboeken.Pages.Stripboek
 
 @{
-    Layout = null;
+    Layout = "_Layout";
+    ViewData["Title"] = "Log-In";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    
+<div class="row">
+    <div class="col-lg-4 content">
+        <img src="">
+    </div>
+    <div class="col-lg-8 content">
+        <p>Titel: </p>
+        <p>Reeks: </p>
+        <p>Schrijver(s): </p>
+        <p>Tekenaar(s): </p>
+        <p>Jaar van uitgave: </p>
+        <p>ISBN: </p>
+    </div>
 </div>
-</body>
-</html>

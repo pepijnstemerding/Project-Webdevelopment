@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 using WebDevStripboeken.Models;
-using WebDevStripboeken.Repositories;
+using WebDevStripboeken.Repository;
 using Newtonsoft.Json;
 
 namespace WebDevStripboeken.Pages;

@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS website;
 USE website;
 -- Standaard tabellen
 CREATE TABLE IF NOT EXISTS `Gebruiker` (

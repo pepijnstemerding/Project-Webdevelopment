@@ -6,13 +6,17 @@ namespace WebDevStripboeken.Repository;
 
 public class DBConnection
 {
-    protected IDbConnection Connect()
+    public static MySqlConnection Connect()
     {
         return new MySqlConnection(
             @"Server=127.0.0.1;
-            Database=stripboekdatabase;
+            Database=website;
             Uid=root;
-            Pwd=j9muMb2002;
+            Pwd=Test@1234!;
             Port=3306");
     }
+    /*Marten : Database=website
+     *         Uid=root;
+     *         Pwd=Test@1234!; 
+     */
 }

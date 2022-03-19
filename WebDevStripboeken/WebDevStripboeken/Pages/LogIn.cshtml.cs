@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Net;
+using System.Text.Json.Serialization;
+using System.Web;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
@@ -11,12 +14,23 @@ public class LogIn : PageModel
     public myUser currentUser { get; set; }
     public void OnGet()
     {
+        if (Request.Cookies["user"] == null)
+        {
+            HttpContext.Response.Cookies.Append("user", myUser.setCookies());
+        }
+        else
+        {
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        }
+        //currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        /*
+        Cookie User = HttpContext.Request.Cookies;
         string jsonUser = Request.Cookies["user"];
         if (jsonUser == null) //sets first cookie
         {
-            jsonUser = myUser.setCookies();
+            //jsonUser = myUser.setCookies();
         }
-        currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
+        currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);*/
     }
     
     public void OnPost([FromForm] string User/*, [FromForm] string WW*/)
