@@ -19,4 +19,10 @@ public class DBConnection
      *         Uid=root;
      *         Pwd=Test@1234!; 
      */
+    
+    /*Honor
+     Database
+     Uid
+     Pwd
+     Port=3306"*/
 }
