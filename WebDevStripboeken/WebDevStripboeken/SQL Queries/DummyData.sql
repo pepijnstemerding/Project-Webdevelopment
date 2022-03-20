@@ -20,10 +20,10 @@ VALUES (
 
 INSERT INTO `Collectie` (
     Collectie_naam,
-    Gebruikers_id)
+    Gebruikersnaam)
 VALUES (
     'Nu lezen',
-    1);
+    'Bas');
 
 INSERT INTO `Stripboek` (
     Reeks,
