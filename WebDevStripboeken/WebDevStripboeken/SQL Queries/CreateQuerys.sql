@@ -1,4 +1,4 @@
--- need double checking foreing keys (aantal lijken niet gedefineerd)
+-- Standaard tabellen
 use stripboek;
 CREATE TABLE IF NOT EXISTS `Gebruiker` (
 `Gebruikers_id`               INT AUTO_INCREMENT NOT NULL,  -- Unieke gebruikers ID

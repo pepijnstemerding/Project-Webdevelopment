@@ -1,4 +1,4 @@
-USE website;
+USE stripboek;
 INSERT INTO `Gebruiker` (
     Gebruikersnaam,
     Wachtwoord,
@@ -31,7 +31,6 @@ INSERT INTO `Stripboek` (
     ISBN,
     Jaar_v_Uitgave,
     Uitgever,
-    Locatie,
     Afbeelding_urls,
     Waarde_schatting)
 VALUES (
@@ -40,6 +39,5 @@ VALUES (
     9789002139611,
     1978,
     'Standaard Uitgeverij',
-    'Kast 3A',
     'https://media.s-bol.com/YyKVnvnoQprW/550x550.jpg',
     16.94);
