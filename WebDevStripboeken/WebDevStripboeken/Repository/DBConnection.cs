@@ -6,7 +6,7 @@ namespace WebDevStripboeken.Repository;
 
 public class DBConnection
 {
-    protected IDbConnection Connect()
+    public static MySqlConnection Connect()
     {
         return new MySqlConnection(
             @"Server=127.0.0.1;

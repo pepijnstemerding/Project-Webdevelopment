@@ -1,19 +1,34 @@
-﻿@page
+﻿@page "{Boekid}"
+@using WebDevStripboeken.Pages.Shared
 @model WebDevStripboeken.Pages.Stripboek
 
 @{
-    Layout = null;
+    Layout = "_Layout";
+    ViewData["Title"] = "Log-In";
+    ViewData["User"] = @Model.currentUser.userName;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    
+<div class="row">
+    <div class="col-lg-4 content" style="display: flex; flex-wrap: wrap">
+        <img src="@Model.boek.Afbeelding_urls" style="width: fit-content"> <!-- picture's hebben white borders, dunno hoe te centeren -->
+    </div>
+    <div class="col-lg-8 content">
+        <p>Titel: @Model.boek.Titel</p>
+        <p>Reeks: @Model.boek.Reeks</p>
+        <p>Schrijver(s): </p>
+        <p>Tekenaar(s): </p>
+        <p>Jaar van uitgave: @Model.boek.Jaar_v_Uitgave</p>
+        <p>ISBN: @Model.boek.ISBN</p>
+        @{
+            switch (@Model.currentUser.userName)
+            {
+                case "Guest":
+                    <p>Wil je dit werk toevoegen aan een van jouw collectie? <a href="../login">Log hier in!</a></p>
+                    break;
+                default:
+                    <p>Toevoegen aan collectie: (implement dropdown)</p>
+                    break;
+            }
+        }
+    </div>
 </div>
-</body>
-</html>

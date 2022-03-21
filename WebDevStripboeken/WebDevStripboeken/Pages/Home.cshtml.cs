@@ -2,13 +2,15 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
+using WebDevStripboeken.Repository;
 
 namespace WebDevStripboeken.Pages;
 
 public class Home : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
-    public Models.myUser currentUser { get; set; }
+    public myUser currentUser { get; set; }
+    public List<Models.myStripboek> lil = HomeRepository.GetAll();
     public void OnGet()
     {
         string jsonUser = Request.Cookies["user"];
@@ -17,5 +19,8 @@ public class Home : PageModel
             jsonUser = myUser.setCookies();
         }
         currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
+
+        
+        
     }
 }

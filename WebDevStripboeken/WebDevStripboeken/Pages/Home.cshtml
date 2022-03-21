@@ -12,6 +12,12 @@
     <h1>ALLE STRIPBOEKEN</h1><h6>(in de hele database...)</h6>
     <div class="col-4 content">
         <ul>
+            @{
+                foreach (Models.myStripboek x in Model.lil)
+                {
+                    <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+                }
+            }
             <li>Stripboek 1</li>
             <li>Stripboek 2</li>
         </ul>

@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Net;
+using System.Text.Json.Serialization;
+using System.Web;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
+using WebDevStripboeken.Repository;
 
 namespace WebDevStripboeken.Pages;
 
@@ -11,24 +15,30 @@ public class LogIn : PageModel
     public myUser currentUser { get; set; }
     public void OnGet()
     {
-        string jsonUser = Request.Cookies["user"];
-        if (jsonUser == null) //sets first cookie
-        {
-            jsonUser = myUser.setCookies();
-        }
-        currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
+        if (Request.Cookies["user"] == null)
+        { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
+        else
+        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); } 
     }
     
-    public void OnPost([FromForm] string User/*, [FromForm] string WW*/)
+    public IActionResult OnPost([FromForm] string User, [FromForm] string WW)
     {
-        string json = Request.Cookies["user"];
-        myUser coockieUser = JsonConvert.DeserializeObject<myUser>(json);
+        if (LogInRepository.checkLogIn(User, WW) == true)
+        {
+            string json = Request.Cookies["user"];
+            myUser coockieUser = JsonConvert.DeserializeObject<myUser>(json);
 
-        coockieUser.userName = User;
+            coockieUser.userName = User;
 
-        json = JsonConvert.SerializeObject(coockieUser);
-        Response.Cookies.Append("user", json);
+            json = JsonConvert.SerializeObject(coockieUser);
+            Response.Cookies.Append("user", json);
 
-        currentUser = coockieUser;
+            currentUser = coockieUser;
+            return Page();
+        }
+        else
+        {
+            return Page();
+        }
     }
 }
