@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Collections.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVjdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -29,10 +33,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nSW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/MyCollection.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlDb2xsZWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Privacy.cshtml]

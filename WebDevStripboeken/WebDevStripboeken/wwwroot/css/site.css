@@ -20,3 +20,7 @@ body {
 .content {
   border: 5px solid black;
 }
+img {
+ max-width: 75%;
+  
+}

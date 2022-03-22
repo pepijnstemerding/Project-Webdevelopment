@@ -1,7 +1,6 @@
 CREATE DATABASE IF NOT EXISTS website;
 USE website;
 -- Standaard tabellen
-use stripboek;
 CREATE TABLE IF NOT EXISTS `Gebruiker` (
 `Gebruikersnaam`              VARCHAR(32) NOT NULL UNIQUE , -- Gebruikersnaam
 `Email`                       VARCHAR(100) NOT NULL,        -- Email van de gebruiker
