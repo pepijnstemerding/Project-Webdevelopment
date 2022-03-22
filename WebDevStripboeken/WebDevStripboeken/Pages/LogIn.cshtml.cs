@@ -28,7 +28,7 @@ public class LogIn : PageModel
             string json = Request.Cookies["user"];
             myUser coockieUser = JsonConvert.DeserializeObject<myUser>(json);
 
-            coockieUser.userName = User;
+            coockieUser.Gebruikersnaam = User;
 
             json = JsonConvert.SerializeObject(coockieUser);
             Response.Cookies.Append("user", json);

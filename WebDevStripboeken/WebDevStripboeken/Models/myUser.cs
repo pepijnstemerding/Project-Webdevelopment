@@ -4,12 +4,20 @@ using System.Net;
 using System.Web;
 namespace WebDevStripboeken.Models;
 
+[BindProperties]
 public class myUser
 {
-    [BindProperty] 
-    public string userName { get; set; } = "Guest";
-    public string passWord { get; set; }
-    public string eMail { get; set; }
+    
+    public string Gebruikersnaam { get; set; } = "Guest";
+    public string Email { get; set; }
+    public string Wachtwoord { get; set; }
+    public int Is_admin { get; set; }
+    public int Profiel_zichtbaarheid { get; set; }
+    public int Collectie_zichtbaarheid { get; set; }
+    public string Geboorte_datum { get; set; }
+    public string Beveiligingsvraag { get; set; }
+
+    
     
     public static string setCookies()
     {
@@ -19,7 +27,6 @@ public class myUser
         {
             user.Expires = DateTime.Now.AddDays(30);
         };
-
         return JsonConvert.SerializeObject(user);
     }
 

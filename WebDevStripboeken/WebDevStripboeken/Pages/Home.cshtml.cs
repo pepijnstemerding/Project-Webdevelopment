@@ -10,7 +10,7 @@ public class Home : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public List<Models.myStripboek> lil = HomeRepository.GetAll();
+    public List<myStripboek> lil = HomeRepository.GetAll();
     public void OnGet()
     {
         string jsonUser = Request.Cookies["user"];

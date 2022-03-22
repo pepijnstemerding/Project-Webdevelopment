@@ -20,10 +20,6 @@ public class Stripboek : PageModel
         { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         
         Boekid = boekid;
-        //boek = StripboekRepository.GetOne(boekid);
-        foreach (myStripboek x in StripboekRepository.GetOne(boekid))
-        {
-            boek = x;
-        }
+        boek = StripboekRepository.GetOne(boekid);
     }
 }
