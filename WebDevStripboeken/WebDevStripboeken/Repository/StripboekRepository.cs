@@ -7,8 +7,9 @@ namespace WebDevStripboeken.Repository;
 
 public class StripboekRepository : DBConnection
 {
-    //public static myStripboek GetOne(int x)
-    //{
+    public static List<myStripboek> GetOne(int x)
+    {
+        //var param = x;
         /*using MySqlConnection connection = Connect();
         connection.Open();
 
@@ -17,14 +18,14 @@ public class StripboekRepository : DBConnection
                             FROM (website.stripboek)
                             WHERE Boek_id = @x;", connection))
         { command.ExecuteReader();};
-        connection.Close();
+        connection.Close();*/
         
         
         using var connection = Connect();
         IEnumerable<myStripboek> one = connection.Query<myStripboek>(
             @"SELECT *
                 FROM (website.stripboek)
-                WHERE Boek_id = @x;");
-        return one;*/
-    //}
+                WHERE Boek_id = " + x + ";");
+        return one.ToList();
+    }
 }

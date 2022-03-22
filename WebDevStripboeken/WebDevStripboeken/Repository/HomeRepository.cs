@@ -1,9 +1,5 @@
-﻿using System.Data;
-using System.Linq.Expressions;
-using Dapper;
-using WebDevStripboeken.Pages;
+﻿using Dapper;
 using WebDevStripboeken.Models;
-using WebDevStripboeken.Repository;
 
 namespace WebDevStripboeken.Repository;
 

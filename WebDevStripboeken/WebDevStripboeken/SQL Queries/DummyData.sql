@@ -1,4 +1,4 @@
-USE website;
+USE stripboek;
 INSERT INTO `Gebruiker` (
     Gebruikersnaam,
     Wachtwoord,
@@ -20,10 +20,10 @@ VALUES (
 
 INSERT INTO `Collectie` (
     Collectie_naam,
-    Gebruikers_id)
+    Gebruikersnaam)
 VALUES (
     'Nu lezen',
-    1);
+    'Bas');
 
 INSERT INTO `Stripboek` (
     Reeks,
