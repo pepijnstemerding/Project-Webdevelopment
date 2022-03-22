@@ -19,27 +19,16 @@ public class SignUp : PageModel
         }
         currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
     }
+    [BindProperty]
+    public Account Account { get; set; }
+    public IActionResult OnPostSignUp()
+    {
+        if (!ModelState.IsValid)
+        {
+            return Page();
+        }
+        return Page();
+    }
     
-    [BindProperty]
-    [Required]
-    [MinLength(2)]
-    [MaxLength(32)]
-    public string gebruikersnaam { set; get; }
-    
-    [BindProperty]
-    [Required]
-    [EmailAddress]
-    public string email { set; get; }
-    
-    [BindProperty]
-    [Required]
-    [MinLength(6)]
-    [MaxLength(30)]
-    public string wachtwoord { set; get; }
-
-    [BindProperty]
-    [Required]
-    [MaxLength(30)]
-    public string wachtwoordbevestiging { set; get; }
 
 }

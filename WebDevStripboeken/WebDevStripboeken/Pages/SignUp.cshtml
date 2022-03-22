@@ -17,5 +17,34 @@
             <input type="password" name="passwordcomfirm" placeholder="Confirm password"/>
             <button type="submit" asp-page-handler="Signup">Sign up</button>
         </form> *@
+        
+        <form method="post">
+            <div>
+                <div>Gebruikersnaam</div>
+                <input asp-for="Account.gebruikersnaam" placeholder="gebruikersnaam"/>
+                <span asp-validation-for="Account.gebruikersnaam"></span>
+            </div>
+            <div>
+                <div>Email</div> 
+                <input asp-for="Account.email" placeholder="email"/>
+                <span asp-validation-for="Account.email"></span>
+            </div>
+            <div>
+                <div>Wachtwoord</div>
+                <input asp-for="Account.wachtwoord" placeholder="wachtwoord"/>
+                <span asp-validation-for="Account.wachtwoord"></span>
+            </div>
+            <div>
+                <div>Bevestig wachtwoord</div>
+                <input asp-for="Account.wachtwoordbevestiging" placeholder="wachtwoord bevestigen"/>
+                <span asp-validation-for="Account.wachtwoordbevestiging"></span>
+            </div>
+            <div>
+                <div>Beveiligingsvraag: wat is de naam van je laatste huisdier?</div>
+                <input asp-for="Account.beveiligingsvraag" placeholder="beveiligingsvraag"/>
+                <span asp-validation-for="Account.beveiligingsvraag"></span>
+            </div>
+            <button type="submit" asp-page-handler="SignUp">Sign Up</button>
+        </form>
     </div>
 </div>
