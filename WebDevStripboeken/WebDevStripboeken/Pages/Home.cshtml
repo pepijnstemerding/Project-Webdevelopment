@@ -4,7 +4,7 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Home";
-    ViewData["User"] = @Model.currentUser.userName;
+    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
     
 } 
 
@@ -13,7 +13,7 @@
     <div class="col-4 content">
         <ul>
             @{
-                foreach (Models.myStripboek x in Model.lil)
+                foreach (myStripboek x in Model.lil)
                 {
                     <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
                 }

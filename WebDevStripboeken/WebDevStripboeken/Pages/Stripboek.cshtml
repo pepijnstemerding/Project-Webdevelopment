@@ -1,11 +1,10 @@
 ﻿@page "{Boekid}"
-@using WebDevStripboeken.Pages.Shared
 @model WebDevStripboeken.Pages.Stripboek
 
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Log-In";
-    ViewData["User"] = @Model.currentUser.userName;
+    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 }
 
 <div class="row">
@@ -20,7 +19,7 @@
         <p>Jaar van uitgave: @Model.boek.Jaar_v_Uitgave</p>
         <p>ISBN: @Model.boek.ISBN</p>
         @{
-            switch (@Model.currentUser.userName)
+            switch (@Model.currentUser.Gebruikersnaam)
             {
                 case "Guest":
                     <p>Wil je dit werk toevoegen aan een van jouw collectie? <a href="../login">Log hier in!</a></p>

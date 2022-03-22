@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
+using WebDevStripboeken.Repository;
 
 namespace WebDevStripboeken.Pages;
 
@@ -9,13 +10,17 @@ public class Profile : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public void OnGet()
+
+    public string routeUser { get; set; }
+    public void OnGet([FromRoute]string bla)
     {
-        string jsonUser = Request.Cookies["user"];
-        if (jsonUser == null) //sets first cookie
-        {
-            jsonUser = myUser.setCookies();
-        }
-        currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
+        if (Request.Cookies["user"] == null)
+        { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
+        else
+        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
+        
+        //get user uit database van route, kijk stripboek voor voorbeeld
+        routeUser = bla;
+        currentUser = ProfileRepository.GetOne(bla);
     }
 }
