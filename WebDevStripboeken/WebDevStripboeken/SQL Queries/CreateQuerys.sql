@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS website;
 USE website;
 -- Standaard tabellen
 CREATE TABLE IF NOT EXISTS `Gebruiker` (
-`Gebruiker_id`                VARCHAR(30) NOT NULL UNIQUE,  -- Gebruiker_id
+`Gebruiker_id`                INT NOT NULL UNIQUE,  -- Gebruiker_id
 `Gebruikersnaam`              VARCHAR(32) NOT NULL UNIQUE , -- Gebruikersnaam
 `Email`                       VARCHAR(100) NOT NULL,        -- Email van de gebruiker
 `Wachtwoord`                  VARCHAR(30) NOT NULL,         -- Wachtwoord van de gebruiker
@@ -43,7 +43,7 @@ PRIMARY KEY (`Tekenaar_id`));
 
 -- Koppel tabellen
 CREATE TABLE IF NOT EXISTS `Bezit` (
-`Gebruiker_id`   VARCHAR(30) NOT NULL, -- Het ID van de gebruiker waarvan dit stripboek is
+`Gebruiker_id`   INT NOT NULL, -- Het ID van de gebruiker waarvan dit stripboek is
 `Boek_id`        INT NOT NULL, -- Het ID van het boek waar het om gaat
 `Locatie`        VARCHAR(10) NOT NULL, -- Locatie waar het boek zich bevindt    
 `Status_exemplaar` TINYTEXT,     -- De status/qualiteit van het fysieke exemplaar
@@ -55,7 +55,7 @@ FOREIGN KEY (`Gebruiker_id`) REFERENCES `Gebruiker`(`Gebruiker_id`));
 CREATE TABLE IF NOT EXISTS `Zit_in` (
 `Boek_id`       INT NOT NULL,
 `Collectie_id`  INT NOT NULL,
-`Gebruiker_id` VARCHAR(30) NOT NULL, 
+`Gebruiker_id` INT NOT NULL, 
 PRIMARY KEY (`Boek_id`, `Collectie_id`, `Gebruiker_id`),
 FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
 FOREIGN KEY (`Collectie_id`) REFERENCES `Collectie`(`Collectie_id`),
