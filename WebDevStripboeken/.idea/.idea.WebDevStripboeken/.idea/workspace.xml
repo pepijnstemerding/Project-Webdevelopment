@@ -5,32 +5,21 @@
     <projectFile profileName="IIS Express">WebDevStripboeken/WebDevStripboeken.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="467364c9-f42c-4ac8-be29-8f1e05393c5a" name="Changes" comment="resize">
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/wwwroot/Images/Comic Collector Home1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="467364c9-f42c-4ac8-be29-8f1e05393c5a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Database Design.asta.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/auteur.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/bezit.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/collectie.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/geschreven_door.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/getekend_door.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/stripboek.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/tekenaar.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/zit_in.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database Design.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../Database Design.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/MyCollection.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/MyCollection.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Repository/DBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Repository/DBConnection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.staticwebassets.runtime.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/wwwroot/Images/Comic Collector.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/gebruiker.sql" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/gebruiker.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +27,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Collections.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1ac3bf8d279e4572a77c8002c0c830f1171c00/e0/be7f3209/MySqlConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Collections.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Repository/DBConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,18 +44,41 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="RunConfigurationTargetLRU" value="e3497a85-3dec-4d26-aaa9-ede92fd33374" />
+    <property name="RunConfigurationTargetLRU" value="e3497a85-3dec-4d26-aaa9-ede92fd33374&#10;e3497a85-3dec-4d26-aaa9-ede92fd33374/schema/&quot;website&quot;" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
     <property name="settings.editor.selected.configurable" value="HotReloadSettingsPage" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.WebDevStripboeken">
+  <component name="RunManager" selected="Database Script.collectie.sql and 3 more">
     <configuration name="CreateQuerys.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="e3497a85-3dec-4d26-aaa9-ede92fd33374" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bezit.sql and 1 more" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/bezit.sql" />
+      <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/collectie.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="e3497a85-3dec-4d26-aaa9-ede92fd33374" namespace="schema/&quot;website&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="collectie.sql and 3 more" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/collectie.sql" />
+      <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/bezit.sql" />
+      <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/gebruiker.sql" />
+      <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/stripboek.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="e3497a85-3dec-4d26-aaa9-ede92fd33374" namespace="schema/&quot;website&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gebruiker.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/gebruiker.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="e3497a85-3dec-4d26-aaa9-ede92fd33374" namespace="schema/&quot;website&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="WebDevStripboeken" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -108,6 +113,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.collectie.sql and 3 more" />
+        <item itemvalue="Database Script.bezit.sql and 1 more" />
+        <item itemvalue="Database Script.gebruiker.sql" />
         <item itemvalue="Database Script.CreateQuerys.sql" />
       </list>
     </recent_temporary>
@@ -132,7 +140,8 @@
       <workItem from="1647711846237" duration="844000" />
       <workItem from="1647767555665" duration="1995000" />
       <workItem from="1647773160740" duration="10247000" />
-      <workItem from="1647941112590" duration="7198000" />
+      <workItem from="1647941112590" duration="17915000" />
+      <workItem from="1648023466121" duration="5591000" />
     </task>
     <task id="LOCAL-00001" summary="Logo?">
       <created>1647944743330</created>
@@ -169,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647947305387</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Dummy data">
+      <created>1647953721159</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647953721159</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +212,7 @@
     <MESSAGE value="Logo in root" />
     <MESSAGE value="Home" />
     <MESSAGE value="resize" />
-    <option name="LAST_COMMIT_MESSAGE" value="resize" />
+    <MESSAGE value="Dummy data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dummy data" />
   </component>
 </project>
