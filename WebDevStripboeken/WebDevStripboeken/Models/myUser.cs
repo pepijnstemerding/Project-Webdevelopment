@@ -14,7 +14,7 @@ public class myUser
     public int Is_admin { get; set; }
     public int Profiel_zichtbaarheid { get; set; }
     public int Collectie_zichtbaarheid { get; set; }
-    public string Geboorte_datum { get; set; }
+    public DateTime Geboorte_datum { get; set; }
     public string Beveiligingsvraag { get; set; }
 
     

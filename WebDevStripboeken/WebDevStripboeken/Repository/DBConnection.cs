@@ -11,10 +11,11 @@ public class DBConnection
         return new MySqlConnection(
             @"Server=127.0.0.1;
             Database=website;
-            Uid=website1;
-            Pwd=Password123;
+            Uid=root;
+            Pwd=Test@1234!;
             Port=3306");
     }
     //db jason uid: website, pwd Test12345
     //db honor uid: website1, pwd Password123
+    //db marten uid: root, pwd Test@1234!
 }
