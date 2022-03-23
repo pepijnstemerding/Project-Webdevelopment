@@ -32,10 +32,12 @@ CREATE TABLE IF NOT EXISTS `Stripboek` (
 PRIMARY KEY (`Boek_id`));
 
 CREATE TABLE IF NOT EXISTS `Auteur` (
-`Naam_Autheur`          VARCHAR(50) NOT NULL,  -- Naam van de auteur
-PRIMARY KEY (`Naam_Autheur`));
+`Auteur_id`                INT NOT NULL,          -- Auteur_id 
+ `Naam_Auteur`          VARCHAR(50) NOT NULL,  -- Naam van de auteur
+PRIMARY KEY (`Auteur_id`));
 
 CREATE TABLE IF NOT EXISTS `Tekenaar` (
+`Tekenaar_id` INT NOT NULL, -- Tekenaar_id 
 `Naam_Tekenaar`          VARCHAR(50) NOT NULL,  -- Naam van de tekenaar
 PRIMARY KEY (`Naam_Tekenaar`));
 
