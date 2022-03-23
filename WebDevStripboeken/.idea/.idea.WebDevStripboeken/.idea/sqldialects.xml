@@ -2,6 +2,8 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/WebDevStripboeken/Pages/Index.cshtml.cs" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/WebDevStripboeken/SQL Queries/gebruiker.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/WebDevStripboeken/SQL Queries/stripboek.sql" dialect="MySQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>

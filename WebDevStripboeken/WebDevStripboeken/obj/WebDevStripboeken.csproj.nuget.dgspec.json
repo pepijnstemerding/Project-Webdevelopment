@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj": {}
+    "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj": {
+    "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
+        "projectUniqueName": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
         "projectName": "WebDevStripboeken",
-        "projectPath": "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
-        "packagesPath": "C:\\Users\\marte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marte\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\",
+        "projectPath": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
+        "packagesPath": "C:\\Users\\hhbwr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
-          "C:\\Users\\marte\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\hhbwr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

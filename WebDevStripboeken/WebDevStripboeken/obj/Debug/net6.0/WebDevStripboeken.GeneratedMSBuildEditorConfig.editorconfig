@@ -8,57 +8,65 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebDevStripboeken
 build_property.RootNamespace = WebDevStripboeken
-build_property.ProjectDir = C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\
+build_property.ProjectDir = C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\marte\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken
+build_property.MSBuildProjectDirectory = C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Error.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Collections.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVjdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Home.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Index.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/LogIn.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Privacy.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Profile.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Settings.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Settings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/SignUp.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnblVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/_ViewImports.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Stripboek.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyaXBib2VrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/_ViewStart.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marte/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_Layout.cshtml]
+[C:/Users/hhbwr/OneDrive/Documents/GitHub/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9lq1p8kyhi
