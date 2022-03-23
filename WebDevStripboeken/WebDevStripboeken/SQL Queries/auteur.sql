@@ -1,8 +1,8 @@
 -- Dummy data auteur tabel
-INSERT INTO auteur(Naam_Autheur) VALUES ('Becky Chambers');
-INSERT INTO auteur(Naam_Autheur) VALUES ('Daniel Chambers');
-INSERT INTO auteur(Naam_Autheur) VALUES ('James Chambers');
-INSERT INTO auteur(Naam_Autheur) VALUES ('Ian Fleming');
-INSERT INTO auteur(Naam_Autheur) VALUES ('Malorie Blackman');
-INSERT INTO auteur(Naam_Autheur) VALUES ('Taylor Jenkins Reid');
-INSERT INTO auteur(Naam_Autheur) VALUES ('Sophie Morgan');
+INSERT INTO auteur(Auteur_id, Naam_Auteur) VALUES (1, 'Becky Chambers');
+INSERT INTO auteur(Auteur_id, Naam_Auteur) VALUES (2, 'Daniel Chambers');
+INSERT INTO auteur(Auteur_id, Naam_Auteur) VALUES (3, 'James Chambers');
+INSERT INTO auteur(Auteur_id, Naam_Auteur) VALUES (4, 'Ian Flemming');
+INSERT INTO auteur(Auteur_id, Naam_Auteur) VALUES (5, 'Malorie Blackman');
+INSERT INTO auteur(Auteur_id, Naam_Auteur) VALUES (6, 'Taylor Jenkins Reid');
+INSERT INTO auteur(Auteur_id, Naam_Auteur) VALUES (7, 'Sophie Morgan');
