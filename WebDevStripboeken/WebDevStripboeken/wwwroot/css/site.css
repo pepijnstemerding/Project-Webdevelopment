@@ -24,7 +24,10 @@ img {
  max-width: 100%;
   
 }
-.container-fluid
+.row
 {
   object-fit: fill;
+  background-color: black;
+  color: white;
+  
 }
