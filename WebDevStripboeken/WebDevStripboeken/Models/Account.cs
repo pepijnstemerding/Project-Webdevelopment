@@ -26,5 +26,8 @@ public class Account
     public string wachtwoordbevestiging { set; get; }
     
     [Required]
+    public DateOnly geboortedatum { set; get; }
+    
+    [Required]
     public object beveiligingsvraag { get; set; }
 }
