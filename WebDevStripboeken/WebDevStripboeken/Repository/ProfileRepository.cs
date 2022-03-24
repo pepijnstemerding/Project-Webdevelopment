@@ -12,7 +12,7 @@ public class ProfileRepository : DBConnection
         myUser one = connnection.QuerySingle<myUser>(
             @"SELECT * 
                 FROM (website.gebruiker)
-               ;");
+               WHERE Gebruikersnaam = '" + x + "';");
         return one;
         //WHERE Gebruikersnaam = '" + x + "' LIMIT 1
     }

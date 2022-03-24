@@ -13,14 +13,22 @@ public class Home : PageModel
     public List<myStripboek> lil = HomeRepository.GetAll();
     public void OnGet()
     {
-        string jsonUser = Request.Cookies["user"];
-        if (jsonUser == null) //sets first cookie
+        if (Request.Query.ContainsKey("delete"))
         {
-            jsonUser = myUser.setCookies();
+            Console.WriteLine("yay");
+            HttpContext.Response.Cookies.Delete("user");
+            //myUser.delCookies();
+            currentUser = new myUser();
         }
-        currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
+        else
+        {
+            string jsonUser = Request.Cookies["user"];
+            if (jsonUser == null) //sets first cookie
+            {
+                jsonUser = myUser.setCookies();
+            }
 
-        
-        
+            currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
+        }
     }
 }

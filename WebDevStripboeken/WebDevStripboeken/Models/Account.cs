@@ -15,7 +15,6 @@ public class Account
     public string email { set; get; }
     
     [Required]
-    //[DataType(DataType.Password)]
     [MinLength(6)]
     [MaxLength(30)]
     public string wachtwoord { set; get; }
@@ -26,5 +25,8 @@ public class Account
     public string wachtwoordbevestiging { set; get; }
     
     [Required]
-    public object beveiligingsvraag { get; set; }
+    public DateTime geboortedatum { set; get; }
+    
+    [Required]
+    public string beveiligingsvraag { get; set; }
 }

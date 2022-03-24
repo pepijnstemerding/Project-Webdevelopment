@@ -11,8 +11,8 @@ public class Profile : PageModel
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
 
-    public string routeUser { get; set; }
-    public void OnGet([FromRoute]string bla)
+    public string routeUser;
+    public void OnGet([FromRoute] string bla) //why tf u null
     {
         if (Request.Cookies["user"] == null)
         { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
@@ -21,6 +21,6 @@ public class Profile : PageModel
         
         //get user uit database van route, kijk stripboek voor voorbeeld
         routeUser = bla;
-        currentUser = ProfileRepository.GetOne(bla);
+        currentUser = ProfileRepository.GetOne(currentUser.Gebruikersnaam); //cheap but works
     }
 }
