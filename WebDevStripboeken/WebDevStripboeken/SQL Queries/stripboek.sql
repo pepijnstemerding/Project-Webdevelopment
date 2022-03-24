@@ -1,4 +1,5 @@
-﻿use website;
+﻿-- Dummy Data Stripboek tabel 
+USE website;
 INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (1, 'Donald Duck', 'Donald Duck: The duckiest book1', 112030405060, '1',  '1996', 'comicbookstore', 'www', 1010);
 INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (2, 'Donald Duck', 'Donald Duck: The duckiest book2', 122030405060, '0', '1997', 'comicbookstore', 'www', 11);
 INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (3, 'Donald Duck', 'Donald Duck: The duckiest book3', 132030405060, '1', '1998', 'comicbookstore', 'www', 90);

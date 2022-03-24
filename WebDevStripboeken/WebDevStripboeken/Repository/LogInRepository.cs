@@ -11,13 +11,14 @@ public class LogInRepository : DBConnection
     //public myUser check;
     public static bool checkLogIn(string a, string b)
     {
+        var parameters = new {Gebruikersnaam = a};
         using var connection = Connect();
         try
         {
             var check = connection.QuerySingle<myUser>(
                 @"SELECT Gebruikersnaam, Wachtwoord
                 FROM (website.gebruiker)
-                WHERE Gebruikersnaam = '" + a + "' LIMIT 1;");
+                WHERE Gebruikersnaam = @Gebruikersnaam LIMIT 1;", parameters);
             if (check.Wachtwoord == b)
             { return true; }
             return false;
