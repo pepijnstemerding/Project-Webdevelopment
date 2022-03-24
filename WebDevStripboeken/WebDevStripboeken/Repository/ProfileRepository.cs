@@ -7,12 +7,13 @@ public class ProfileRepository : DBConnection
 {
     public static myUser GetOne(string x)
     {
+        var parameters = new {Gebruikersnaam = x};
         using var connnection = Connect();
 
         myUser one = connnection.QuerySingle<myUser>(
             @"SELECT * 
                 FROM (website.gebruiker)
-               WHERE Gebruikersnaam = '" + x + "';");
+               WHERE Gebruikersnaam = @Gebruikersnaam LIMIT 1;", parameters);
         return one;
         //WHERE Gebruikersnaam = '" + x + "' LIMIT 1
     }

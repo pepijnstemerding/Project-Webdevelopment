@@ -5,14 +5,17 @@ namespace WebDevStripboeken.Repository;
 
 public class HomeRepository : DBConnection
 {
-    public static List<myStripboek> GetAll()
+    public static List<myStripboek> GetAll(int min)
     {
+        //var Min = min;
+        //var Max = min + 5;
+        var parameters = new {Min = min, Max = min + 5};
         using var connection = Connect();
 
         IEnumerable<myStripboek> all = connection.Query<myStripboek>(
             @"SELECT *
                 FROM (website.stripboek)
-                WHERE Boek_id > 0 AND Boek_id <= 5;");
+                WHERE Boek_id >= @Min AND Boek_id < @Max;", parameters);
         return all.ToList();
     }
 }
