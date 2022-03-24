@@ -7,8 +7,8 @@ CREATE PROCEDURE StripboekAanpassen(
     reeksVAR tinytext,
     titleVAR tinytext,
     isbnVAR varchar(17),
-    goedgekeurd  tinyint(1),
-    jaar_v_Uitgave year,
+    goedgekeurdVAR  tinyint(1),
+    jaar_v_UitgaveVAR year,
     uitgeverVAR tinytext,
     boek_idVAR int,
 
@@ -24,8 +24,8 @@ BEGIN
     SET Reeks          = reeksVAR,
         Titel          = titleVAR,
         isbn           = isbnVAR,
-        Goedgekeurd    = goedgekeurd,
-        Jaar_v_Uitgave = jaar_v_Uitgave,
+        Goedgekeurd    = goedgekeurdVAR,
+        Jaar_v_Uitgave = jaar_v_UitgaveVAR,
         Uitgever       = uitgeverVAR
     WHERE Boek_id = boek_idVAR;
 

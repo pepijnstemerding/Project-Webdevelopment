@@ -11,30 +11,34 @@
 </head>
 <body>
 <header>
-    <<div class="row">
-        <div class="col-2 content"><a href="../home"><img src="/Images/Comic Collector1.png" alt="logo"></img></a></div>
-        <div class="col-2 content"><a href="../home"><img src="Images/Comic Collector Home1.png" alt="home"></img></a></div>
-        <div class="col-2 content"><a href="../collections"><img src="/Images/Comic Collector Collections1.png" alt="collections"></img></a></div>
-        <div class="col-4 content">Searchbar</div>
-        <div class="col-2 content">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Hello @ViewData["User"]
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                @switch (ViewData["User"])
-                {
-                    case "Guest":
-                        <li><a class="dropdown-item" href="../login">Log-In</a></li>
-                        break;
-                    default:
-                        <li><a class="dropdown-item" href="../profile">Profile</a></li>
-                        <li><a class="dropdown-item" href="../settings">User settings</a></li>
-                        <li><a class="dropdown-item" href="#">Log-Out (delete and renew cookie)</a></li><!--Context.Response.Cookies.Delete("user") -->
-                        break;
-                }
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark black-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 content"><a href="../home"><img src="/Images/Comic Collector1.png" alt="logo"></img></a></div>
+            <div class="col-2 content"><a href="../home"><img src="Images/Comic Collector Home1.png" alt="home"></img></a></div>
+            <div class="col-2 content"><a href="../collections"><img src="/Images/Comic Collector Collections1.png" alt="collections"></img></a></div>
+            <div class="col-4 content"><input name="searchbar" required="" size="40" autocapitalize="off" autocomplete="off" type="text" class="form-control" placeholder="Searchbar"></div>
+            <div class="col-2 content">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Hello @ViewData["User"]
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    @switch (ViewData["User"])
+                    {
+                        case "Guest":
+                            <li><a class="dropdown-item" href="../login">Log-In</a></li>
+                            break;
+                        default:
+                            <li><a class="dropdown-item" href="../profile">Profile</a></li>
+                            <li><a class="dropdown-item" href="../settings">User settings</a></li>
+                            <li><a class="dropdown-item" href="#">Log-Out (delete and renew cookie)</a></li><!--Context.Response.Cookies.Delete("user") -->
+                            break;
+                    }
+                </ul>
+            </div>
         </div>
     </div>
+    </nav>
 </header>
 
 <div class="container">
