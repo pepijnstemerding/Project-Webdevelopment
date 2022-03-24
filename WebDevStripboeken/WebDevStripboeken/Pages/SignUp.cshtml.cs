@@ -27,6 +27,10 @@ public class SignUp : PageModel
         {
             return Page();
         }
+        else
+        {
+            //SignUp();  ??? idk what to do to make it use the method lol
+        }
         return Page();
     }
     

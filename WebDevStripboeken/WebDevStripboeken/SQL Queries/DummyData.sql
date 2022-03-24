@@ -1,4 +1,4 @@
-USE stripboek;
+USE website;
 INSERT INTO `Gebruiker` (
     Gebruikersnaam,
     Wachtwoord,
