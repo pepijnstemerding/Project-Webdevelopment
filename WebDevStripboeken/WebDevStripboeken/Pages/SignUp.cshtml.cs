@@ -31,7 +31,7 @@ public class SignUp : PageModel
                 from value in ModelState.Values
                 where value.ValidationState == ModelValidationState.Invalid
                 select value;  
-            return Page();  // <-- I set a breakpoint here, and examine "errors"
+            return Page();
         }
         else
         {

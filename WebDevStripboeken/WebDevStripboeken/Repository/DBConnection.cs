@@ -10,9 +10,8 @@ public class DBConnection
     {
         return new MySqlConnection(
             @"Server=127.0.0.1;
-            Database=website;
-            Uid=root;
-            Pwd=Test@1234!;
+            Uid=website;
+            Pwd=Test12345;
             Port=3306");
     }
     //db jason uid: website, pwd Test12345
