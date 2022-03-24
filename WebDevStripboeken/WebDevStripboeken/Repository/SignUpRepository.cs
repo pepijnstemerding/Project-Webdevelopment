@@ -5,9 +5,8 @@ namespace WebDevStripboeken.Repository;
 
 public class SignUpRepository : DBConnection
 {
-    public async Task SignUp([FromBody] Account account)
+    public static async Task SignUp(Account account)
     {
-        using var connection = Connect();
         var sql = @"INSERT INTO website.gebruiker 
                         (Gebruikersnaam, 
                          Email, 
@@ -22,5 +21,9 @@ public class SignUpRepository : DBConnection
                          @geboortedatum,
                          @beveiligingsvraag
                          )";
+        using var connection = Connect();
+        {
+            connection.Execute(sql);
+        }
     }
 }

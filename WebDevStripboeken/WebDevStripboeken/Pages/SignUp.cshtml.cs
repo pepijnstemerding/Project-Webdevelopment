@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using WebDevStripboeken.Repository;
 
 namespace WebDevStripboeken.Pages;
 
@@ -25,11 +27,15 @@ public class SignUp : PageModel
     {
         if (!ModelState.IsValid)
         {
-            return Page();
+            var errors = 
+                from value in ModelState.Values
+                where value.ValidationState == ModelValidationState.Invalid
+                select value;  
+            return Page();  // <-- I set a breakpoint here, and examine "errors"
         }
         else
         {
-            //SignUp();  ??? idk what to do to make it use the method lol
+            SignUpRepository.SignUp(Account);
         }
         return Page();
     }

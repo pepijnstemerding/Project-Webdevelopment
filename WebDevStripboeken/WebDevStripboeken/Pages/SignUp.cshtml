@@ -10,14 +10,6 @@
 <div class="row">
     <h1>SIGN-UP</h1>
     <div class="col-12 content">
-        @* <form method="post" id="SignUp">
-            <input type="text" name="username" placeholder="Username"/>
-            <input type="text" name="email" placeholder="E-mail"/>
-            <input type="password" name="password" placeholder="Password"/>
-            <input type="password" name="passwordcomfirm" placeholder="Confirm password"/>
-            <button type="submit" asp-page-handler="Signup">Sign up</button>
-        </form> *@
-        
         <form method="post">
             <div>
                 <div>Gebruikersnaam</div>
@@ -41,7 +33,7 @@
             </div>
             <div>
                 <div>Geboortedatum</div>
-                <input asp-for="Account.geboortedatum" placeholder="geboortedatum" />
+                <input type="date" asp-for="Account.geboortedatum" asp-format="{0:yyyy-MM-dd}" placeholder="geboortedatum" value="0"/>
                 <span asp-validation-for="Account.geboortedatum"></span>
             </div>
             <div>
