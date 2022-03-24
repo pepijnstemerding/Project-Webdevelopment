@@ -1,4 +1,7 @@
-﻿namespace WebDevStripboeken.Repository;
+﻿using Dapper;
+using WebDevStripboeken.Models;
+
+namespace WebDevStripboeken.Repository;
 
 public class CollectieRepository : DBConnection
 
@@ -7,10 +10,10 @@ public class CollectieRepository : DBConnection
     {
         using var connection = Connect();
 
-        IEnumerable<myCollectie> all = connection.Query<myCollecite>(
+        IEnumerable<myCollectie> all1 = connection.Query<myCollectie>(
             @"SELECT *
                 FROM (website.collectie)
-                WHERE Collectie_naam ='Wishlist');
-        return all.ToList();
+                WHERE Collectie_naam = 'Wishlist';");
+        return all1.ToList();
     }
 }
