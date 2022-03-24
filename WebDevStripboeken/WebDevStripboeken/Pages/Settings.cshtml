@@ -5,12 +5,46 @@
     Layout = "_Layout";
     ViewData["Title"] = "Settings"; 
 }
-<div class="row content">
-    <h2>Account settings</h2> <!--Gebruiker zijn account settings: kunnen veranderd worden-->
-    <p>Username</p>
-    <p>Password</p>
-    <p>E-mail</p>
+
+<div class="row">
+    <h1>SETTINGS</h1>
+    <div class="col-12 content">
+        <form method="post">
+            <div>
+                <div>Gebruikersnaam</div>
+                <input asp-for="Account.gebruikersnaam" placeholder="Gebruikersnaam"/>
+                <span asp-validation-for="Account.gebruikersnaam"></span>
+            </div>
+            <div>
+                <div>Email</div> 
+                <input asp-for="Account.email" placeholder="Email"/>
+                <span asp-validation-for="Account.email"></span>
+            </div>
+            <div>
+                <div>Wachtwoord</div>
+                <input asp-for="Account.wachtwoord" placeholder="Wachtwoord"/>
+                <span asp-validation-for="Account.wachtwoord"></span>
+            </div>
+            <div>
+                <div>Bevestig wachtwoord</div>
+                <input asp-for="Account.wachtwoordbevestiging" placeholder="Wachtwoord bevestigen"/>
+                <span asp-validation-for="Account.wachtwoordbevestiging"></span>
+            </div>
+            <div>
+                <div>Geboortedatum</div>
+                <input type="date" asp-for="Account.geboortedatum" asp-format="{0:yyyy-MM-dd}" placeholder="Geboortedatum" value="0"/>
+                <span asp-validation-for="Account.geboortedatum"></span>
+            </div>
+            <div>
+                <div>Beveiligingsvraag: wat is de naam van je laatste huisdier?</div>
+                <input asp-for="Account.beveiligingsvraag" placeholder="Beveiligingsvraag"/>
+                <span asp-validation-for="Account.beveiligingsvraag"></span>
+            </div>
+            <button type="submit" asp-page-handler="SignUp">Update</button>
+        </form>
+    </div>
 </div>
+
 <div class="row content">
     <h2>Privacy settings</h2> <!--Privacy settings houdt in wie een collectie of een profile kan zien-->
     <p>Who can see your collections?</p>
