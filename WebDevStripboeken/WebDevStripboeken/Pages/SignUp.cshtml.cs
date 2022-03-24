@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
-using System.ComponentModel.DataAnnotations;
+using WebDevStripboeken.Repository;
 
 namespace WebDevStripboeken.Pages;
 
@@ -30,6 +30,7 @@ public class SignUp : PageModel
         else
         {
             //SignUp();  ??? idk what to do to make it use the method lol
+            SignUpRepository.SignUp(Account);
         }
         return Page();
     }

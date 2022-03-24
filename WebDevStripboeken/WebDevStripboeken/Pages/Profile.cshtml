@@ -14,13 +14,19 @@
         <div class="row content"><p>Lorem ipsum dolor sit amet.</p></div>
         <div class="row content"><p>Lorem ipsum dolor sit amet.</p></div>
     </div>
-    <div class="col-4 content"><h1>Your activity</h1></div>
+    <div class="col-4 content">
+        <h1>Your activity</h1>
+        <ul>
+            <li><a href="chrome://history/">for the chrome users (dont work :( )</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">i dare you</a></li>
+        </ul>
+    </div>
     <div class="col-4 content"><h1>Profile info</h1>
-        <p>Gebruikersnaam : </p>
-        <p>Email : </p>
-        <p>Geboortedatum : </p>
+        <p>Gebruikersnaam : @Model.currentUser.Gebruikersnaam</p>
+        <p>Email : @Model.currentUser.Email</p>
+        <p>Geboortedatum : @Model.currentUser.Geboorte_datum</p>
         <h3>Settings</h3>
-        <p>Profiel zichtbaarheid</p>
-        <p>Collectie zichtbaarheid</p>
+        <p>Profiel zichtbaarheid : @Model.currentUser.Profiel_zichtbaarheid</p>
+        <p>Collectie zichtbaarheid : @Model.currentUser.Collectie_zichtbaarheid</p>
     </div>
 </div>

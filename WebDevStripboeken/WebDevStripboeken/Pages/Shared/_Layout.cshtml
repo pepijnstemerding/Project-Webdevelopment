@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-    <<div class="row">
+    <div class="row">
         <div class="col-2 content"><a href="../home"><img src="/Images/Comic Collector1.png" alt="logo"></img></a></div>
         <div class="col-2 content"><a href="../home"><img src="Images/Comic Collector Home1.png" alt="home"></img></a></div>
         <div class="col-2 content"><a href="../collections"><img src="/Images/Comic Collector Collections1.png" alt="collections"></img></a></div>
@@ -27,9 +27,9 @@
                         <li><a class="dropdown-item" href="../login">Log-In</a></li>
                         break;
                     default:
-                        <li><a class="dropdown-item" href="../profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="../profile/@ViewData["User"]">Profile</a></li>
                         <li><a class="dropdown-item" href="../settings">User settings</a></li>
-                        <li><a class="dropdown-item" href="#">Log-Out (delete and renew cookie)</a></li><!--Context.Response.Cookies.Delete("user") -->
+                        <li><a class="dropdown-item" href="../home?delete">Log-Out (delete and renew cookie)</a></li><!--Context.Response.Cookies.Delete("user") -->
                         break;
                 }
             </ul>
