@@ -18,9 +18,13 @@
                     <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
                 }
             }
-            <li>Stripboek 1</li>
-            <li>Stripboek 2</li>
         </ul>
+        <form method="post">
+            <button type="submit" name="Min" asp-page-handler="Min">-</button>
+            <button type="submit" name="Add" asp-page-handler="Add">+</button>
+            <button type="submit" name="Zero" asp-page-handler="Reset">Reset</button>
+            <input type="hidden" name="based" value="@Model.myBase"/>
+        </form>
     </div>
     <div class="col-4 content">Activity Feed</div>
     <div class="col-4 content">Recommendations</div>

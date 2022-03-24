@@ -10,7 +10,9 @@ public class Home : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public List<myStripboek> lil = HomeRepository.GetAll();
+    public int myBase = 1;
+    private const int defiation = 5;
+    public List<myStripboek> lil;
     public void OnGet()
     {
         if (Request.Query.ContainsKey("delete"))
@@ -30,5 +32,38 @@ public class Home : PageModel
 
             currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
         }
+        lil = HomeRepository.GetAll(myBase);
     }
+
+    public void OnPostMin([FromForm] int based)
+    {
+        myBase = based - defiation;
+        lil = HomeRepository.GetAll(myBase);
+    }
+    public void OnPostAdd([FromForm] int based)
+    {
+        myBase = based + defiation;
+        lil = HomeRepository.GetAll(myBase);
+    }
+
+    public void OnPostReset([FromForm] int based)
+    {
+        myBase = 1;
+        lil = HomeRepository.GetAll(myBase);
+    }
+
+    /*public void OnPost([FromForm] int val)
+    {
+        switch (val)
+        {
+            case 1:
+                min =+ 5;
+                break;
+            case 2:
+                min = -5;
+                break;
+            default: min = 1;
+                break;
+        }
+    }*/
 }

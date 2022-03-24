@@ -9,11 +9,12 @@ public class StripboekRepository : DBConnection
 {
     public static myStripboek GetOne(int x)
     {
+        var parameters = new {Boekid = x};
         using var connection = Connect();
         myStripboek one = connection.QuerySingle<myStripboek>(
             @"SELECT *
                 FROM (website.stripboek)
-                WHERE Boek_id = " + x + " LIMIT 1;");
+                WHERE Boek_id = @Boekid LIMIT 1;", parameters);
         return one;
     }
 }
