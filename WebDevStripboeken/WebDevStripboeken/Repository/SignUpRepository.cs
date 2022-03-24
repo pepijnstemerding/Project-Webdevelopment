@@ -26,4 +26,8 @@ public class SignUpRepository : DBConnection
             connection.Execute(sql);
         }
     }
+    //maakt sql string aan maar wordt nergens uitgevoerd
+    //geen gebruik van dapper
+    //hz Task?
+    //onduidelijk voor comp welke gebruikersnaam
 }

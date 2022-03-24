@@ -21,6 +21,13 @@ body {
   border: 5px solid black;
 }
 img {
- max-width: 75%;
+ max-width: 100%;
+  
+}
+.row
+{
+  object-fit: fill;
+  background-color: black;
+  color: white;
   
 }

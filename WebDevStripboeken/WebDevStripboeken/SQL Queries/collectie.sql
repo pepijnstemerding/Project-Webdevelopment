@@ -1,13 +1,13 @@
 -- Dummy data collectie tabel toevoegen 
 
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('1','Wishlist', 'honor');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('2','TBR', 'jason');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('3','Already have', 'marten');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('4','Bookshelf 1', 'pepijn');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('5','Wishlist2', 'nigel');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('6','Wishlist', 'honor');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('7','Wishlist', 'jason');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('8','Wishlist', 'marten');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('9','Wishlist', 'pepijn');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('10','Wishlist', 'jesse');
-INSERT INTO collectie (Collectie_id, Collectie_naam, Gebruikersnaam) VALUES ('11','Honors shelf', 'tsjabbe');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('1','Wishlist');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('2','TBR');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('3','Already have');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('4','Bookshelf 1');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('5','Wishlist2');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('6','Wishlist');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('7','Wishlist');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('8','Wishlist');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('9','Wishlist');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('10','Wishlist');
+INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('11','Honors shelf');

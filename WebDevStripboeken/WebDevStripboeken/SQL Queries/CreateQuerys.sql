@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `Gebruiker` (
 `Is_admin`                    BOOL NOT NULL DEFAULT 0,                -- Of de gebruiker administrator permissies heeft
 `Profiel_zichtbaarheid`       TINYINT UNSIGNED NOT NULL DEFAULT 1,    -- 0 als niemand je naam en geboortedatum kan zien, 1 als iedereen hem kan zien (uitbreid mogenlijkheid)
 `Collectie_zichtbaarheid`     TINYINT UNSIGNED NOT NULL DEFAULT 1,    -- 0 als niemand je collecties kan zien, 1 als iedereen ze kan zien
-`Geboorte_datum`              DATE NOT NULL,                          -- Geboorte datum van gebruiker
+`Geboorte_datum`              DATETIME NOT NULL,                          -- Geboorte datum van gebruiker
 `Beveiligingsvraag`           VARCHAR(20) NOT NULL,                   -- Antwoord op de beveiligingsvraag voor ww reset 
 PRIMARY KEY (`Gebruiker_id`));
 
