@@ -6,3 +6,21 @@
     ViewData["Title"] = "Your Collections";
     ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 }
+
+<div class="row">
+    <h1>COLLECTIONS</h1><h6>(die een gebruiker heeft aangemaakt</h6>
+    <div class="col-4 content">
+        <ul>
+            @{
+                foreach (myCollectie x in Model.lil2)
+                {
+                    <li><a href="../collectie/@x.Collectie_id">@x.Collectie_naam</a></li> // Link to a gebruiker zijn collecties
+                }
+            }
+            <li>Collectie 1</li> 
+            <li>Wenslijst 1</li>
+        </ul>
+    </div>
+    <div class="col-4 content">Activity Feed</div>
+    <div class="col-4 content">Recommendations</div>
+</div>
