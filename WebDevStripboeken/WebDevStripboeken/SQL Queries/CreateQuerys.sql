@@ -32,12 +32,14 @@ CREATE TABLE IF NOT EXISTS `Stripboek` (
 PRIMARY KEY (`Boek_id`));
 
 CREATE TABLE IF NOT EXISTS `Auteur` (
+`Auteur_id`             INT AUTO_INCREMENT NOT NULL, -- Auteur_id, unique value
 `Naam_Autheur`          VARCHAR(50) NOT NULL,  -- Naam van de auteur
-PRIMARY KEY (`Naam_Autheur`));
+PRIMARY KEY (`Auteur_id`));
 
 CREATE TABLE IF NOT EXISTS `Tekenaar` (
+    `Tekenaar_id`        INT AUTO_INCREMENT NOT NULL, -- Tekenaar_id unique value
 `Naam_Tekenaar`          VARCHAR(50) NOT NULL,  -- Naam van de tekenaar
-PRIMARY KEY (`Naam_Tekenaar`));
+PRIMARY KEY (`Tekenaar_id`));
 
 -- Koppel tabellen
 CREATE TABLE IF NOT EXISTS `Bezit` (
@@ -61,14 +63,14 @@ FOREIGN KEY (`Gebruiker_id`) REFERENCES `Gebruiker`(`Gebruiker_id`));
 
 CREATE TABLE IF NOT EXISTS `Getekend_door` (
 `Boek_id`       INT NOT NULL,       -- ID van het boek getekend door de tekenaar
-`Naam_Tekenaar`          VARCHAR(50) NOT NULL,  -- Naam van de tekenaar
-PRIMARY KEY (`Naam_Tekenaar`, `Boek_id`),
+`Tekenaar_id`   INT NOT NULL,  -- Id van de tekenaar
+PRIMARY KEY (`Tekenaar_id`, `Boek_id`),
 FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
-FOREIGN KEY (`Naam_Tekenaar`) REFERENCES `Tekenaar`(`Naam_Tekenaar`));
+FOREIGN KEY (`Tekenaar_id`) REFERENCES `Tekenaar`(`Tekenaar_id`));
 
 CREATE TABLE IF NOT EXISTS `Geschreven_door` (
 `Boek_id`       INT NOT NULL,       -- ID van het boek geschreven door de auteur
-`Naam_Autheur`  VARCHAR(50) NOT NULL,  -- Naam van de auteur
-PRIMARY KEY (`Naam_Autheur`, `Boek_id`),
+`Auteur_id`  INT NOT NULL,  -- Id van de auteur
+PRIMARY KEY (`Auteur_id`, `Boek_id`),
 FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
-FOREIGN KEY (`Naam_Autheur`) REFERENCES  `Auteur`(`Naam_Autheur`));
+FOREIGN KEY (`Auteur_id`) REFERENCES  `Auteur`(`Auteur_id`));
