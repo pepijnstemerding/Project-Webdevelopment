@@ -4,7 +4,7 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Sign-Up";
-    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+    // ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 } 
 
 <div class="row">
@@ -31,11 +31,11 @@
                 <input asp-for="Account.wachtwoordbevestiging" placeholder="wachtwoord bevestigen"/>
                 <span asp-validation-for="Account.wachtwoordbevestiging"></span>
             </div>
-            <!--<div>
+            <div>
                 <div>Geboortedatum</div>
                 <input type="date" asp-for="Account.geboortedatum" asp-format="{0:yyyy-MM-dd}" placeholder="geboortedatum" value="0"/>
                 <span asp-validation-for="Account.geboortedatum"></span>
-            </div>-->
+            </div>
             <div>
                 <div>Beveiligingsvraag: wat is de naam van je laatste huisdier?</div>
                 <input asp-for="Account.beveiligingsvraag" placeholder="beveiligingsvraag"/>
