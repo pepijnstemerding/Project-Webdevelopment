@@ -5,8 +5,9 @@ namespace WebDevStripboeken.Repository;
 
 public class SignUpRepository : DBConnection
 {
-    public static async Task SignUp(Account account)
+    public static void SignUp(Account account)
     {
+        var par = new {gebruikersnaam = account.gebruikersnaam, email = account.email, wachtwoord = account.wachtwoord, geboortedatum = account.geboortedatum, beveiligingsvraag = account.beveiligingsvraag};
         var sql = @"INSERT INTO website.gebruiker 
                         (Gebruikersnaam, 
                          Email, 
@@ -23,11 +24,7 @@ public class SignUpRepository : DBConnection
                          )";
         using var connection = Connect();
         {
-            connection.Execute(sql);
+            connection.Execute(sql, par);
         }
     }
-    //maakt sql string aan maar wordt nergens uitgevoerd
-    //geen gebruik van dapper
-    //hz Task?
-    //onduidelijk voor comp welke gebruikersnaam
 }
