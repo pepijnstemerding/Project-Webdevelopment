@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
@@ -8,7 +9,7 @@ namespace WebDevStripboeken.Pages;
 
 public class Toevoegen : PageModel
 {
-    [BindProperty(SupportsGet = true)]  //global get
+    //[BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
     public void OnGet()
     {
@@ -18,8 +19,17 @@ public class Toevoegen : PageModel
         { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); } 
     }
 
-    public void OnPost()
+    [BindProperty]
+    public myStripboek SuggestStripboek { get; set; }
+    public void OnPostToevoegen()
     {
-        
+        if (!ModelState.IsValid)
+        {
+            Console.WriteLine("bruh");
+        }
+        else
+        {
+            ToevoegenRepository.AddOne(SuggestStripboek);
+        }
     }
 }

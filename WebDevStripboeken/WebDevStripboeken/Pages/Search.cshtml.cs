@@ -12,9 +12,9 @@ public class Search : PageModel
     public myUser currentUser { get; set; }
 
     public List<myStripboek> getResults;
-    public List<myStripboek> showResults1;
-    public List<myStripboek> showResults2;
-    public List<myStripboek> showResults3;
+    public List<myStripboek> showResults1 = new List<myStripboek>();
+    public List<myStripboek> showResults2 = new List<myStripboek>();
+    public List<myStripboek> showResults3 = new List<myStripboek>();
     public bool PostMethod;
     private int Count;
     public void OnGet()
@@ -34,20 +34,27 @@ public class Search : PageModel
 
         foreach (myStripboek x in getResults)
         {
-            if (Count < 5)
+            if (getResults.Count != 0)
             {
-                showResults1.Add(x);
-                Count++;
+                if (Count < 5)
+                {
+                    showResults1.Add(x);
+                    Count++;
+                }
+                else if (Count >= 5 && Count < 10)
+                {
+                    showResults2.Add(x);
+                    Count++;
+                }
+                else if (Count >= 10 && Count < 15)
+                {
+                    showResults3.Add(x);
+                    Count++;
+                }
             }
-            else if (Count > 5 && Count < 10)
+            else
             {
-                showResults2.Add(x);
-                Count++;
-            }
-            else if (Count > 10 &&Count < 15)
-            {
-                showResults3.Add(x);
-                Count++;
+                Console.WriteLine("pain");
             }
         }
         //for (int i = 0; i < 5; i++) use foreach dumkoff
