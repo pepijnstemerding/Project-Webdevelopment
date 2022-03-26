@@ -24,13 +24,10 @@ public class Home : PageModel
         }
         else
         {
-            string jsonUser = Request.Cookies["user"];
-            if (jsonUser == null) //sets first cookie
-            {
-                jsonUser = myUser.setCookies();
-            }
-
-            currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
+            if (Request.Cookies["user"] == null)
+            { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
+            else
+            { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
         lil = HomeRepository.GetAll(myBase);
     }
@@ -51,19 +48,4 @@ public class Home : PageModel
         myBase = 1;
         lil = HomeRepository.GetAll(myBase);
     }
-
-    /*public void OnPost([FromForm] int val)
-    {
-        switch (val)
-        {
-            case 1:
-                min =+ 5;
-                break;
-            case 2:
-                min = -5;
-                break;
-            default: min = 1;
-                break;
-        }
-    }*/
 }

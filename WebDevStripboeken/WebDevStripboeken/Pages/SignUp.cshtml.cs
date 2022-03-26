@@ -9,8 +9,8 @@ using WebDevStripboeken.Repository;
 namespace WebDevStripboeken.Pages;
 
 public class SignUp : PageModel
-      {
-          [BindProperty(SupportsGet = true)]  //global get
+{
+    // [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
     public void OnGet()
     {
@@ -21,17 +21,22 @@ public class SignUp : PageModel
         }
         currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
     }
+    
     [BindProperty]
     public Account Account { get; set; }
     public IActionResult OnPostSignUp()
     {
+        // ValidationContext vc = new ValidationContext(Account); 
+        // ICollection<ValidationResult> results = new List<ValidationResult>(); // Will contain the results of the validation
+        // bool isValid = Validator.TryValidateObject(Account, vc, results, true);
+        
         if (!ModelState.IsValid)
         {
             var errors = 
                 from value in ModelState.Values
                 where value.ValidationState == ModelValidationState.Invalid
                 select value;  
-            return Page();  // <-- I set a breakpoint here, and examine "errors"
+            return Page();
         }
         else
         {
