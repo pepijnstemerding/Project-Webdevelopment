@@ -15,16 +15,13 @@
         <div class="col-2 content"><a href="../home"><img src="/Images/Comic Collector1.png" alt="logo"></img></a></div>
         <div class="col-2 content"><a href="../home"><img src="Images/Comic Collector Home1.png" alt="home"></img></a></div>
         <div class="col-2 content"><a href="../collections"><img src="/Images/Comic Collector Collections1.png" alt="collections"></img></a></div>
-<<<<<<< HEAD
         <div class="col-4 content"><a href="../search">Doorzoek de database</a></div>
-=======
-        <div class="col-4 content"><div class="col-4 content"><input name="searchbar" required="" size="40" autocapitalize="off" autocomplete="off" type="text" class="form-control" placeholder="Searchbar"></div></div>
->>>>>>> Honor
+        <!--<div class="col-4 content"><div class="col-4 content"><input name="searchbar" required="" size="40" autocapitalize="off" autocomplete="off" type="text" class="form-control" placeholder="Searchbar"></div></div>-->
         <div class="col-2 content">
             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Hello @ViewData["User"]
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul class="dropdown-menu btn-danger" aria-labelledby="dropdownMenuButton1">
                 @switch (ViewData["User"])
                 {
                     case "Guest":
@@ -33,7 +30,8 @@
                     default:
                         <li><a class="dropdown-item" href="../profile/@ViewData["User"]">Profile</a></li>
                         <li><a class="dropdown-item" href="../settings">User settings</a></li>
-                        <li><a class="dropdown-item" href="../home?delete">Log-Out (delete and renew cookie)</a></li><!--Context.Response.Cookies.Delete("user") -->
+                        <li><a class="dropdown-item" href="../toevoegen">Voeg stripboek toe</a></li>
+                        <li><a class="dropdown-item" href="../home?delete">Log-Out</a></li><!--Context.Response.Cookies.Delete("user") -->
                         break;
                 }
             </ul>

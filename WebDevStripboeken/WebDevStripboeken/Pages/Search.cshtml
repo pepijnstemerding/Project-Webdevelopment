@@ -24,19 +24,26 @@
     <div class="col-lg-3">
         <ul>
             @{
-                if (Model.PostMethod && @Model.showResults.Count > 0) 
+                if (Model.PostMethod) 
                 {
-                    foreach (myStripboek x in @Model.showResults)
+                    foreach (myStripboek x in @Model.getResults)
                     {
                         <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
                     }
+                    Console.WriteLine("df");
                 }
             }
         </ul>
     </div>
     <div class="col-lg-3">
         @{
-            if (Model.PostMethod)
+            /*if (Model.PostMethod && @Model.showResults1.Count > 0)
+            {
+                foreach (myStripboek x in @Model.showResults1)
+                {
+                    <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+                }
+            }*/
         }
     </div>
     <div class="col-lg-3">

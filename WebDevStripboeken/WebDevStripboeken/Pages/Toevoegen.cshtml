@@ -1,0 +1,26 @@
+﻿@page
+@model WebDevStripboeken.Pages.Toevoegen
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Toevoegen";
+    //ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+}
+
+<div class="row">
+    <h1>STRIPBOEK TOEVOEGEN</h1>
+    <form method="post">
+        <input type="text" name="reeks" placeholder="Reeks van Stripboek"/>
+        <input type="text" name="titel" placeholder="Titel van Stripboek"/>
+        <input type="number" name="isbn" placeholder="ISBN nummer van Stripboek"/>
+        <input type="number" name="jaar_v_uitgave" placeholder="Jaar waarin Stripboek is uitgegeven"/>
+        <!--
+        auteurs
+        tekenaars
+        -->
+        <input type="text" name="uitgever" placeholder="Uitgever van Stripboek"/>
+        <input type="url" name="afbeelding_url" placeholder="URL voor afbeelding van Stripboek"/>
+        <input type="number" name="waarde_schatting" placeholder="Hoe duur is het Stripboek?"/>
+        <button type="submit" name="action">Suggereer het stripboek</button>
+    </form>
+</div>

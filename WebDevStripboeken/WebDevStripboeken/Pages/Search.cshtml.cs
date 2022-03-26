@@ -11,8 +11,12 @@ public class Search : PageModel
     [BindProperty(SupportsGet = true)]
     public myUser currentUser { get; set; }
 
-    public List<myStripboek> showResults;
+    public List<myStripboek> getResults;
+    public List<myStripboek> showResults1;
+    public List<myStripboek> showResults2;
+    public List<myStripboek> showResults3;
     public bool PostMethod;
+    private int Count;
     public void OnGet()
     {
         if (Request.Cookies["user"] == null)
@@ -25,11 +29,32 @@ public class Search : PageModel
 
     public void OnPost([FromForm] string catagorie, string query)
     {
-        showResults = (SearchRepository.SearchSubmit(catagorie, query));
+        getResults = (SearchRepository.SearchSubmit(catagorie, query));
         PostMethod = true;
-        foreach (myStripboek y in showResults)
+
+        foreach (myStripboek x in getResults)
         {
-            //Console.WriteLine("bla");
+            if (Count < 5)
+            {
+                showResults1.Add(x);
+                Count++;
+            }
+            else if (Count > 5 && Count < 10)
+            {
+                showResults2.Add(x);
+                Count++;
+            }
+            else if (Count > 10 &&Count < 15)
+            {
+                showResults3.Add(x);
+                Count++;
+            }
+        }
+        //for (int i = 0; i < 5; i++) use foreach dumkoff
+        {
+            //myStripboek add = getResults.ElementAt(1);
+            //showResults1.Add(getResults.ElementAt(1));
+            //Console.WriteLine(add.Titel);
         }
     }
 }
