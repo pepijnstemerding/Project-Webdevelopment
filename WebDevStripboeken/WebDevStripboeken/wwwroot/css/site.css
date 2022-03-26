@@ -12,32 +12,27 @@ html {
 html {
   position: relative;
   min-height: 100%;
-}
 
+}
+.container {
+  justify-content: left;
+}
 body {
   margin-bottom: 60px;
-  color:white;
-  background-color: black;
+  color:black;
+  background-color: white;
 }
 h1
 {
   font-family: 'Permanent Marker', cursive;
 }
-.content {
-  border: 5px solid black;
-}
-img {
- max-width: 100%;
-  
-}
-.row
-{
-  object-fit: fill;
-  background-color: black;
-  color: white;
-  
+a {
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  background-color: white;
 }
 
-.button-text-color { 
-  color: white;
+
+img {
+ max-width: 100%;
 }
