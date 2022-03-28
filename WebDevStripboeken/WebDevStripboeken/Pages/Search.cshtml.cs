@@ -57,11 +57,5 @@ public class Search : PageModel
                 Console.WriteLine("pain");
             }
         }
-        //for (int i = 0; i < 5; i++) use foreach dumkoff
-        {
-            //myStripboek add = getResults.ElementAt(1);
-            //showResults1.Add(getResults.ElementAt(1));
-            //Console.WriteLine(add.Titel);
-        }
     }
 }

@@ -4,35 +4,34 @@ namespace WebDevStripboeken.Models;
 
 public class myStripboek
 {
-    public int Boek_id;
-    
+    public int Boek_id { get; set; }
+
     [Required]
-    public string Reeks;
-    
+    public string Reeks { get; set; }
+
+    [Required] 
+    public string Titel { get; set; }
+
     [Required]
-    public string Titel;
-    
+    public string ISBN { get; set; }
+
     [Required]
-    public string ISBN;
-    
-    [Required]
-    [MaxLength(4)]
-    [MinLength(4)]
-    public int Jaar_v_Uitgave;
+    [Range(1000,9999)]
+    public int Jaar_v_Uitgave { get; set; }
+
+    //[Required]
+    //public List<myAuteur> MyAuteurs { get; set; }
     
     //[Required]
-    //public List<myAuteur> MyAuteurs;
-    
-    //[Required]
-    //public List<myTekenaar> MyTekenaars;
-    
+    //public List<myTekenaar> MyTekenaars { get; set; }
+
     [Required]
-    public string Uitgever;
+    public string Uitgever { get; set; }
 
     [Required]
     [Url]
-    public string Afbeelding_urls; //meervoud so maybe List<string>?    Eet db dat gewoon?
+    public string Afbeelding_urls { get; set; }        //meervoud so maybe List<string>?    Eet db dat gewoon?
     
-    public double Waarde_schatting;
-    
+    public double Waarde_schatting { get; set; }
+
 }

@@ -4,7 +4,7 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Toevoegen";
-    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+    //ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 }
 
 <div class="row">
@@ -17,17 +17,17 @@
         </div>
         <div>
             <div>Titel</div>
-            <input asp-for="SuggestStripboek.Titel" type="text" name="titel" placeholder="Titel van Stripboek"/>
+            <input asp-for="SuggestStripboek.Titel" placeholder="Titel van Stripboek"/>
             <span asp-validation-for="SuggestStripboek.Titel"></span>
         </div>
         <div>
             <div>ISBN</div>
-            <input asp-for="SuggestStripboek.ISBN" type="text" name="isbn" placeholder="ISBN nummer van Stripboek"/>
+            <input asp-for="SuggestStripboek.ISBN" placeholder="ISBN nummer van Stripboek"/>
             <span asp-validation-for="SuggestStripboek.ISBN"></span>
         </div>
         <div>
             <div>Jaar van uitgave</div>
-            <input asp-for="SuggestStripboek.Jaar_v_Uitgave" type="number" name="jaar_v_uitgave" placeholder="Jaar waarin Stripboek is uitgegeven"/>
+            <input asp-for="SuggestStripboek.Jaar_v_Uitgave" placeholder="Jaar waarin Stripboek is uitgegeven"/>
             <span asp-validation-for="SuggestStripboek.Jaar_v_Uitgave"></span>
         </div>
         <!--
@@ -36,17 +36,17 @@
         -->
         <div>
             <div>Uitgever</div>
-            <input asp-for="SuggestStripboek.Uitgever" type="text" name="uitgever" placeholder="Uitgever van Stripboek"/>
+            <input asp-for="SuggestStripboek.Uitgever" placeholder="Uitgever van Stripboek"/>
             <span asp-validation-for="SuggestStripboek.Uitgever"></span>
         </div>
         <div>
             <div>Afbeelding</div>
-            <input asp-for="SuggestStripboek.Afbeelding_urls" type="url" name="afbeelding_url" placeholder="URL voor afbeelding van Stripboek"/>
+            <input asp-for="SuggestStripboek.Afbeelding_urls" placeholder="URL voor afbeelding van Stripboek"/>
             <span asp-validation-for="SuggestStripboek.Afbeelding_urls"></span>
         </div>
         <div>
             <div>Waarde van het boek</div>
-            <input asp-for="SuggestStripboek.Waarde_schatting" type="number" name="waarde_schatting" placeholder="Hoe duur is het Stripboek?"/>
+            <input asp-for="SuggestStripboek.Waarde_schatting" placeholder="Hoe duur is het Stripboek?"/>
             <span asp-validation-for="SuggestStripboek.Waarde_schatting"></span>
         </div>
         <button type="submit" asp-page-handler="Toevoegen">Suggereer het stripboek</button>

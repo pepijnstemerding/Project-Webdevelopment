@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
@@ -21,15 +22,20 @@ public class Toevoegen : PageModel
 
     [BindProperty]
     public myStripboek SuggestStripboek { get; set; } //werkt nie echt, geeft amper values mee wil ik wel naar kijken opzich
-    public void OnPostToevoegen()
+    public IActionResult OnPostToevoegen()
     {
         if (!ModelState.IsValid)
         {
-            Console.WriteLine("bruh");
+            var errors = 
+                from value in ModelState.Values
+                where value.ValidationState == ModelValidationState.Invalid
+                select value;
+            return Page();
         }
         else
         {
             ToevoegenRepository.AddOne(SuggestStripboek);
         }
+        return Page();
     }
 }

@@ -23,12 +23,12 @@
             </div>
             <div>
                 <div>Wachtwoord</div>
-                <input asp-for="Account.wachtwoord" placeholder="wachtwoord" min="8" max="32"/>
+                <input asp-for="Account.wachtwoord" type="password" placeholder="wachtwoord" min="8" max="32"/>
                 <span asp-validation-for="Account.wachtwoord"></span>
             </div>
             <div>
                 <div>Bevestig wachtwoord</div>
-                <input asp-for="Account.wachtwoordbevestiging" placeholder="wachtwoord bevestigen" min="8" max="32"/>
+                <input asp-for="Account.wachtwoordbevestiging" type="password" placeholder="wachtwoord bevestigen" min="8" max="32"/>
                 <span asp-validation-for="Account.wachtwoordbevestiging"></span>
             </div>
             <div>
