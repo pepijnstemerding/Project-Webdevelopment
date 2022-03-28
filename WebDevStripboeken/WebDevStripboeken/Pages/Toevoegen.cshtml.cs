@@ -20,7 +20,7 @@ public class Toevoegen : PageModel
     }
 
     [BindProperty]
-    public myStripboek SuggestStripboek { get; set; }
+    public myStripboek SuggestStripboek { get; set; } //werkt nie echt, geeft amper values mee wil ik wel naar kijken opzich
     public void OnPostToevoegen()
     {
         if (!ModelState.IsValid)

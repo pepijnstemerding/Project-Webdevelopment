@@ -34,13 +34,31 @@ public class Home : PageModel
 
     public void OnPostMin([FromForm] int based)
     {
-        myBase = based - defiation;
-        lil = HomeRepository.GetAll(myBase);
+        if (based > 1)
+        {
+            myBase = based - defiation;
+            lil = HomeRepository.GetAll(myBase);
+        }
+        else
+        {
+            myBase = based;
+            lil = HomeRepository.GetAll(myBase);
+        }
+        
     }
     public void OnPostAdd([FromForm] int based)
     {
-        myBase = based + defiation;
-        lil = HomeRepository.GetAll(myBase);
+        if (HomeRepository.GetAll(based + 5).Count == 0)
+        {
+            myBase = based;
+            lil = HomeRepository.GetAll(myBase);
+        }
+        else
+        {
+            myBase = based + defiation;
+            lil = HomeRepository.GetAll(myBase);
+        }
+
     }
 
     public void OnPostReset([FromForm] int based)
