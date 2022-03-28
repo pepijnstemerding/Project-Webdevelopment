@@ -15,6 +15,5 @@ public class ProfileRepository : DBConnection
                 FROM (website.gebruiker)
                WHERE Gebruikersnaam = @Gebruikersnaam LIMIT 1;", parameters);
         return one;
-        //WHERE Gebruikersnaam = '" + x + "' LIMIT 1
     }
 }

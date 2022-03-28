@@ -21,7 +21,7 @@ public class Toevoegen : PageModel
     }
 
     [BindProperty]
-    public myStripboek SuggestStripboek { get; set; } //werkt nie echt, geeft amper values mee wil ik wel naar kijken opzich
+    public myStripboek SuggestStripboek { get; set; }
     public IActionResult OnPostToevoegen()
     {
         if (!ModelState.IsValid)

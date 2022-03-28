@@ -45,7 +45,8 @@ public class Home : PageModel
             myBase = based;
             lil = HomeRepository.GetAll(myBase);
         }
-        
+        if (Request.Cookies["user"] != null)
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
     }
     public void OnPostAdd([FromForm] int based)
     {
@@ -59,12 +60,15 @@ public class Home : PageModel
             myBase = based + defiation;
             lil = HomeRepository.GetAll(myBase);
         }
-
+        if (Request.Cookies["user"] != null)
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
     }
 
     public void OnPostReset([FromForm] int based)
     {
         myBase = 1;
         lil = HomeRepository.GetAll(myBase);
+        if (Request.Cookies["user"] != null)
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
     }
 }

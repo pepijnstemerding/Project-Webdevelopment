@@ -23,6 +23,11 @@ public class StripboekRepository : DBConnection
                 ON (website.getekend_door.Tekenaar_id) = (website.tekenaar.Tekenaar_id)
                 WHERE (website.stripboek.Boek_id) = @Boekid LIMIT 1;";*/
 
+        var IBegSqlIsGood =
+            @"SELECT (stripboek.Afbeelding_urls), (stripboek.Titel), (stripboek.Reeks), (auteur.Naam_Auteur), (tekenaar.Naam_Tekenaar), (stripboek.Jaar_v_Uitgave), (stripboek.ISBN), (stripboek.Waarde_schatting) 
+            FROM (website.stripboek, website.auteur, website.tekenaar, website.geschreven_door, website.getekend_door)
+            WHERE (geschreven_door.Boek_id = @Boekid && geschreven_door.Auteur_id = auteur.Auteur_id) && (getekend_door.Boek_id = @Boekid && getekend_door.Tekenaar_id = tekenaar.Tekenaar_id)";
+
         var sqlStripboek = @"SELECT *
                             FROM (website.stripboek)
                             WHERE Boek_id = @Boekid";
@@ -38,8 +43,9 @@ public class StripboekRepository : DBConnection
                             JOIN (website.tekenaar)
                             ON getekend_door.Tekenaar_id = tekenaar.Tekenaar_id
                             WHERE getekend_door.Boek_id = @Boekid;";
+        
         using var connection = Connect();
-        myStripboek one =  connection.QuerySingle<myStripboek>(sqlStripboek, parameters); //System.InvalidOperationException: Sequence contains no elements (werkt verder prima)
+        myStripboek one = connection.QuerySingle<myStripboek>(IBegSqlIsGood, parameters);
         one.MyAuteurs = connection.Query<myAuteur>(sqlAuteur, parameters).ToList();
         one.MyTekenaars = connection.Query<myTekenaar>(sqlTekenaar, parameters).ToList();
         
