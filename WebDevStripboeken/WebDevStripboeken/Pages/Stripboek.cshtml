@@ -26,7 +26,7 @@
                 }
             }
         </ul>
-        <p>Tekenaar(s): @Model.boek.MyTekenaars</p>
+        <p>Tekenaar(s): </p>
         <ul>
             @{
                 if (@Model.boek.MyTekenaars.Count > 0)
@@ -40,6 +40,7 @@
         </ul>
         <p>Jaar van uitgave: @Model.boek.Jaar_v_Uitgave</p>
         <p>ISBN: @Model.boek.ISBN</p>
+        <p>Geschatte Waarde : $ @Model.boek.Waarde_schatting</p>
         @{
             switch (@Model.currentUser.Gebruikersnaam)
             {
