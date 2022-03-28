@@ -13,7 +13,7 @@ public class StripboekRepository : DBConnection
         using var connection = Connect();
         myStripboek one = connection.QuerySingle<myStripboek>(
             @"SELECT *
-                FROM (website.stripboek)
+                FROM (website.stripboek), (website.auteur),(website.tekenaar)
                 WHERE Boek_id = @Boekid LIMIT 1;", parameters);
         return one;
     }

@@ -12,6 +12,7 @@ public class Stripboek : PageModel
     public myUser currentUser { get; set; }
     public int Boekid { get; set; }
     public myStripboek boek;
+    
     public void OnGet([FromRoute]int boekid)
     {
         if (Request.Cookies["user"] == null)

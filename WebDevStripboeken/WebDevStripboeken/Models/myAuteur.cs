@@ -3,5 +3,5 @@
 public class myAuteur
 {
     
-    public string Auteur_naam;
+    public string Naam_Auteur;
 }
