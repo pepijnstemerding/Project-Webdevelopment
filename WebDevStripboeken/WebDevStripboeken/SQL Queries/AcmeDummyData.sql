@@ -18,7 +18,7 @@ INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (5, 'Damien Hirst');
 INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (6, 'Banksy');
 INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (7, 'Rembrandt');
 INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (8, 'Leonardo Da Vinci');
-INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (9, ' Piet Mondiran'); 
+INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (9, ' Piet Mondiran');
 
 -- Dummy data collectie tabel toevoegen 
 INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('1','Wishlist');
@@ -32,20 +32,6 @@ INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('8','Wishlist');
 INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('9','Wishlist');
 INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('10','Wishlist');
 INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('11','Honors shelf');
-
--- Dummy data collectie tabel toevoegen 
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('1','Wishlist');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('2','TBR');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('3','Already have');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('4','Bookshelf 1');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('5','Wishlist2');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('6','Wishlist');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('7','Wishlist');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('8','Wishlist');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('9','Wishlist');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('10','Wishlist');
-INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('11','Honors shelf');
-
 
 -- Dummy Data Gebruiker tabel
 INSERT INTO Gebruiker(Gebruiker_id,Gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(1,'honor','something@gmail.com','wachtwoord1',1,1,1,'1996-08-24','nee');
@@ -89,16 +75,20 @@ INSERT INTO bezit(Gebruiker_id, Boek_id, Locatie, Status_exemplaar, Gekocht_voor
 
 -- dummy data voor geschreven_door
 INSERT INTO geschreven_door (Boek_id, Auteur_id ) VALUES (1, 1);
+INSERT INTO geschreven_door (Boek_id, Auteur_id ) VALUES (1, 2);
+INSERT INTO geschreven_door (Boek_id, Auteur_id ) VALUES (1, 3);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (2, 2);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (3, 3);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (4, 4);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (5, 5);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (6, 6);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (7, 7);
-INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (8, 8);
+-- INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (8, 8); Cannot add or update a child row: a foreign key constraint fails (`website`.`geschreven_door`, CONSTRAINT `geschreven_door_ibfk_2` FOREIGN KEY (`Auteur_id`) REFERENCES `auteur` (`Auteur_id`))
 
 -- dummy data voor de getekend door tabel 
 INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES (1,1);
+INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES (1,2);
+INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES (1,3);
 INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES (2,2);
 INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES (3,3);
 INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES (4,4);

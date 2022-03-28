@@ -14,10 +14,33 @@
     <div class="col-lg-8 content">
         <p>Titel: @Model.boek.Titel</p>
         <p>Reeks: @Model.boek.Reeks</p>
-        <p>Schrijver(s): @Model.</p>
-        <p>Tekenaar(s): @Model.</p>
+        <p>Schrijver(s): </p>
+        <ul>
+            @{
+                if (@Model.boek.MyAuteurs.Count > 0)
+                {
+                    foreach (myAuteur x in @Model.boek.MyAuteurs)
+                    {
+                        <li>@x.Naam_Auteur</li>
+                    }
+                }
+            }
+        </ul>
+        <p>Tekenaar(s): </p>
+        <ul>
+            @{
+                if (@Model.boek.MyTekenaars.Count > 0)
+                {
+                    foreach (myTekenaar y in @Model.boek.MyTekenaars)
+                    {
+                        <li>@y.Naam_Tekenaar</li>
+                    }
+                }
+            }
+        </ul>
         <p>Jaar van uitgave: @Model.boek.Jaar_v_Uitgave</p>
         <p>ISBN: @Model.boek.ISBN</p>
+        <p>Geschatte Waarde : $ @Model.boek.Waarde_schatting</p>
         @{
             switch (@Model.currentUser.Gebruikersnaam)
             {

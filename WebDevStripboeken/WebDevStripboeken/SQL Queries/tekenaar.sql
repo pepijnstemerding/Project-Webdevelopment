@@ -1,4 +1,5 @@
 -- dummy data tekenaar tabel 
+USE website;
 INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (1, 'Nick Sharrat');
 INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (2, 'Vincent Van Gogh');
 INSERT INTO tekenaar(Tekenaar_id, Naam_Tekenaar) VALUES (3, 'Henri Matisse');

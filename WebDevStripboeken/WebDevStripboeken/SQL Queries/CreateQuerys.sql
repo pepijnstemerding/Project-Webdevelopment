@@ -33,7 +33,7 @@ PRIMARY KEY (`Boek_id`));
 
 CREATE TABLE IF NOT EXISTS `Auteur` (
 `Auteur_id`             INT AUTO_INCREMENT NOT NULL, -- Auteur_id, unique value
-`Naam_Autheur`          VARCHAR(50) NOT NULL,  -- Naam van de auteur
+`Naam_Auteur`          VARCHAR(50) NOT NULL,  -- Naam van de auteur
 PRIMARY KEY (`Auteur_id`));
 
 CREATE TABLE IF NOT EXISTS `Tekenaar` (
