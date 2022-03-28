@@ -14,6 +14,14 @@ html {
   min-height: 100%;
 
 }
+.dropdown-container {
+  position: relative;
+}
+.dropdown-menu{
+  top: 100%;
+  right: 0;
+  margin-left: -100px;
+}
 .container {
   justify-content: left;
 }

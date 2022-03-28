@@ -35,26 +35,29 @@
                     </form>
                 </li>
             </ul>
-            <button class="btn dropdown-toggle, button-text-color navbar-collapse collapse" type="button" id="navbarColor01" data-bs-toggle="dropdown" data-bs-target="navbarColor01" aria-expanded="false">
+            <div class="dropdown">
+            <button class="btn dropdown-toggle button-text-color navbar-collapse collapse" type="button" id="navbarColor01" data-bs-toggle="dropdown" data-bs-target="navbarColor01" aria-expanded="false">
                 Hello @ViewData["User"]
             </button>
+            
 
-            <ul class="dropdown-menu btn-danger" aria-labelledby="navbarColor01">
+                <ul class="dropdown-menu btn-black" aria-labelledby="navbarColor01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                @switch (ViewData["User"])
-                {
-                    case "Guest":
-                        <li><a class="dropdown-item" id="navbarColor01"  href="../login">Log-In</a></li>
-                        break;
-                    default:
+                    @switch (ViewData["User"])
+                    {
+                        case "Guest":
+                            <li><a class="dropdown-item" id="navbarColor01"  href="../login">Log-In</a></li>
+                            break;
+                        default:
 
-                        <li><a class="dropdown-item" id="navbarColor01" href="../profile/@ViewData["User"]">Profile</a></li>
-                        <li><a class="dropdown-item" id="navbarColor01" href="../settings">User settings</a></li>
-                        <li><a class="dropdown-item" id="navbarColor01" href="../toevoegen">Voeg stripboek toe</a></li>
-                        <li><a class="dropdown-item" id="navbarColor01" href="../home?delete">Log-Out</a></li><!--Context.Response.Cookies.Delete("user")-->
-                        break;
-                }
-            </ul>
+                            <li><a class="dropdown-item" id="navbarColor01" href="../profile/@ViewData["User"]">Profile</a></li>
+                            <li><a class="dropdown-item" id="navbarColor01" href="../settings">User settings</a></li>
+                            <li><a class="dropdown-item" id="navbarColor01" href="../toevoegen">Voeg stripboek toe</a></li>
+                            <li><a class="dropdown-item" id="navbarColor01" href="../home?delete">Log-Out</a></li><!--Context.Response.Cookies.Delete("user")-->
+                            break;
+                    }
+                </ul>
+                </div>
         </div>
         </div>
     </nav>
