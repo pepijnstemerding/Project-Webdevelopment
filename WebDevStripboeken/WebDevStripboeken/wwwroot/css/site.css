@@ -12,32 +12,39 @@ html {
 html {
   position: relative;
   min-height: 100%;
-}
 
+}
+.dropdown-container {
+  position: relative;
+}
+.dropdown-menu{
+  top: 100%;
+  right: 0;
+  margin-left: -100px;
+}
+.container {
+  justify-content: left;
+}
 body {
   margin-bottom: 60px;
-  color:white;
-  background-color: black;
+  color:black;
+  background-color: white;
 }
 h1
 {
   font-family: 'Permanent Marker', cursive;
 }
-.content {
-  border: 5px solid black;
+a {
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  background-color: white;
 }
-img {
- max-width: 100%;
-  
-}
-.row
-{
-  object-fit: fill;
-  background-color: black;
-  color: white;
-  
+.dropdown-menu, dropdown-toggle {
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  background-color: white;
 }
 
-.button-text-color { 
-  color: white;
+img {
+ max-width: 100%;
 }

@@ -2,5 +2,5 @@
 
 public class myTekenaar
 {
-    public string Tekenaar_naam;
+    public string Naam_Tekenaar;
 }

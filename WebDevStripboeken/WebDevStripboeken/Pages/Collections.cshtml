@@ -11,16 +11,34 @@
     <h1>COLLECTIONS</h1><h6>(die een gebruiker heeft aangemaakt</h6>
     <div class="col-4 content">
         <ul>
-            @{
+            @*@{
                 foreach (myCollectie x in Model.lil2)
                 {
                     <li><a href="../collectie/@x.Collectie_id">@x.Collectie_naam</a></li> // Link to a gebruiker zijn collecties
                 }
-            }
+            }*@
             <li>Collectie 1</li> 
             <li>Wenslijst 1</li>
         </ul>
     </div>
     <div class="col-4 content">Activity Feed</div>
-    <div class="col-4 content">Recommendations</div>
+    <div class="col-4 content">Recommendations
+        <ul>
+            @{
+                foreach (myStripboek x in Model.lil1)
+                {
+                    <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+                }
+            }
+            <li>Recommendation 1</li> 
+            <li>Recommendation 2</li>
+              
+        </ul>
+         <form method="post">
+                                   <button type="submit" name="Min" asp-page-handler="Min">-</button>
+                                   <button type="submit" name="Add" asp-page-handler="Add">+</button>
+                                   <button type="submit" name="Zero" asp-page-handler="Reset">Reset</button>
+                                   <input type="hidden" name="based" value="@Model.myBase"/>
+                               </form>
+        </div>
 </div>

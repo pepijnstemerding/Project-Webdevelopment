@@ -13,6 +13,7 @@ public class Home : PageModel
     public int myBase = 1;
     private const int defiation = 5;
     public List<myStripboek> lil;
+    
     public void OnGet()
     {
         if (Request.Query.ContainsKey("delete"))
