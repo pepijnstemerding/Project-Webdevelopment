@@ -41,7 +41,7 @@
                 <input asp-for="Account.beveiligingsvraag" placeholder="Beveiligingsvraag"/>
                 <span asp-validation-for="Account.beveiligingsvraag"></span>
             </div>
-            <button type="submit" asp-page-handler="SignUp">Update</button>
+            <button type="submit" asp-page-handler="Update">Update</button>
         </form>
     </div>
 </div>
@@ -61,8 +61,9 @@
     </div>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="flexRadioDefault1" id="Collections_Alleen_ik">
-            <label class="form-check-label" for="Collections_Everyone">Alleen ik
-            </label>
+        <label class="form-check-label" for="Collections_Everyone">Alleen ik
+        </label>
+        <button type="submit" asp-page-handler="Update">Update</button>
         </div>
     <div class="form-check">
         <h3>Wie kunt je profiel in zien?</h3>
@@ -78,7 +79,8 @@
     </div>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="flexRadioDefault2" id="Profile_Alleen_ik">
-            <label class="form-check-label" for="Collections_Everyone">Alleen ik 
-            </label>
+        <label class="form-check-label" for="Collections_Everyone">Alleen ik 
+        </label>
+        <button type="submit" asp-page-handler="Update">Update</button>
         </div>
 </div>

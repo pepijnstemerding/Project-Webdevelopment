@@ -8,38 +8,56 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/WebDevStripboeken.styles.css" asp-append-version="true"/>
+    
+    
 </head>
 <body>
 <header>
-    <div class="row">
-        <div class="col-2 content"><a href="../home"><img src="/Images/Comic Collector1.png" alt="logo"></img></a></div>
-        <div class="col-2 content"><a href="../home"><img src="Images/Comic Collector Home1.png" alt="home"></img></a></div>
-        <div class="col-2 content"><a href="../collections"><img src="/Images/Comic Collector Collections1.png" alt="collections"></img></a></div>
-
-        <div class="col-4 content"><a href="../search"><input name="searchbar" required="" size="40" autocapitalize="off" autocomplete="off" type="text" class="form-control" placeholder="Doorzoek de database"></a></div>
-
-        
-
-        <div class="col-2 content">
-            <button class="btn dropdown-toggle, button-text-color" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom p-0">
+        <div class="container">
+        <a class="navbar-brand navbar-collapse collapse" href="../home"><img src="/Images/Comic Collector1.png" width="400" height="100" alt="logo"></img></a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../collections">Collections</a>
+                </li>
+                <li>
+                    <form class="form-inline navbar-collapse collapse" id="navbarColor01">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Doorzoek de database" aria-label="Search">
+                        <a href="../search"></a>
+                        <button class="btn btn-outline-success my-2 my-sm-0 navbar-collapse collapse" type="submit">Zoek</button>
+                    </form>
+                </li>
+            </ul>
+            <button class="btn dropdown-toggle, button-text-color navbar-collapse collapse" type="button" id="navbarColor01" data-bs-toggle="dropdown" data-bs-target="navbarColor01" aria-expanded="false">
                 Hello @ViewData["User"]
             </button>
-            <ul class="dropdown-menu btn-danger" aria-labelledby="dropdownMenuButton1">
+
+            <ul class="dropdown-menu btn-danger" aria-labelledby="navbarColor01">
+
                 @switch (ViewData["User"])
                 {
                     case "Guest":
-                        <li><a class="dropdown-item" href="../login">Log-In</a></li>
+                        <li><a class="dropdown-item" id="navbarColor01"  href="../login">Log-In</a></li>
                         break;
                     default:
-                        <li><a class="dropdown-item" href="../profile/@ViewData["User"]">Profile</a></li>
-                        <li><a class="dropdown-item" href="../settings">User settings</a></li>
-                        <li><a class="dropdown-item" href="../toevoegen">Voeg stripboek toe</a></li>
-                        <li><a class="dropdown-item" href="../home?delete">Log-Out</a></li><!--Context.Response.Cookies.Delete("user") -->
+
+                        <li><a class="dropdown-item" id="navbarColor01" href="../profile/@ViewData["User"]">Profile</a></li>
+                        <li><a class="dropdown-item" id="navbarColor01" href="../settings">User settings</a></li>
+                        <li><a class="dropdown-item" id="navbarColor01" href="../toevoegen">Voeg stripboek toe</a></li>
+                        <li><a class="dropdown-item" id="navbarColor01" href="../home?delete">Log-Out</a></li><!--Context.Response.Cookies.Delete("user")-->
                         break;
                 }
             </ul>
         </div>
-    </div>
+        </div>
+    </nav>
 </header>
 
 <div class="container">
@@ -53,11 +71,8 @@
         &copy; 2022 - WebDevStripboeken - <a asp-area="" asp-page="/Privacy">Privacy</a>
     </div>
 </footer>
-
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
-
-@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

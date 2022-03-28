@@ -3,17 +3,18 @@ using WebDevStripboeken.Models;
 
 namespace WebDevStripboeken.Repository;
 
-public class CollectieRepository : DBConnection
+/*public class CollectieRepository : DBConnection
 
 {
-    public static List<myCollectie> GetAll()
+    public static List<myCollectie> (string b)
     {
+        var parameters = new {Gebruikersnaam = b};
         using var connection = Connect();
 
         IEnumerable<myCollectie> all1 = connection.Query<myCollectie>(
-            @"SELECT *
-                FROM (website.collectie)
-                WHERE Collectie_naam = 'Wishlist';");
+            @"SELECT Collectie_naam
+                FROM (website.collectie), (website.gebruiker)
+                WHERE Gebruikersnaam = @Gebruikersnaam LIMIT 1;", parameters);
         return all1.ToList();
     }
-}
+}*/

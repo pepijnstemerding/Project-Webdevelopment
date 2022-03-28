@@ -8,10 +8,14 @@ namespace WebDevStripboeken.Pages;
 
 public class Collections : PageModel
 {
-    
-    [BindProperty(SupportsGet = true)]  //global get
+
+    [BindProperty(SupportsGet = true)] //global get
     public myCollectie currentUser { get; set; }
-    public List<myCollectie> lil2 = CollectieRepository.GetAll();
+    public int myBase = 1;
+    private const int defiation = 5;
+    public List<myStripboek> lil1;
+    
+
     public void OnGet()
     {
         if (Request.Query.ContainsKey("delete"))
@@ -23,13 +27,27 @@ public class Collections : PageModel
         }
         else
         {
-            string jsonUser = Request.Cookies["user"];
-            if (jsonUser == null) //sets first cookie
-            {
-                jsonUser = myUser.setCookies();
-            }
-
-            currentUser = JsonConvert.DeserializeObject<myCollectie>(jsonUser);
+            if (Request.Cookies["user"] == null)
+            { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
+            else
+            { currentUser = JsonConvert.DeserializeObject<myCollectie>(Request.Cookies["user"]); }
         }
+        lil1 = HomeRepository.GetAll(myBase);
+    }
+    public void OnPostMin([FromForm] int based)
+    {
+        myBase = based - defiation;
+        lil1 = HomeRepository.GetAll(myBase);
+    }
+    public void OnPostAdd([FromForm] int based)
+    {
+        myBase = based + defiation;
+        lil1 = HomeRepository.GetAll(myBase);
+    }
+
+    public void OnPostReset([FromForm] int based)
+    {
+        myBase = 1;
+        lil1 = HomeRepository.GetAll(myBase);
     }
 }
