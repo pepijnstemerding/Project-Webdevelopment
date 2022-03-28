@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `Gebruiker` (
 `Gebruiker_id`                INT AUTO_INCREMENT NOT NULL,            -- Gebruiker_id
 `Gebruikersnaam`              VARCHAR(32) NOT NULL UNIQUE,            -- Gebruikersnaam
 `Email`                       VARCHAR(100) NOT NULL,                  -- Email van de gebruiker
-`Wachtwoord`                  VARCHAR(30) NOT NULL,                   -- Wachtwoord van de gebruiker
+`Wachtwoord`                  VARCHAR(32) NOT NULL,                   -- Wachtwoord van de gebruiker
 `Is_admin`                    BOOL NOT NULL DEFAULT 0,                -- Of de gebruiker administrator permissies heeft
 `Profiel_zichtbaarheid`       TINYINT UNSIGNED NOT NULL DEFAULT 1,    -- 0 als niemand je naam en geboortedatum kan zien, 1 als iedereen hem kan zien (uitbreid mogenlijkheid)
 `Collectie_zichtbaarheid`     TINYINT UNSIGNED NOT NULL DEFAULT 1,    -- 0 als niemand je collecties kan zien, 1 als iedereen ze kan zien
