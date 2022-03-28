@@ -15,7 +15,7 @@ public class HomeRepository : DBConnection
         IEnumerable<myStripboek> all = connection.Query<myStripboek>(
             @"SELECT *
                 FROM (website.stripboek)
-                WHERE Boek_id >= @Min AND Boek_id < @Max;", parameters);
+                WHERE Boek_id >= @Min AND Boek_id < @Max AND Goedgekeurd = 1;", parameters);
         return all.ToList();
     }
 }
