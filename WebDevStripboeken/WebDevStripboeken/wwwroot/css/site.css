@@ -12,7 +12,7 @@ html {
   min-height: 100%;
   font-size: 20px;
   font-family: 'Permanent Marker', cursive;
-  font-weight: strong; 
+ 
 
 }
 .dropdown-container {
@@ -29,7 +29,7 @@ html {
 }
 body {
   margin-bottom: 60px;
-  color: #1d0dd9;
+  color: black;
   background-color: white;
   width: 100%;
   height: auto;
@@ -38,21 +38,24 @@ body {
   background-repeat: no-repeat;
   font-size: 20px;
   font-family: 'Permanent Marker', cursive;
-  font-weight: strong;
+  
 }
 
+ul {
+list-style-type: none; 
+}
 h1
 {
   font-family: 'Permanent Marker', cursive;
 }
 a:link {
   text-decoration: none;
-  color: #1504d7;
+  color: black;
 }
 
 a:visited {
   text-decoration: none;
-  color: #1504d7;
+  color: black;
 }
 
 a:hover {
@@ -64,8 +67,8 @@ a:active {
   text-decoration: none;
   color: #617181;
 }
-}
-.dropdown-menu, dropdown-toggle {
+
+.dropdown-menu{
   font-family: 'Permanent Marker', cursive;
   color: #1d0dd9;
   background-color: white;
