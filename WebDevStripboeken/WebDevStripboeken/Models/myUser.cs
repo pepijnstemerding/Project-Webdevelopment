@@ -7,7 +7,7 @@ namespace WebDevStripboeken.Models;
 [BindProperties]
 public class myUser
 {
-    
+    public int Gebruiker_id { get; set; }
     public string Gebruikersnaam { get; set; } = "Guest";
     public string Email { get; set; }
     public string Wachtwoord { get; set; }

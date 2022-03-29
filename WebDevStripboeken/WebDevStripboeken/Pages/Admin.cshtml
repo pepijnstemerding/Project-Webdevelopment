@@ -12,7 +12,13 @@
         @{
             foreach (var x in @Model.listUsers)
             {
-                <li>@x.Gebruikersnaam -- @x.Geboorte_datum -- @x.Email</li>
+                <li>@x.Gebruikersnaam -- @x.Geboorte_datum -- @x.Email
+                    <form>
+                        <!--<button type="submit" name="promote"></button>-->
+                        <input type="hidden" name="id" value="@x.Gebruiker_id"/>
+                        <button type="submit" name="delete" asp-page-handler="DelUser">Verwijder Gebruiker</button>
+                    </form>
+                </li>
             }
         }
     </ul>
@@ -22,7 +28,13 @@
         @{
             foreach (var x in @Model.listStripboek)
             {
-                <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+                <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a>
+                    <form method="post">
+                        <button type="submit" name="accept" asp-page-handler="AccBoek">Accepteer stripboek</button>
+                        <input type="hidden" name="id" value="@x.Boek_id"/>
+                        <button type="submit" name="delete" asp-page-handler="DelBoek">Verwijder stripboek</button>
+                    </form>
+                </li>
             }
         }
     </ul>

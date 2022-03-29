@@ -49,28 +49,28 @@ CREATE TABLE IF NOT EXISTS `Bezit` (
 `Status_exemplaar` TINYTEXT,     -- De status/qualiteit van het fysieke exemplaar
 `Gekocht_voor`     DOUBLE,       -- De prijs waarvoor de gebruiker het boek heeft gekocht
 PRIMARY KEY (`Boek_id`, `Gebruiker_id`),
-FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
-FOREIGN KEY (`Gebruiker_id`) REFERENCES `Gebruiker`(`Gebruiker_id`));
+FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`) ON DELETE CASCADE,
+FOREIGN KEY (`Gebruiker_id`) REFERENCES `Gebruiker`(`Gebruiker_id`) ON DELETE CASCADE);
 
 CREATE TABLE IF NOT EXISTS `Zit_in` (
 `Boek_id`       INT NOT NULL,
 `Collectie_id`  INT NOT NULL,
 `Gebruiker_id`  INT NOT NULL, 
 PRIMARY KEY (`Boek_id`, `Collectie_id`, `Gebruiker_id`),
-FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
+FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`) ON DELETE CASCADE ,
 FOREIGN KEY (`Collectie_id`) REFERENCES `Collectie`(`Collectie_id`),
-FOREIGN KEY (`Gebruiker_id`) REFERENCES `Gebruiker`(`Gebruiker_id`));
+FOREIGN KEY (`Gebruiker_id`) REFERENCES `Gebruiker`(`Gebruiker_id`) ON DELETE CASCADE);
 
 CREATE TABLE IF NOT EXISTS `Getekend_door` (
 `Boek_id`       INT NOT NULL,       -- ID van het boek getekend door de tekenaar
 `Tekenaar_id`   INT NOT NULL,  -- Id van de tekenaar
 PRIMARY KEY (`Tekenaar_id`, `Boek_id`),
-FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
+FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`) ON DELETE CASCADE ,
 FOREIGN KEY (`Tekenaar_id`) REFERENCES `Tekenaar`(`Tekenaar_id`));
 
 CREATE TABLE IF NOT EXISTS `Geschreven_door` (
 `Boek_id`       INT NOT NULL,       -- ID van het boek geschreven door de auteur
 `Auteur_id`  INT NOT NULL,  -- Id van de auteur
 PRIMARY KEY (`Auteur_id`, `Boek_id`),
-FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`),
+FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`) ON DELETE CASCADE ,
 FOREIGN KEY (`Auteur_id`) REFERENCES `Auteur`(`Auteur_id`));

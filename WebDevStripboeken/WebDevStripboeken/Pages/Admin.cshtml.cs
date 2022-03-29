@@ -32,7 +32,23 @@ public class Admin : PageModel
         }
 
         return Redirect("../home");
+    }
 
+    public void OnPostDelUser([FromForm] int id)
+    {
+        AdminRepository.delUser(id);
+        listUsers = AdminRepository.GetUsers();
+    }
 
+    public void OnPostDelBoek([FromForm] int id)
+    {
+        AdminRepository.delBoek(id);
+        listStripboek = AdminRepository.GetBoeken();
+    }
+
+    public void OnPostAccBoek([FromForm] int id)
+    {
+        AdminRepository.accBoek(id);
+        listStripboek = AdminRepository.GetBoeken();
     }
 }
