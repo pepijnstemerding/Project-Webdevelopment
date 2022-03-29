@@ -13,6 +13,7 @@ public class Home : PageModel
     public int myBase = 1;
     private const int defiation = 5;
     public List<myStripboek> lil;
+    public string message;
     
     public void OnGet()
     {
@@ -21,6 +22,7 @@ public class Home : PageModel
             Console.WriteLine("yay");
             HttpContext.Response.Cookies.Delete("user");
             //myUser.delCookies();
+            message = "bye bye";
             currentUser = new myUser();
         }
         else

@@ -13,6 +13,8 @@ public class LogIn : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
+
+    public string message;
     public void OnGet()
     {
         if (Request.Cookies["user"] == null)
@@ -34,10 +36,12 @@ public class LogIn : PageModel
             Response.Cookies.Append("user", json);
 
             currentUser = coockieUser;
+            message = "Welkom terug " + currentUser.Gebruikersnaam;
             return Page();
         }
         else
         {
+            message = "Invalid log-in gegevens.";
             return Page();
         }
     }
