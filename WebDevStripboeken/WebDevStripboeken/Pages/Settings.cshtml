@@ -14,22 +14,22 @@
         <form method="post">
             <div>
                 <div>Gebruikersnaam</div>
-                <input asp-for="Account.gebruikersnaam" placeholder="Gebruikersnaam"/>
+                <input asp-for="Account.gebruikersnaam" placeholder="Gebruikersnaam" min="2" max="32"/>
                 <span asp-validation-for="Account.gebruikersnaam"></span>
             </div>
             <div>
                 <div>Email</div> 
-                <input asp-for="Account.email" placeholder="Email"/>
+                <input asp-for="Account.email" placeholder="Email" min="8" max="100"/>
                 <span asp-validation-for="Account.email"></span>
             </div>
             <div>
                 <div>Wachtwoord</div>
-                <input asp-for="Account.wachtwoord" placeholder="Wachtwoord"/>
+                <input asp-for="Account.wachtwoord" placeholder="Wachtwoord" min="8" max="32"/>
                 <span asp-validation-for="Account.wachtwoord"></span>
             </div>
             <div>
                 <div>Bevestig wachtwoord</div>
-                <input asp-for="Account.wachtwoordbevestiging" placeholder="Wachtwoord bevestigen"/>
+                <input asp-for="Account.wachtwoordbevestiging" placeholder="Wachtwoord bevestigen" min="8" max="32"/>
                 <span asp-validation-for="Account.wachtwoordbevestiging"></span>
             </div>
             <div>
@@ -39,7 +39,7 @@
             </div>
             <div>
                 <div>Beveiligingsvraag: Wat is de naam van je laatste huisdier?</div>
-                <input asp-for="Account.beveiligingsvraag" placeholder="Beveiligingsvraag"/>
+                <input asp-for="Account.beveiligingsvraag" placeholder="Beveiligingsvraag" min="2" max="20"/>
                 <span asp-validation-for="Account.beveiligingsvraag"></span>
             </div>
             <button type="submit" asp-page-handler="Update">Update</button>

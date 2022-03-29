@@ -29,9 +29,12 @@
                 </li>
                 <li>
                     <form class="form-inline navbar-collapse collapse" id="navbarColor01">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Doorzoek de database" aria-label="Search">
-                        <a href="../search"></a>
-                        <button class="btn btn-outline-success my-2 my-sm-0 navbar-collapse collapse" type="submit">Zoek</button>
+                        <a href="../search">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Doorzoek de database" aria-label="Search">
+                        </a>
+                        <!--<a href="../search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0 navbar-collapse collapse" type="submit">Zoek</button>
+                        </a>-->
                     </form>
                 </li>
             </ul>
@@ -62,12 +65,13 @@
         </div>
     </nav>
 </header>
-
 <div class="container">
     <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
+        <div class="backgroundimg">
+            @RenderBody()
+        </div></main>
 </div>
+
 
 <footer class="border-top footer text-muted">
     <div class="container">
@@ -77,5 +81,6 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+
 </body>
 </html>

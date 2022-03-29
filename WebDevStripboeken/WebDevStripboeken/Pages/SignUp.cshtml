@@ -13,12 +13,12 @@
         <form method="post">
             <div>
                 <div>Gebruikersnaam</div>
-                <input asp-for="Account.gebruikersnaam" placeholder="gebruikersnaam" min="2" max="30"/>
+                <input asp-for="Account.gebruikersnaam" placeholder="gebruikersnaam" min="2" max="32"/>
                 <span asp-validation-for="Account.gebruikersnaam"></span>
             </div>
             <div>
                 <div>Email</div> 
-                <input asp-for="Account.email" placeholder="email" min="8" max="50"/>
+                <input asp-for="Account.email" placeholder="email" min="8" max="100"/>
                 <span asp-validation-for="Account.email"></span>
             </div>
             <div>
@@ -38,7 +38,7 @@
             </div>
             <div>
                 <div>Beveiligingsvraag: wat is de naam van je laatste huisdier?</div>
-                <input asp-for="Account.beveiligingsvraag" placeholder="beveiligingsvraag" min="2" max="32"/>
+                <input asp-for="Account.beveiligingsvraag" placeholder="beveiligingsvraag" min="2" max="20"/>
                 <span asp-validation-for="Account.beveiligingsvraag"></span>
             </div>
             <button type="submit" asp-page-handler="SignUp">Sign Up</button>
