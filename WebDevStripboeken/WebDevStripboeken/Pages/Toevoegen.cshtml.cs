@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.Web;
+using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -22,7 +23,7 @@ public class Toevoegen : PageModel
 
     [BindProperty]
     public myStripboek SuggestStripboek { get; set; }
-    public IActionResult OnPostToevoegen()
+    public IActionResult OnPostToevoegen([FromForm] string AuteursString, string TekenaarsString)
     {
         if (!ModelState.IsValid)
         {
@@ -34,7 +35,10 @@ public class Toevoegen : PageModel
         }
         else
         {
-            ToevoegenRepository.AddOne(SuggestStripboek);
+
+            List<string> AuteurList = new List<string>(AuteursString.Split(", "));
+            List<string> TekenaarList = new List<string>(TekenaarsString.Split(", "));
+            ToevoegenRepository.AddOne(SuggestStripboek, AuteurList, TekenaarList);
         }
         return Page();
     }
