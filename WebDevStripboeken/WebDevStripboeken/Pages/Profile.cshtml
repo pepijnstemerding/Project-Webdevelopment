@@ -21,14 +21,15 @@
             <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">i dare you</a></li>
         </ul>
     </div>
-    <div class="col-4 content"><h1>Profile info</h1>
+    <div class="col-4 content">
+        <h1>Profile info</h1>
         <p>Gebruikersnaam : @Model.currentUser.Gebruikersnaam</p>
         <p>Email : @Model.currentUser.Email</p>
-        <p>Geboortedatum : @Model.currentUser.Geboorte_datum</p>
+        <p>Geboortedatum : @Model.currentUser.Geboorte_datum.ToString("d")</p>
         @{
             if (@Model.currentUser.Is_admin == 1)
             {
-                <h3>ADMIN SETTINGS</h3>
+                <h1>ADMIN SETTINGS</h1>
                 <p><a href="../admin/">maakt niet uit</a></p>
                 <p><a href="../admin/">maakt niet uit</a></p>
             }

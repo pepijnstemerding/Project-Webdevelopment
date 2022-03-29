@@ -14,31 +14,46 @@ html {
   min-height: 100%;
 
 }
+
 .dropdown-container {
   position: relative;
 }
+
 .dropdown-menu{
   top: 100%;
   right: 0;
   margin-left: -100px;
 }
+
 .container {
   justify-content: left;
 }
+
 body {
   margin-bottom: 60px;
   color:black;
   background-color: white;
 }
-h1
-{
+
+h1 {
   font-family: 'Permanent Marker', cursive;
+  font-size: 45px;
 }
+
+h3 {
+  padding: 10px;
+}
+
+h4 {
+  padding: 5px;
+}
+
 a {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Roboto', sans-serif;
   color: black;
-  background-color: white;
+  text-decoration: none;
 }
+
 .dropdown-menu, dropdown-toggle {
   font-family: 'Permanent Marker', cursive;
   color: black;
@@ -47,4 +62,9 @@ a {
 
 img {
  max-width: 100%;
+}
+
+.field-validation-error {
+  color:red;
+  font-size: smaller;
 }

@@ -13,6 +13,8 @@ public class myStripboek
     public string Titel { get; set; }
 
     [Required]
+    [MinLength(13)]
+    [MaxLength(13)]
     public string ISBN { get; set; }
 
     [Required]
@@ -28,7 +30,6 @@ public class myStripboek
     [Required]
     public string Uitgever { get; set; }
 
-    [Required]
     [Url]
     public string Afbeelding_urls { get; set; }        //meervoud so maybe List<string>?    Eet db dat gewoon?
     
