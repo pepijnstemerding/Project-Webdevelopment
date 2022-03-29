@@ -27,6 +27,7 @@ public class StripboekRepository : DBConnection
             @"SELECT (stripboek.Afbeelding_urls), (stripboek.Titel), (stripboek.Reeks), (auteur.Naam_Auteur), (tekenaar.Naam_Tekenaar), (stripboek.Jaar_v_Uitgave), (stripboek.ISBN), (stripboek.Waarde_schatting) 
             FROM (website.stripboek, website.auteur, website.tekenaar, website.geschreven_door, website.getekend_door)
             WHERE (geschreven_door.Boek_id = @Boekid && geschreven_door.Auteur_id = auteur.Auteur_id) && (getekend_door.Boek_id = @Boekid && getekend_door.Tekenaar_id = tekenaar.Tekenaar_id)";
+        //dafuq jason??
 
         var sqlStripboek = @"SELECT *
                             FROM (website.stripboek)
@@ -43,14 +44,12 @@ public class StripboekRepository : DBConnection
                             JOIN (website.tekenaar)
                             ON getekend_door.Tekenaar_id = tekenaar.Tekenaar_id
                             WHERE getekend_door.Boek_id = @Boekid;";
-        
+
         using var connection = Connect();
-        myStripboek one = connection.QuerySingle<myStripboek>(IBegSqlIsGood, parameters);
+        myStripboek one = connection.QuerySingle<myStripboek>(sqlStripboek, parameters);
         one.MyAuteurs = connection.Query<myAuteur>(sqlAuteur, parameters).ToList();
         one.MyTekenaars = connection.Query<myTekenaar>(sqlTekenaar, parameters).ToList();
-        
+
         return one;
     }
-    //dont work, QuerySingle geeft een enkele rij terug. Dit werkt dus niet met de lijsten myTekenaars en myAuteurs
-    //mogelijke oplossing zou zijn om lijsten appart op te halen en dan in one te zetten.
 }
