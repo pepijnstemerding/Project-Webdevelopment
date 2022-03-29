@@ -1,0 +1,63 @@
+﻿@page
+@using WebDevStripboeken.Pages.Shared
+@model WebDevStripboeken.Pages.Search
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Search";
+    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+}
+
+<div class="row">
+    <div class="col-lg-3">
+        <form method="post" id="search">
+            <label for="search"></label>
+            <select name="catagorie" required="required">
+                <option value="Reeks">Reeks</option>
+                <option value="Titel">Titel</option>
+                <option value="Uitgever">Uitgever</option>
+                <option value="ISBN">ISBN</option>
+                <option value="Jaar">Jaar van Uitgave</option>
+                <option value="Auteur">Auteur</option>
+                <option value="Tekenaar">Tekenaar</option>
+            </select>
+            <input type="text" name="query" placeholder="Wat zoekt u?"/>
+            <input type="submit"/>
+        </form>
+    </div>
+    <div class="col-lg-3">
+        <ul>
+            @{
+                if (Model.PostMethod && @Model.showResults1.Count > 0)
+                {
+                    foreach (myStripboek x in @Model.showResults1)
+                    {
+                        <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+    <div class="col-lg-3">
+        @{
+            if (Model.PostMethod && @Model.showResults2.Count > 0)
+            {
+                foreach (myStripboek x in @Model.showResults2)
+                {
+                    <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+                }
+            }
+        }
+    </div>
+    <div class="col-lg-3">
+        @{
+            if (Model.PostMethod && @Model.showResults3.Count > 0)
+            {
+                foreach (myStripboek x in @Model.showResults3)
+                {
+                    <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+                }
+            }
+        }
+    </div>
+</div>

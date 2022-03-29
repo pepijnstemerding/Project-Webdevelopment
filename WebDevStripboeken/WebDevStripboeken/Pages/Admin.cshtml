@@ -1,0 +1,29 @@
+﻿@page
+@model WebDevStripboeken.Pages.Admin
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Profile";
+    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+}
+
+<div class="col-lg-6">
+    <ul>
+        @{
+            foreach (var x in @Model.listUsers)
+            {
+                <li>@x.Gebruikersnaam -- @x.Geboorte_datum -- @x.Email</li>
+            }
+        }
+    </ul>
+</div>
+<div class="col-lg-6">
+    <ul>
+        @{
+            foreach (var x in @Model.listStripboek)
+            {
+                <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+            }
+        }
+    </ul>
+</div>

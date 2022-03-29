@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 html {
   font-size: 14px;
 }
@@ -11,8 +12,39 @@ html {
 html {
   position: relative;
   min-height: 100%;
-}
 
+}
+.dropdown-container {
+  position: relative;
+}
+.dropdown-menu{
+  top: 100%;
+  right: 0;
+  margin-left: -100px;
+}
+.container {
+  justify-content: left;
+}
 body {
   margin-bottom: 60px;
+  color:black;
+  background-color: white;
+}
+h1
+{
+  font-family: 'Permanent Marker', cursive;
+}
+a {
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  background-color: white;
+}
+.dropdown-menu, dropdown-toggle {
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  background-color: white;
+}
+
+img {
+ max-width: 100%;
 }

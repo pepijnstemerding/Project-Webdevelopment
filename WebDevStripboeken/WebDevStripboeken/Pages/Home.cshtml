@@ -1,22 +1,31 @@
-﻿@page
+﻿@page "/Home"
 @model WebDevStripboeken.Pages.Home
 
 @{
-    Layout = null;
-}
+    Layout = "_Layout";
+    ViewData["Title"] = "Home";
+    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+    
+} 
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
 <div class="row">
-    <p>lorem ipsum</p>
+    <h1>ALLE STRIPBOEKEN</h1><h6>(in de hele database...)</h6> 
+    <div class="col-4 content">
+        <ul>
+            @{
+                foreach (myStripboek x in Model.lil)
+                {
+                    <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a></li>
+                }
+            }
+        </ul>
+        <form method="post">
+            <button type="submit" name="Min" asp-page-handler="Min">-</button>
+            <button type="submit" name="Add" asp-page-handler="Add">+</button>
+            <button type="submit" name="Zero" asp-page-handler="Reset">Reset</button>
+            <input type="hidden" name="based" value="@Model.myBase"/>
+        </form>
+    </div>
+    <div class="col-4 content">Activity Feed</div>
+    <div class="col-4 content">Recommendations</div>
 </div>
-<div class="row">
-    <p>lorem ipsum</p>
-</div>
-</body>
-</html>

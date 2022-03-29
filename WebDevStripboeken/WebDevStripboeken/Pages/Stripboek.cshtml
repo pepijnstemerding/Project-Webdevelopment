@@ -1,0 +1,57 @@
+﻿@page "{Boekid}"
+@model WebDevStripboeken.Pages.Stripboek
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Log-In";
+    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+}
+
+<div class="row">
+    <div class="col-lg-4 content" style="display: flex; flex-wrap: wrap">
+        <img src="@Model.boek.Afbeelding_urls" style="width: fit-content"> <!-- picture's hebben white borders, dunno hoe te centeren -->
+    </div>
+    <div class="col-lg-8 content">
+        <p>Titel: @Model.boek.Titel</p>
+        <p>Reeks: @Model.boek.Reeks</p>
+        <p>Schrijver(s): </p>
+        <ul>
+            @{
+                if (@Model.boek.MyAuteurs.Count > 0)
+                {
+                    foreach (myAuteur x in @Model.boek.MyAuteurs)
+                    {
+                        <li>@x.Naam_Auteur</li>
+                    }
+                }
+            }
+        </ul>
+        <p>Tekenaar(s): </p>
+        <ul>
+            @{
+                if (@Model.boek.MyTekenaars.Count > 0)
+                {
+                    foreach (myTekenaar y in @Model.boek.MyTekenaars)
+                    {
+                        <li>@y.Naam_Tekenaar</li>
+                    }
+                }
+            }
+        </ul>
+        <p>Jaar van uitgave: @Model.boek.Jaar_v_Uitgave</p>
+        <p>ISBN: @Model.boek.ISBN</p>
+        <p>Geschatte Waarde : $ @Model.boek.Waarde_schatting</p>
+        @{
+            switch (@Model.currentUser.Gebruikersnaam)
+            {
+                case "Guest":
+                    <p>Wil je dit werk toevoegen aan een van jouw collecties? <a href="../login">Log hier in!</a></p>
+                    break;
+                default:
+                    <p>Toevoegen aan collectie:</p>
+                    <ul class="dropdown-menu"></ul>
+                    break;
+            }
+        }
+    </div>
+</div>
