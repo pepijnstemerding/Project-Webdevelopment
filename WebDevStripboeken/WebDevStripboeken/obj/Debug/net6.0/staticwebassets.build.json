@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PvyNIIuBMg5R+ubXCigWb1Ba7QBFwS1RIWFBf473mZk=",
+  "Hash": "0u8w4i37nqGNPsjvtQvua6xmkjjVb67VXj1rrUsJ5Hc=",
   "Source": "WebDevStripboeken",
   "BasePath": "_content/WebDevStripboeken",
   "Mode": "Default",
@@ -35817,6 +35817,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\comic grayscale.jpg"
+    },
+    {
+      "Identity": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\wwwroot\\Images\\grayscale_transparent1.jpg",
+      "SourceId": "WebDevStripboeken",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\wwwroot\\",
+      "BasePath": "_content/WebDevStripboeken",
+      "RelativePath": "Images/grayscale_transparent1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\grayscale_transparent1.jpg"
     },
     {
       "Identity": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\wwwroot\\js\\site.js",
