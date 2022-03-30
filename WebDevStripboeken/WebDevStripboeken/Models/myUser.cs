@@ -16,7 +16,6 @@ public class myUser
     public int Collectie_zichtbaarheid { get; set; }
     public DateTime Geboorte_datum { get; set; }
     public string Beveiligingsvraag { get; set; }
-
     
     
     public static string setCookies()
