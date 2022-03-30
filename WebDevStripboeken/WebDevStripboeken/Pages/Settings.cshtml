@@ -27,11 +27,6 @@
                     <input id="wachtwoord" class="form-control" asp-for="Account.wachtwoord" placeholder="Wachtwoord"/>
                     <span asp-validation-for="Account.wachtwoord"></span>
                 </div>
-            <label for="wachtwoord_bevestigen" class="form-label">Wachtwoord bevestigen:</label>
-                <div class="input-group mb-3">
-                    <input id="wachtwoord_bevestigen" class="form-control" asp-for="Account.wachtwoordbevestiging" placeholder="Wachtwoord bevestigen"/>
-                    <span asp-validation-for="Account.wachtwoordbevestiging"></span>
-                </div>
             <label for="geboortedatum" class="form-label">Geboortedatum:</label>
                 <div class="input-group mb-3">
                     <input id="geboortedatum" class="form-control" type="date" asp-for="Account.geboortedatum" asp-format="{0:yyyy-MM-dd}" placeholder="Geboortedatum" value="0"/>
