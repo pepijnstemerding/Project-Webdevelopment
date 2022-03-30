@@ -4,14 +4,14 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Your Collections";
-    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+    ViewData["User"] = @Model.currentUserCookie.Gebruikersnaam;
 }
 
 <div class="row">
     <div class="col-4 content">
         <h2>Collecties</h2>
         <ul>
-            { @*
+            @*{ 
                 foreach (myCollectie x in Model.lil2)
                 {
                     <li><a href="../collectie/@x.Collectie_id">@x.Collectie_naam</a></li> <!--Link naar een gebruiker zijn collecties-->
