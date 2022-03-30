@@ -11,6 +11,10 @@
     <h2>Instellingen</h2>
     <h3>Profiel Instellingen</h3>
     <div class="col-12 content">
+        <form method="post">
+            <div>Gebruikersnaam wijzigen</div>
+            <input type="text" name="gebruikersnaam" placeholder="Nieuwe gebruikersnaam"/>
+            <button type="submit" asp-page-handler="UpdateGebruikersnaam">Update</button>
         <form method="post" class="needs-validation" novalidate>
             <label for="gebruikersnaam" class="form-label">Gebruikersnaam:</label>
             <div class="input-group mb-3">
@@ -45,6 +49,27 @@
 
             <button class="btn btn-outline-secondary" type="submit" asp-page-handler="Update"><i class="fa-solid fa-pen fa-fw"></i>Update</button>
         </form>
+        <form method="post">
+            <div>Email wijzigen</div>
+            <input type="text" name="email" placeholder="Nieuwe email"/>
+            <button type="submit" asp-page-handler="UpdateEmail">Update</button>
+        </form>    
+        <form method="post">
+            <div>Wachtwoord wijzigen</div>
+            <input type="password" name="wachtwoord" placeholder="Nieuwe wachtwoord"/>
+            <button type="submit" asp-page-handler="UpdateWachtwoord">Update</button>
+        </form>
+        <form method="post">
+            <div>Geboortedatum wijzigen</div>
+            <input type="date" name="geboortedatum" placeholder="Nieuwe geboortedatum" asp-format="{0:yyyy:MM:dd}"/>
+            <button type="submit" asp-page-handler="UpdateGeboortedatum">Update</button>
+        </form>
+        <form method="post">
+            <div>Wat is de naam van je laatste huisdier?</div>
+            <input type="text" name="beveiligingsvraag" placeholder="Antwoord beveiligingsvraag"/>
+            <button type="submit" asp-page-handler="UpdateBeveiligingsvraag">Update</button>
+        </form>
+        
     </div>
 
     <h3>Privacy Instellingen</h3> <!--Privacy settings houdt in wie een collectie of een profile kan zien-->

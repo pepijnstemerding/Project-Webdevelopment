@@ -4,8 +4,8 @@ namespace WebDevStripboeken.Repository;
 
 public class SettingsRepository : DBConnection
 {
-    // public static myUser UpdateSettings()
-    // {
-    //     
-    // }
+    public static void UpdateGebruikersnaam(string nieuwe)
+    {
+        
+    }
 }
