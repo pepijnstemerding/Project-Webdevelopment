@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-html {
-  font-size: 14px;
-}
+
 
 @media (min-width: 768px) {
   html {
@@ -12,6 +10,9 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+ 
 
 }
 .dropdown-container {
@@ -23,25 +24,53 @@ html {
   margin-left: -100px;
 }
 .container {
-  justify-content: left;
+ justify-content: left; 
+  
 }
 body {
   margin-bottom: 60px;
-  color:black;
+  color: black;
   background-color: white;
+  width: 100%;
+  height: auto;
+  background-image: url("../Images/grayscale_transparent1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+  
+}
+
+ul {
+list-style-type: none; 
 }
 h1
 {
   font-family: 'Permanent Marker', cursive;
 }
-a {
-  font-family: 'Permanent Marker', cursive;
+a:link {
+  text-decoration: none;
   color: black;
-  background-color: white;
 }
-.dropdown-menu, dropdown-toggle {
-  font-family: 'Permanent Marker', cursive;
+
+a:visited {
+  text-decoration: none;
   color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #419fec;
+}
+
+a:active {
+  text-decoration: none;
+  color: #617181;
+}
+
+.dropdown-menu{
+  font-family: 'Permanent Marker', cursive;
+  color: #1d0dd9;
   background-color: white;
 }
 
