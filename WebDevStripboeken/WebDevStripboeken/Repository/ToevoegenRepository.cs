@@ -15,7 +15,7 @@ public class ToevoegenRepository : DBConnection
         
         var sql = @"INSERT INTO website.stripboek 
             (Reeks, Titel, ISBN, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) 
-            VALUES (@Reeks, @Titel, @ISBN, @Jaar, @Uitgever, @Afbeelding, @Waarde)";
+            VALUES (@Reeks, @Titel, @ISBN, @Jaar, @Uitgever, @Afbeelding, @Waarde);";
 
         
         var sqlAuteur = @"INSERT INTO website.auteur
