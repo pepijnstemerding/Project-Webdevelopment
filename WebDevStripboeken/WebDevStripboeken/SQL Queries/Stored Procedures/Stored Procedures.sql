@@ -5,7 +5,7 @@ DELIMITER //
 CREATE PROCEDURE StripboekAanpassen(
     #stripboek
     reeksVAR tinytext,
-    titleVAR tinytext,
+    titelVAR tinytext,
     isbnVAR varchar(17),
     goedgekeurdVAR  tinyint(1),
     jaar_v_UitgaveVAR year,
@@ -13,16 +13,16 @@ CREATE PROCEDURE StripboekAanpassen(
     boek_idVAR int,
 
     #tekenaar
-    tekenaar_naamARRAY varchar(255),
+    naam_tekenaarARRAY varchar(255),
 
     #auteur
-    auteur_naamARRAY varchar(255)
+    naam_auteurARRAY varchar(255)
 )
 BEGIN
     #stripboek
     UPDATE stripboek
     SET Reeks          = reeksVAR,
-        Titel          = titleVAR,
+        Titel          = titelVAR,
         isbn           = isbnVAR,
         Goedgekeurd    = goedgekeurdVAR,
         Jaar_v_Uitgave = jaar_v_UitgaveVAR,
