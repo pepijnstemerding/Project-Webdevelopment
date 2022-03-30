@@ -9,8 +9,8 @@
 } 
 
 <div class="row">
-    <h1>ALLE STRIPBOEKEN</h1><h6>(in de hele database...)</h6> 
     <div class="col-4 content">
+        <h2>Alle Stripboeken</h2>
         <div class="accordion" id="stripboekAccordeon">
             @{
                 int i = 0;
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     i++;
                 }
             }
@@ -45,6 +45,12 @@
             <input type="hidden" name="based" value="@Model.myBase"/>
         </form>
     </div>
-    <div class="col-4 content">Activity Feed</div>
-    <div class="col-4 content">Recommendations</div>
+    
+    <div class="col-4 content">
+        <h2>Jouw Activiteit</h2>
+    </div>
+    
+    <div class="col-4 content">
+        <h2>Aanbevelingen</h2>
+    </div>
 </div>
