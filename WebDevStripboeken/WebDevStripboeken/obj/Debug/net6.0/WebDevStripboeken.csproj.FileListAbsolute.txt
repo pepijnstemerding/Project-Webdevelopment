@@ -167,3 +167,4 @@ C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeke
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\obj\Debug\net6.0\ref\WebDevStripboeken.dll
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\obj\Debug\net6.0\WebDevStripboeken.pdb
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\obj\Debug\net6.0\WebDevStripboeken.genruntimeconfig.cache
+D:\Programming\School\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\Newtonsoft.Json.dll

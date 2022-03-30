@@ -8,53 +8,57 @@
 }
 
 <div class="row">
-    <h1>STRIPBOEK TOEVOEGEN</h1>
-    <form method="post">
-        <div>
-            <div>Reeks</div>
-            <input asp-for="SuggestStripboek.Reeks" placeholder="Reeks van Stripboek"/>
+    <h1>Stripboek Toevoegen</h1>
+    
+    <form method="post" class="needs-validation" novalidate>
+        <label for="reeks" class="form-label">De reeks:</label>
+        <div class="input-group mb-3">
+            <input class="form-control" id="reeks" asp-for="SuggestStripboek.Reeks" placeholder="Bijvoorbeeld Donald Duck"/>
             <span asp-validation-for="SuggestStripboek.Reeks"></span>
         </div>
-        <div>
-            <div>Titel</div>
-            <input asp-for="SuggestStripboek.Titel" placeholder="Titel van Stripboek"/>
+        <label for="titel" class="form-label">De titel:</label>
+        <div class="input-group mb-3">
+            <input class="form-control" id="titel" asp-for="SuggestStripboek.Titel" placeholder="Bijvoorbeeld Back to Klondike"/>
             <span asp-validation-for="SuggestStripboek.Titel"></span>
         </div>
-        <div>
-            <div>ISBN</div>
-            <input asp-for="SuggestStripboek.ISBN" placeholder="ISBN nummer van Stripboek"/>
+        <label for="isbn" class="form-label">Het ISBN nummer:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text">ISBN-13</span>
+            <input class="form-control" id="isbn" asp-for="SuggestStripboek.ISBN" placeholder="Bijvoorbeeld 9780944599020"/>
             <span asp-validation-for="SuggestStripboek.ISBN"></span>
         </div>
-        <div>
-            <div>Jaar van uitgave</div>
-            <input asp-for="SuggestStripboek.Jaar_v_Uitgave" placeholder="Jaar waarin Stripboek is uitgegeven"/>
+        <label for="jaar_v_uitgave" class="form-label">Het jaar van uitgave:</label>
+        <div class="input-group mb-3">
+            <input class="form-control" id="jaar_v_uitgave" asp-for="SuggestStripboek.Jaar_v_Uitgave" placeholder="Bijvoorbeeld 1953"/>
             <span asp-validation-for="SuggestStripboek.Jaar_v_Uitgave"></span>
         </div>
-        <div>
-            <div>Auteurs</div>
-            <input asp-for="SuggestStripboek.MyAuteurs"/>
+        <label for="auteur" class="form-label">De auteur(s):</label>
+        <div class="input-group mb-3">
+            <input class="form-control" id="auteur" asp-for="SuggestStripboek.MyAuteurs" placeholder="Bijvoorbeeld Carl Barks"/>
             <span asp-validation-for="SuggestStripboek.MyAuteurs"></span> <!-- why no work -->
         </div>
-        <div>
-            <div>Tekenaars</div>
-            <input asp-for="SuggestStripboek.MyTekenaars"/>
+        <label for="tekenaar" class="form-label">De illustrator(s):</label>
+        <div class="input-group mb-3">
+            <input class="form-control" id="tekenaar" asp-for="SuggestStripboek.MyTekenaars" placeholder="Bijvoorbeeld Carl Barks"/>
             <span asp-validation-for="SuggestStripboek.MyTekenaars"></span> <!-- why no work -->
         </div>
-        <div>
-            <div>Uitgever</div>
-            <input asp-for="SuggestStripboek.Uitgever" placeholder="Uitgever van Stripboek"/>
+        <label for="uitgever" class="form-label">De uitgever:</label>
+        <div class="input-group mb-3">
+            <input class="form-control" id="uitgever" asp-for="SuggestStripboek.Uitgever" placeholder="Bijvoorbeeld Walt Disney"/>
             <span asp-validation-for="SuggestStripboek.Uitgever"></span>
         </div>
-        <div>
-            <div>Afbeelding</div>
-            <input asp-for="SuggestStripboek.Afbeelding_urls" placeholder="URL voor afbeelding van Stripboek"/>
+        <label for="afbeelding_url" class="form-label">Een afbeelding link:</label>
+        <div class="input-group mb-3">
+            <input class="form-control" id="afbeelding_url" asp-for="SuggestStripboek.Afbeelding_urls" placeholder="Bijvoorbeeld https://static.wikia.nocookie.net/disney/images/3/3c/Donald_Duck_Finds_Pirate_Gold.jpg/revision/latest/scale-to-width-down/400"/>
             <span asp-validation-for="SuggestStripboek.Afbeelding_urls"></span>
         </div>
-        <div>
-            <div>Waarde van het boek</div>
-            <input asp-for="SuggestStripboek.Waarde_schatting" placeholder="Hoe duur is het Stripboek?"/>
+        <label for="geschatte_waarde" class="form-label">De geschatte waarde:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text">€</span>
+            <input class="form-control" id="geschatte_waarde" asp-for="SuggestStripboek.Waarde_schatting" placeholder="Bijvoorbeeld 75 (euro)"/>
             <span asp-validation-for="SuggestStripboek.Waarde_schatting"></span>
         </div>
-        <button type="submit" asp-page-handler="Toevoegen">Suggereer het stripboek</button>
+
+        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="Toevoegen"><i class="fa-solid fa-plus fa-fw"></i>Maak suggestie</button>
     </form>
 </div>

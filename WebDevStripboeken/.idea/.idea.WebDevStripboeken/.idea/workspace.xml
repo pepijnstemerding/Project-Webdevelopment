@@ -6,29 +6,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="467364c9-f42c-4ac8-be29-8f1e05393c5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Database Design.asta.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/auteur.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/bezit.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/collectie.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/geschreven_door.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/getekend_door.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/stripboek.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/tekenaar.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/zit_in.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database Design.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../Database Design.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/gebruiker.sql" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/gebruiker.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1ac3bf8d279e4572a77c8002c0c830f1171c00/e0/be7f3209/MySqlConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
