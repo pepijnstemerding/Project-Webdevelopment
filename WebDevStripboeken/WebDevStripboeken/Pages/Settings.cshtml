@@ -11,65 +11,31 @@
     <h2>Instellingen</h2>
     <h3>Profiel Instellingen</h3>
     <div class="col-12 content">
-        <form method="post">
-            <div>Gebruikersnaam wijzigen</div>
-            <input type="text" name="gebruikersnaam" placeholder="Nieuwe gebruikersnaam"/>
-            <button type="submit" asp-page-handler="UpdateGebruikersnaam">Update</button>
+        <label for="gebruikersnaam" class="form-label">Gebruikersnaam wijzigen:</label>
         <form method="post" class="needs-validation" novalidate>
-            <label for="gebruikersnaam" class="form-label">Gebruikersnaam:</label>
-            <div class="input-group mb-3">
-                <input id="gebruikersnaam" class="form-control" asp-for="Account.gebruikersnaam" placeholder="Gebruikersnaam"/>
-                <span asp-validation-for="Account.gebruikersnaam"></span>
-            </div>
-            <label for="email" class="form-label">Email:</label>
-            <div class="input-group mb-3">
-                <input id="email" class="form-control" asp-for="Account.email" placeholder="Email"/>
-                <span asp-validation-for="Account.email"></span>
-            </div>
-            <label for="wachtwoord" class="form-label">Wachtwoord:</label>
-            <div class="input-group mb-3">
-                <input id="wachtwoord" class="form-control" asp-for="Account.wachtwoord" placeholder="Wachtwoord"/>
-                <span asp-validation-for="Account.wachtwoord"></span>
-            </div>
-            <label for="wachtwoord_bevestigen" class="form-label">Wachtwoord bevestigen:</label>
-            <div class="input-group mb-3">
-                <input id="wachtwoord_bevestigen" class="form-control" asp-for="Account.wachtwoordbevestiging" placeholder="Wachtwoord bevestigen"/>
-                <span asp-validation-for="Account.wachtwoordbevestiging"></span>
-            </div>
-            <label for="geboortedatum" class="form-label">Geboortedatum:</label>
-            <div class="input-group mb-3">
-                <input id="geboortedatum" class="form-control" type="date" asp-for="Account.geboortedatum" asp-format="{0:yyyy-MM-dd}" placeholder="Geboortedatum" value="0"/>
-                <span asp-validation-for="Account.geboortedatum"></span>
-            </div>
-            <label for="beveiligings_vraag" class="form-label">Beveiligings vraag:</label>
-            <div class="input-group mb-3">
-                <input id="beveiligings_vraag" class="form-control" asp-for="Account.beveiligingsvraag" placeholder="Beveiligingsvraag"/>
-                <span asp-validation-for="Account.beveiligingsvraag"></span>
-            </div>
-
-            <button class="btn btn-outline-secondary" type="submit" asp-page-handler="Update"><i class="fa-solid fa-pen fa-fw"></i>Update</button>
+            <input class="form-control" id="gebruikersnaam" type="text" name="gebruikersnaam" placeholder="Nieuwe gebruikersnaam"/>
+            <button class="btn btn-outline-secondary" type="submit" asp-page-handler="UpdateGebruikersnaam"><i class="fa-solid fa-pen fa-fw"></i>Update</button>
         </form>
-        <form method="post">
-            <div>Email wijzigen</div>
-            <input type="text" name="email" placeholder="Nieuwe email"/>
-            <button type="submit" asp-page-handler="UpdateEmail">Update</button>
-        </form>    
-        <form method="post">
-            <div>Wachtwoord wijzigen</div>
-            <input type="password" name="wachtwoord" placeholder="Nieuwe wachtwoord"/>
-            <button type="submit" asp-page-handler="UpdateWachtwoord">Update</button>
+        <label for="email" class="form-label">Email adres wijzigen:</label>
+        <form method="post" class="needs-validation" novalidate>
+            <input class="form-control" id="email" type="text" name="email" placeholder="Nieuwe email"/>
+            <button class="btn btn-outline-secondary" type="submit" asp-page-handler="UpdateEmail"><i class="fa-solid fa-pen fa-fw"></i>Update</button>
         </form>
-        <form method="post">
-            <div>Geboortedatum wijzigen</div>
-            <input type="date" name="geboortedatum" placeholder="Nieuwe geboortedatum" asp-format="{0:yyyy:MM:dd}"/>
-            <button type="submit" asp-page-handler="UpdateGeboortedatum">Update</button>
+        <label for="wachtwoord" class="form-label">Wachtwoord wijzigen:</label>
+        <form method="post" class="needs-validation" novalidate>
+            <input class="form-control" id="wachtwoord" type="password" name="wachtwoord" placeholder="Nieuwe wachtwoord"/>
+            <button class="btn btn-outline-secondary" type="submit" asp-page-handler="UpdateWachtwoord"><i class="fa-solid fa-pen fa-fw"></i>Update</button>
         </form>
-        <form method="post">
-            <div>Wat is de naam van je laatste huisdier?</div>
-            <input type="text" name="beveiligingsvraag" placeholder="Antwoord beveiligingsvraag"/>
-            <button type="submit" asp-page-handler="UpdateBeveiligingsvraag">Update</button>
+        <label for="geboortedatum" class="form-label">Geboortedatum wijzigen:</label>
+        <form method="post" class="needs-validation" novalidate>
+            <input class="form-control" id="geboortedatum" type="date" name="geboortedatum" placeholder="Nieuwe geboortedatum" asp-format="{0:yyyy:MM:dd}"/>
+            <button class="btn btn-outline-secondary" type="submit" asp-page-handler="UpdateGeboortedatum"><i class="fa-solid fa-pen fa-fw"></i>Update</button>
         </form>
-        
+        <label for="beveiligingsvraag" class="form-label">Beveiligingsvraag antwoord wijzigen (de naam van je laatste huisdier):</label>
+        <form method="post" class="needs-validation" novalidate>
+            <input class="form-control" id="beveiligingsvraag" type="text" name="beveiligingsvraag" placeholder="Antwoord beveiligingsvraag"/>
+            <button class="btn btn-outline-secondary" type="submit" asp-page-handler="UpdateBeveiligingsvraag"><i class="fa-solid fa-pen fa-fw"></i>Update</button>
+        </form>
     </div>
 
     <h3>Privacy Instellingen</h3> <!--Privacy settings houdt in wie een collectie of een profile kan zien-->
