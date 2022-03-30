@@ -8,21 +8,30 @@
 }
 
 <div class="row">
-    <h1>COLLECTIONS</h1><h6>(die een gebruiker heeft aangemaakt</h6>
     <div class="col-4 content">
+        <h2>Collecties</h2>
         <ul>
             { @*
                 foreach (myCollectie x in Model.lil2)
                 {
                     <li><a href="../collectie/@x.Collectie_id">@x.Collectie_naam</a></li> <!--Link naar een gebruiker zijn collecties-->
                 }
-            } *@
-            <li>Collectie 1</li> 
+            }*@
+            <li>Collectie 1</li>
             <li>Wenslijst 1</li>
         </ul>
     </div>
-    <div class="col-4 content">Activity Feed</div>
+    
     <div class="col-4 content">
+        <h2>Activiteiten</h2>
+        <ul>
+            <li>Activiteit 1</li>
+            <li>Activiteit 2</li>
+        </ul>
+    </div>
+    
+    <div class="col-4 content">
+        <h2>Suggesties</h2>
         <div class="accordion" id="stripboekAccordeon">
             @{
                 int i = 0;
@@ -43,7 +52,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     i++;
                 }
             }

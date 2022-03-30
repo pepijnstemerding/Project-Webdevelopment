@@ -7,18 +7,25 @@
     ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 }
 <div class="row">
-    <h1>LOG-IN</h1>
-    <div id="dialog">
-        <p>@Model.message</p>
-    </div>
-    <div class="col-12 content" id="log-in">
-        <form method="post" id="LogIn">
-            <input type="text" name="User" placeholder="Username" min="2" max="32"/>
-            <input type="password" name="WW" placeholder="Password"/>
-            <p>Don't have an account yet?</p>
-            <p><a href="../signup">Sign up now</a></p>
-            <p>Forgot password?</p>
-            <button type="submit" name="action">Log-In</button>
-        </form>
-    </div>
+    <h2>Log In</h2>
+    
+    <form method="post" id="LogIn" class="needs-validation" novalidate>
+        <label for="username" class="form-label">Je gebruikersnaam:</label>
+        <div class="input-group mb-3">
+            <input name="User" type="text" class="form-control" id="username" placeholder="Gebruikersnaam"/>
+            <!-- <span asp-validation-for="SuggestStripboek.Reeks"></span> -->
+        </div>
+        <label for="password" class="form-label">Je wachtwoord:</label>
+        <div class="input-group mb-3">
+            <input name="WW" type="password" class="form-control" id="password" placeholder="Wachtwoord"/>
+            <!-- <span asp-validation-for="SuggestStripboek.Reeks"></span> -->
+        </div>
+
+        <span>Heb je nog geen account?</span>
+        <p><a class="link-info" href="../signup">Nu registreren</a></p>
+        <span>Wachtwoord vergeten?</span>
+        <p><a class="link-info" href="#">Nu wachtwoord herstellen</a></p>
+        
+        <button name="action" class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-arrow-right-to-bracket fa-fw"></i>Log in</button>
+    </form>
 </div>

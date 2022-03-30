@@ -6,7 +6,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="467364c9-f42c-4ac8-be29-8f1e05393c5a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Models/myUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Models/myUser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/LogIn.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Profile.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Profile.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Settings.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Settings.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/SignUp.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/SignUp.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Toevoegen.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Toevoegen.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +39,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1f6f390bc246f43f64a19835b0d7e69c2d8f7cd17815f5fcbb145b665bab8/IActionResult.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,7 +63,7 @@
     <property name="settings.editor.selected.configurable" value="HotReloadSettingsPage" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Database Script.collectie.sql and 3 more">
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebDevStripboeken">
     <configuration name="CreateQuerys.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" />
       <script-mode>FILE</script-mode>
@@ -136,6 +153,7 @@
       <workItem from="1647773160740" duration="10247000" />
       <workItem from="1647941112590" duration="17915000" />
       <workItem from="1648023466121" duration="5591000" />
+      <workItem from="1648634573121" duration="2973000" />
     </task>
     <task id="LOCAL-00001" summary="Logo?">
       <created>1647944743330</created>
