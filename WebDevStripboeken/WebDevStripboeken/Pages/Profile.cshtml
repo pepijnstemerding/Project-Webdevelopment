@@ -15,21 +15,21 @@
         <div class="row content"><p>Lorem ipsum dolor sit amet.</p></div>
     </div>
     <div class="col-4 content">
-        <h1>Your activity</h1>
+        <h2>Jouw Activiteiten</h2>
         <ul>
             <li><a href="chrome://history/">for the chrome users (dont work :( )</a></li>
             <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">i dare you</a></li>
         </ul>
     </div>
     <div class="col-4 content">
-        <h1>Profile info</h1>
+        <h2>Profiel Informatie</h2>
         <p>Gebruikersnaam : @Model.currentUser.Gebruikersnaam</p>
         <p>Email : @Model.currentUser.Email</p>
         <p>Geboortedatum : @Model.currentUser.Geboorte_datum.ToString("d")</p>
         @{
             if (@Model.currentUser.Is_admin == 1)
             {
-                <h1>ADMIN SETTINGS</h1>
+                <h2>Admin Instellingen</h2>
                 <p><a href="../admin/">maakt niet uit</a></p>
                 <p><a href="../admin/">maakt niet uit</a></p>
             }
