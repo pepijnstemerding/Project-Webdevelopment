@@ -23,9 +23,9 @@ public class Toevoegen : PageModel
 
     [BindProperty]
     public myStripboek SuggestStripboek { get; set; }
-    public IActionResult OnPostToevoegen([FromForm] string AuteursString, string TekenaarsString)
+    public IActionResult OnPostToevoegen([FromForm] string AuteursString, [FromForm] string TekenaarsString)
     {
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             var errors = 
                 from value in ModelState.Values
@@ -35,7 +35,6 @@ public class Toevoegen : PageModel
         }
         else
         {
-
             List<string> AuteurList = new List<string>(AuteursString.Split(", "));
             List<string> TekenaarList = new List<string>(TekenaarsString.Split(", "));
             ToevoegenRepository.AddOne(SuggestStripboek, AuteurList, TekenaarList);
