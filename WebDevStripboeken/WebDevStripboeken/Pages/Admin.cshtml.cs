@@ -30,9 +30,36 @@ public class Admin : PageModel
             listStripboek = AdminRepository.GetBoeken();
             return Page();
         }
-
         return Redirect("../home");
+    }
 
+    public IActionResult OnPostDelUser([FromForm] int id)
+    {
+        AdminRepository.delUser(id);
+        listStripboek = AdminRepository.GetBoeken();
+        listUsers = AdminRepository.GetUsers();
+        if (Request.Cookies["user"] != null)
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        return Redirect("../Admin");
+    }
 
+    public IActionResult OnPostDelBoek([FromForm] int id)
+    {
+        AdminRepository.delBoek(id);
+        listStripboek = AdminRepository.GetBoeken();
+        listUsers = AdminRepository.GetUsers();
+        if (Request.Cookies["user"] != null)
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        return Redirect("../Admin");
+    }
+
+    public IActionResult OnPostAccBoek([FromForm] int id)
+    {
+        AdminRepository.accBoek(id);
+        listStripboek = AdminRepository.GetBoeken();
+        listUsers = AdminRepository.GetUsers();
+        if (Request.Cookies["user"] != null)
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        return Redirect("../Admin");
     }
 }

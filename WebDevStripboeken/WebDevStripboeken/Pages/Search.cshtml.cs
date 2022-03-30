@@ -17,6 +17,7 @@ public class Search : PageModel
     public List<myStripboek> showResults3 = new List<myStripboek>();
     public bool PostMethod;
     private int Count;
+    public string message;
     public void OnGet()
     {
         if (Request.Cookies["user"] == null)
@@ -32,30 +33,33 @@ public class Search : PageModel
         getResults = (SearchRepository.SearchSubmit(catagorie, query));
         PostMethod = true;
 
-        foreach (myStripboek x in getResults)
+        if (getResults.Count != 0)
         {
-            if (getResults.Count != 0)
+            foreach (myStripboek x in getResults)
             {
-                if (Count < 5)
+                if (getResults.Count != 0)
                 {
-                    showResults1.Add(x);
-                    Count++;
-                }
-                else if (Count >= 5 && Count < 10)
-                {
-                    showResults2.Add(x);
-                    Count++;
-                }
-                else if (Count >= 10 && Count < 15)
-                {
-                    showResults3.Add(x);
-                    Count++;
+                    if (Count < 5)
+                    {
+                        showResults1.Add(x);
+                        Count++;
+                    }
+                    else if (Count >= 5 && Count < 10)
+                    {
+                        showResults2.Add(x);
+                        Count++;
+                    }
+                    else if (Count >= 10 && Count < 15)
+                    {
+                        showResults3.Add(x);
+                        Count++;
+                    }
                 }
             }
-            else
-            {
-                Console.WriteLine("pain");
-            }
+        }
+        else
+        {
+            message = "Niks gevonden..";
         }
     }
 }

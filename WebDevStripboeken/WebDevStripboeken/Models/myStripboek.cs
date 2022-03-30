@@ -21,10 +21,10 @@ public class myStripboek
     [Range(1000,9999)]
     public int Jaar_v_Uitgave { get; set; }
 
-    [Required]
+    //[Required]
     public List<myAuteur> MyAuteurs { get; set; }
     
-    [Required]
+    //[Required]
     public List<myTekenaar> MyTekenaars { get; set; }
 
     [Required]
