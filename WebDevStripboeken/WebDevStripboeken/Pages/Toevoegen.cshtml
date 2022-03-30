@@ -4,7 +4,7 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Toevoegen";
-    //ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+    ViewData["User"] = @Model.name;
 }
 
 <div class="row">
@@ -32,15 +32,15 @@
             <input class="form-control" id="jaar_v_uitgave" asp-for="SuggestStripboek.Jaar_v_Uitgave" placeholder="Bijvoorbeeld 1953"/>
             <span asp-validation-for="SuggestStripboek.Jaar_v_Uitgave"></span>
         </div>
-        <label for="auteur" class="form-label">De auteur(s):</label>
+        <label for="auteur" class="form-label">De auteur(s): (scheiden met komma en spatie)</label>
         <div class="input-group mb-3">
-            <input class="form-control" id="auteur" asp-for="SuggestStripboek.MyAuteurs" placeholder="Bijvoorbeeld Carl Barks"/>
-            <span asp-validation-for="SuggestStripboek.MyAuteurs"></span> <!-- why no work -->
+            <input type="text" id="auteur" name="AuteursString"  placeholder="Bijvoorbeeld Carl Barks"/>
+            <!--<span asp-validation-for="SuggestStripboek.MyAuteurs"></span>  why no work -->
         </div>
-        <label for="tekenaar" class="form-label">De illustrator(s):</label>
+        <label for="tekenaar" class="form-label">De illustrator(s): (scheiden met komma en spatie)</label>
         <div class="input-group mb-3">
-            <input class="form-control" id="tekenaar" asp-for="SuggestStripboek.MyTekenaars" placeholder="Bijvoorbeeld Carl Barks"/>
-            <span asp-validation-for="SuggestStripboek.MyTekenaars"></span> <!-- why no work -->
+            <input type="text" id="tekenaar" name="TekenaarsString" placeholder="Bijvoorbeeld Carl Barks"/>
+            <!--<span asp-validation-for="SuggestStripboek.MyTekenaars"></span>  why no work -->
         </div>
         <label for="uitgever" class="form-label">De uitgever:</label>
         <div class="input-group mb-3">

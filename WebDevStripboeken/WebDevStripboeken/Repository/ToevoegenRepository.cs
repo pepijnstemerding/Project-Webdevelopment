@@ -15,16 +15,16 @@ public class ToevoegenRepository : DBConnection
         
         var sql = @"INSERT INTO website.stripboek 
             (Reeks, Titel, ISBN, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) 
-            VALUES (@Reeks, @Titel, @ISBN, @Jaar, @Uitgever, @Afbeelding, @Waarde)";
+            VALUES (@Reeks, @Titel, @ISBN, @Jaar, @Uitgever, @Afbeelding, @Waarde);";
 
         
         var sqlAuteur = @"INSERT INTO website.auteur
                         (Naam_Auteur)
-                        VALUE @Auteur";
+                        VALUE (@Auteur);";
 
         var sqlTekenaar = @"INSERT INTO website.tekenaar
                             (Naam_Tekenaar)
-                            VALUE @Tekenaar";
+                            VALUE (@Tekenaar);";
 
         // var parTekenaar = new {Tekenaar = x.MyTekenaars[0]};
         // var sqlTekenaar = @"INSERT INTO website.tekenaar

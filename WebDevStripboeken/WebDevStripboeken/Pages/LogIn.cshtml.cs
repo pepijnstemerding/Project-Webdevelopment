@@ -36,12 +36,12 @@ public class LogIn : PageModel
             Response.Cookies.Append("user", json);
 
             currentUser = coockieUser;
-            message = "gelukt";
+            message = "Welkom, " + currentUser.Gebruikersnaam;
             return Page();
         }
         else
         {
-            message = "mislukt";
+            message = "Sorry, niet gelukt";
             return Page();
         }
     }

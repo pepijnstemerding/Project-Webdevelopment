@@ -13,17 +13,20 @@ public class Toevoegen : PageModel
 {
     //[BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
+    public string name { get; set; }
     public void OnGet()
     {
         if (Request.Cookies["user"] == null)
         { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
         else
-        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); } 
+        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
+
+        name = currentUser.Gebruikersnaam;
     }
 
     [BindProperty]
     public myStripboek SuggestStripboek { get; set; }
-    public IActionResult OnPostToevoegen([FromForm] string AuteursString, string TekenaarsString)
+    public IActionResult OnPostToevoegen([FromForm] string AuteursString, [FromForm] string TekenaarsString)
     {
         if (!ModelState.IsValid)
         {
@@ -31,7 +34,7 @@ public class Toevoegen : PageModel
                 from value in ModelState.Values
                 where value.ValidationState == ModelValidationState.Invalid
                 select value;
-            return Page();
+            //return Page();
         }
         else
         {
@@ -40,6 +43,9 @@ public class Toevoegen : PageModel
             List<string> TekenaarList = new List<string>(TekenaarsString.Split(", "));
             ToevoegenRepository.AddOne(SuggestStripboek, AuteurList, TekenaarList);
         }
+        if (Request.Cookies["user"] != null) 
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        name = currentUser.Gebruikersnaam;
         return Page();
     }
 }

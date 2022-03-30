@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using WebDevStripboeken.Models;
 using WebDevStripboeken.Repository;
+using System;
 
 namespace WebDevStripboeken.Pages;
 
@@ -15,6 +16,7 @@ public class Collections : PageModel
     public int myBase = 1;
     private const int defiation = 5;
     public List<myStripboek> lil1;
+    public string name { get; set; }
     
 
     public void OnGet()
@@ -34,6 +36,7 @@ public class Collections : PageModel
             { currentUser = JsonConvert.DeserializeObject<myCollectie>(Request.Cookies["user"]); }
         }
         lil1 = HomeRepository.GetAll(myBase);
+        name = currentUser.Gebruikersnaam.ToString();
     }
     
     public void OnPostMin([FromForm] int based)
