@@ -1,4 +1,5 @@
 ﻿@page
+@using Microsoft.VisualBasic
 @model WebDevStripboeken.Pages.Admin
 
 @{
@@ -12,7 +13,7 @@
         @{
             foreach (var x in @Model.listUsers)
             {
-                <li>@x.Gebruikersnaam -- @x.Geboorte_datum -- @x.Email</li>
+                <li>@x.Gebruikersnaam -- @Strings.FormatDateTime(@x.Geboorte_datum) -- @x.Email</li>
             }
         }
     </ul>

@@ -11,7 +11,6 @@ public class Stripboek : PageModel
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
     public int Boekid { get; set; }
-
     public myStripboek boek { get; set; }
 
     public void OnGet([FromRoute]int boekid)

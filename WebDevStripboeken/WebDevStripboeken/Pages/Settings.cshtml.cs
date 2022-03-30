@@ -9,7 +9,7 @@ namespace WebDevStripboeken.Pages;
 
 public class Settings : PageModel
 { 
-    [BindProperty(SupportsGet = true)]  //global get
+    //[BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
     public void OnGet()
     {
@@ -21,8 +21,21 @@ public class Settings : PageModel
         currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
     }
 
-    public void OnPostUpdateGebruikersnaam([FromForm] string gebruikersnaam)
+    // public void OnPostUpdateGebruikersnaam([FromForm] string gebruikersnaam)
+    // {
+    //     SettingsRepository.UpdateGebruikersnaam(gebruikersnaam);
+    //     if (Request.Cookies["user"] != null)
+    //         currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+    // }
+    [BindProperty]
+    public Account Account { get; set; }
+
+    public IActionResult OnPostUpdateAccount()
     {
-        SettingsRepository.UpdateGebruikersnaam(gebruikersnaam);
+        if (ModelState.IsValid)
+        {
+            SettingsRepository.UpdateGebruikersnaam();
+        }
+        return Page();
     }
 }
