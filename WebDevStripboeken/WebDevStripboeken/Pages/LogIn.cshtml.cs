@@ -23,7 +23,7 @@ public class LogIn : PageModel
     
     public IActionResult OnPost([FromForm] string User, [FromForm] string WW)
     {
-        if (LogInRepository.checkLogIn(User, WW) == true)
+        if (LogInRepository.checkLogIn(User, WW))
         {
             string json = Request.Cookies["user"];
             myUser coockieUser = JsonConvert.DeserializeObject<myUser>(json);

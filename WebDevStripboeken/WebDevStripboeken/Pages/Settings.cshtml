@@ -12,38 +12,31 @@
     <h2>PROFILE SETTINGS</h2>
     <div class="col-12 content">
         <form method="post">
-            <div>
-                <div>Gebruikersnaam</div>
-                <input asp-for="Account.gebruikersnaam" placeholder="Gebruikersnaam"/>
-                <span asp-validation-for="Account.gebruikersnaam"></span>
-            </div>
-            <div>
-                <div>Email</div> 
-                <input asp-for="Account.email" placeholder="Email"/>
-                <span asp-validation-for="Account.email"></span>
-            </div>
-            <div>
-                <div>Wachtwoord</div>
-                <input asp-for="Account.wachtwoord" placeholder="Wachtwoord"/>
-                <span asp-validation-for="Account.wachtwoord"></span>
-            </div>
-            <div>
-                <div>Bevestig wachtwoord</div>
-                <input asp-for="Account.wachtwoordbevestiging" placeholder="Wachtwoord bevestigen"/>
-                <span asp-validation-for="Account.wachtwoordbevestiging"></span>
-            </div>
-            <div>
-                <div>Geboortedatum</div>
-                <input type="date" asp-for="Account.geboortedatum" asp-format="{0:yyyy-MM-dd}" placeholder="Geboortedatum" value="0"/>
-                <span asp-validation-for="Account.geboortedatum"></span>
-            </div>
-            <div>
-                <div>Beveiligingsvraag: Wat is de naam van je laatste huisdier?</div>
-                <input asp-for="Account.beveiligingsvraag" placeholder="Beveiligingsvraag"/>
-                <span asp-validation-for="Account.beveiligingsvraag"></span>
-            </div>
-            <button type="submit" asp-page-handler="Update">Update</button>
+            <div>Gebruikersnaam wijzigen</div>
+            <input type="text" name="gebruikersnaam" placeholder="Nieuwe gebruikersnaam"/>
+            <button type="submit" asp-page-handler="UpdateGebruikersnaam">Update</button>
         </form>
+        <form method="post">
+            <div>Email wijzigen</div>
+            <input type="text" name="email" placeholder="Nieuwe email"/>
+            <button type="submit" asp-page-handler="UpdateEmail">Update</button>
+        </form>    
+        <form method="post">
+            <div>Wachtwoord wijzigen</div>
+            <input type="password" name="wachtwoord" placeholder="Nieuwe wachtwoord"/>
+            <button type="submit" asp-page-handler="UpdateWachtwoord">Update</button>
+        </form>
+        <form method="post">
+            <div>Geboortedatum wijzigen</div>
+            <input type="date" name="geboortedatum" placeholder="Nieuwe geboortedatum" asp-format="{0:yyyy:MM:dd}"/>
+            <button type="submit" asp-page-handler="UpdateGeboortedatum">Update</button>
+        </form>
+        <form method="post">
+            <div>Wat is de naam van je laatste huisdier?</div>
+            <input type="text" name="beveiligingsvraag" placeholder="Antwoord beveiligingsvraag"/>
+            <button type="submit" asp-page-handler="UpdateBeveiligingsvraag">Update</button>
+        </form>
+        
     </div>
 </div>
 
@@ -65,7 +58,7 @@
         <label class="form-check-label" for="Collections_Everyone">Alleen ik
         </label>
         <button type="submit" asp-page-handler="Update">Update</button>
-        </div>
+    </div>
     <div class="form-check">
         <h3>Wie kunt je profiel in zien?</h3>
         <input class="form-check-input" type="radio" name="flexRadioDefault2" id="Profile_Everyone" checked>
@@ -83,5 +76,5 @@
         <label class="form-check-label" for="Collections_Everyone">Alleen ik 
         </label>
         <button type="submit" asp-page-handler="Update">Update</button>
-        </div>
+    </div>
 </div>

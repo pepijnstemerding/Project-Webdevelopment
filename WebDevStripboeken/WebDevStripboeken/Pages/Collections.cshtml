@@ -11,12 +11,12 @@
     <h1>COLLECTIONS</h1><h6>(die een gebruiker heeft aangemaakt</h6>
     <div class="col-4 content">
         <ul>
-            @*@{
+            { @*
                 foreach (myCollectie x in Model.lil2)
                 {
-                    <li><a href="../collectie/@x.Collectie_id">@x.Collectie_naam</a></li> // Link to a gebruiker zijn collecties
+                    <li><a href="../collectie/@x.Collectie_id">@x.Collectie_naam</a></li> <!--Link naar een gebruiker zijn collecties-->
                 }
-            }*@
+            } *@
             <li>Collectie 1</li> 
             <li>Wenslijst 1</li>
         </ul>
