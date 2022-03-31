@@ -20,20 +20,26 @@ public class Search : PageModel
     public string message;
     public void OnGet()
     {
-        if (Request.Cookies["user"] == null)
+        if (Request.Cookies["user"] == null)    //Haalt Cookie op als deze bestaat, als deze niet besstaat dan wordt er een nieuwe aangemaakt.
         { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
         else
         { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
 
-        PostMethod = false;
+        PostMethod = false;                     //Boolean die vermeldt welke On methode is gebruikt, voorkomt het afdrukken van lege lijsten.
     }
 
+    /// <summary>
+    /// Methode die word aangeroepen als de Gebruiker iets zoekt
+    /// </summary>
+    /// <param name="catagorie">De tabelnaam waarin vervolgens zal worden gezocht.</param>
+    /// <param name="query">De zoekterm waarop gezocht zal worden</param>
     public void OnPost([FromForm] string catagorie, string query)
     {
-        getResults = (SearchRepository.SearchSubmit(catagorie, query));
+        
+        getResults = (SearchRepository.SearchSubmit(catagorie, query)); //Stuurt parameters naar repository, verwacht een List<myStripboeken> terug.
         PostMethod = true;
-
-        if (getResults.Count != 0)
+        
+        if (getResults.Count != 0)                                          //Splits de verkregen lijst naar kleinere lijsten.
         {
             foreach (myStripboek x in getResults)
             {
@@ -57,7 +63,7 @@ public class Search : PageModel
                 }
             }
         }
-        else
+        else        //Message die wordt weergeven als er niks gevonden word in de database met de meegegeven parameters.
         {
             message = "Niks gevonden..";
         }

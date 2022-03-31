@@ -5,6 +5,10 @@ namespace WebDevStripboeken.Repository;
 
 public class SignUpRepository : DBConnection
 {
+    /// <summary>
+    /// Voegt Gebruiker toe op basis van megegeven account
+    /// </summary>
+    /// <param name="account">Megegeven Account</param>
     public static void SignUp(Account account)
     {
         var par = new {gebruikersnaam = account.gebruikersnaam, email = account.email, wachtwoord = account.wachtwoord, geboortedatum = account.geboortedatum, beveiligingsvraag = account.beveiligingsvraag};

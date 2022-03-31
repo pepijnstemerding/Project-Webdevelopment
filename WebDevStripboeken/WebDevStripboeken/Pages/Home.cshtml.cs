@@ -17,8 +17,8 @@ public class Home : PageModel
     
     public void OnGet()
     {
-        if (Request.Query.ContainsKey("delete"))
-        {
+        if (Request.Query.ContainsKey("delete"))        //Wordt aangeroepen als de Gebruiker op de knop "Logout" drukt in de header
+        {                                               //Verwijdert het huidige Cookie en zet de "currentUser" als een nieuwe default "myUser".
             Console.WriteLine("yay");
             HttpContext.Response.Cookies.Delete("user");
             //myUser.delCookies();
@@ -27,7 +27,7 @@ public class Home : PageModel
         }
         else
         {
-            if (Request.Cookies["user"] == null)
+            if (Request.Cookies["user"] == null)        //Haalt Cookie op als deze bestaat, als deze niet besstaat dan wordt er een nieuwe aangemaakt.
             { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
             else
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
@@ -35,6 +35,10 @@ public class Home : PageModel
         lil = HomeRepository.GetAll(myBase);
     }
 
+    /// <summary>
+    /// Methode die wordt aangeroepen als de Gebruiker het vorige set stripboeken wilt zien. 
+    /// </summary>
+    /// <param name="based"></param>
     public void OnPostMin([FromForm] int based)
     {
         if (based > 1)
@@ -50,6 +54,11 @@ public class Home : PageModel
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
     }
+    
+    /// <summary>
+    /// Methode die wordt aangeroepen als de Gebruiker het volgende set stripboeken wilt zien.
+    /// </summary>
+    /// <param name="based"></param>
     public void OnPostAdd([FromForm] int based)
     {
         if (HomeRepository.GetAll(based + defiation).Count == 0)
@@ -66,6 +75,10 @@ public class Home : PageModel
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
     }
 
+    /// <summary>
+    /// Methode die wordt aangeroepen als de Gebruiker terug wilt naar het begin van de lijst.
+    /// </summary>
+    /// <param name="based"></param>
     public void OnPostReset([FromForm] int based)
     {
         myBase = 1;
