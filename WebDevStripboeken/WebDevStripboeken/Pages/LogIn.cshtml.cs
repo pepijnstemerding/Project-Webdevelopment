@@ -37,7 +37,7 @@ public class LogIn : PageModel
 
             currentUser = coockieUser;
             message = "Welkom, " + currentUser.Gebruikersnaam;
-            return Page();
+            return RedirectToPage("index");
         }
         else
         {

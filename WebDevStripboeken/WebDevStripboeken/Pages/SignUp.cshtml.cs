@@ -42,7 +42,7 @@ public class SignUp : PageModel
         {
             SignUpRepository.SignUp(Account);
         }
-        return Page();
+        return RedirectToPage("index");
     }
     
 
