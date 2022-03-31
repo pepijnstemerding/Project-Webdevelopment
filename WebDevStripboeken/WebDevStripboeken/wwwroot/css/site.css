@@ -11,9 +11,7 @@ html {
   position: relative;
   min-height: 100%;
   font-size: 20px;
-  font-family: 'Permanent Marker', cursive;
- 
-
+  font-family: 'Roboto', sans-serif;
 }
 
 .dropdown-container {
@@ -27,9 +25,13 @@ html {
 }
 
 .container {
- justify-content: left; 
-  
+  justify-content: left; 
+  background-color: white;
+  height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+
 
 body {
   margin-bottom: 60px;
@@ -41,13 +43,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-size: 20px;
-  font-family: 'Permanent Marker', cursive;
-  
+  font-family: 'Roboto', sans-serif;
 }
 
-ul {
-list-style-type: none; 
-}
 
 h1 {
   font-family: 'Permanent Marker', cursive;
@@ -69,7 +67,7 @@ a {
 }
 
 .dropdown-menu, dropdown-toggle {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Roboto', sans-serif;
   color: black;
 }
 
@@ -84,19 +82,20 @@ a:active {
 }
 
 .dropdown-menu{
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Roboto', sans-serif;
   color: #1d0dd9;
   background-color: white;
 }
 
 img {
- max-width: 100%;
+  max-width: 100%;
 }
 
 .field-validation-error {
-  color:red;
+  color: red;
   font-size: smaller;
 }
+
 /* Original van wdw: https://webdesignerwall.com/wdw-snippet/comment-section-form-with-ratings aangepast inline met website style en functie*/
 .card {
     position: relative;
@@ -111,13 +110,16 @@ img {
     border-radius: 6px;
     -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1)
 }
+
 .comment-box {
     padding: 5px
 }
+
 .comment-area textarea {
     resize: none;
     border: 1px solid #ad9f9f
 }
+
 .form-control:focus {
     color: #495057;
     background-color: #fff;
@@ -125,16 +127,19 @@ img {
     outline: 0;
     box-shadow: 0 0 0 1px rgb(255, 0, 0) !important
 }
+
 .send {
     color: #fff;
     background-color: #ff0000;
     border-color: #ff0000
 }
+
 .send:hover {
     color: #fff;
     background-color: #47f502;
     border-color: #01963d
 }
+
 .rating {
     display: flex;
     margin-top: -10px;
@@ -142,9 +147,11 @@ img {
     margin-left: -4px;
     float: left
 }
+
 .rating>input {
     display: none
 }
+
 .rating>label {
     position: relative;
     width: 19px;
@@ -152,18 +159,22 @@ img {
     color: #ff0000;
     cursor: pointer
 }
+
 .rating>label::before {
     content: "\2605";
     position: absolute;
     opacity: 0
 }
+
 .rating>label:hover:before,
 .rating>label:hover~label:before {
     opacity: 1 !important
 }
+
 .rating>input:checked~label:before {
     opacity: 1
 }
+
 .rating:hover>input:checked~label:before {
     opacity: 0.4
 }
