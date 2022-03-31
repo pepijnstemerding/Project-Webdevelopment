@@ -12,9 +12,9 @@
         <img src="@Model.boek.Afbeelding_urls" style="width: fit-content"> <!-- picture's hebben white borders, dunno hoe te centeren -->
     </div>
     <div class="col-lg-8 content">
-        <p>Titel: @Model.boek.Titel</p>
-        <p>Reeks: @Model.boek.Reeks</p>
-        <p>Schrijver(s): </p>
+        <p><b>Titel:</b> @Model.boek.Titel</p>
+        <p><b>Reeks:</b> @Model.boek.Reeks</p>
+        <p><b>Schrijver(s):</b> </p>
         <ul>
             @{
                 if (@Model.boek.MyAuteurs.Count > 0)
@@ -26,7 +26,7 @@
                 }
             }
         </ul>
-        <p>Tekenaar(s): </p>
+        <p><b>Tekenaar(s):</b> </p>
         <ul>
             @{
                 if (@Model.boek.MyTekenaars.Count > 0)
@@ -38,9 +38,9 @@
                 }
             }
         </ul>
-        <p>Jaar van uitgave: @Model.boek.Jaar_v_Uitgave</p>
-        <p>ISBN: @Model.boek.ISBN</p>
-        <p>Geschatte Waarde : $ @Model.boek.Waarde_schatting</p>
+        <p><b>Jaar van uitgave:</b> @Model.boek.Jaar_v_Uitgave</p>
+        <p><b>ISBN:</b> @Model.boek.ISBN</p>
+        <p><b>Geschatte Waarde:</b> €@Model.boek.Waarde_schatting</p>
         @{
             switch (@Model.currentUser.Gebruikersnaam)
             {
@@ -48,7 +48,7 @@
                     <p>Wil je dit werk toevoegen aan een van jouw collecties? <a href="../login">Log hier in!</a></p>
                     break;
                 default:
-                    <p>Toevoegen aan collectie:</p>
+                    <p><b>Toevoegen aan collectie:</b></p>
                     <ul class="dropdown-menu"></ul>
                     break;
             }
