@@ -10,7 +10,7 @@ public class SearchRepository : DBConnection
         var parameters = new {Query = b};
         using var connection = Connect();
         //controle a
-        if (a.Contains('-') || a.Contains('"') || a.Contains(' ') || a.Contains("'"))
+        if (a.Contains("--") || a.Contains('"') || a.Contains(' ') || a.Contains("'"))
         {
             return new List<myStripboek>();
         }

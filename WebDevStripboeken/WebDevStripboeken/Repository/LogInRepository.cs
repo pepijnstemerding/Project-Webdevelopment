@@ -6,9 +6,12 @@ namespace WebDevStripboeken.Repository;
 
 public class LogInRepository : DBConnection
 {
-    //public static myUser chicken;
-    //public static string crow;
-    //public myUser check;
+    /// <summary>
+    /// Haalt op Gebruikersdata op basis van megegeven Gebruikersnaam, vergelijkt daarna opgehaalde WW en megegeven WW
+    /// </summary>
+    /// <param name="a">Megegeven Gebruikersnaam</param>
+    /// <param name="b">Megegeven Wachtwoord</param>
+    /// <returns>True/False (inloggen gelukt/inloggen niet gelukt)</returns>
     public static bool checkLogIn(string a, string b)
     {
         var parameters = new {Gebruikersnaam = a};
