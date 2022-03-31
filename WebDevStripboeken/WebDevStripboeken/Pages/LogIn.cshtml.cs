@@ -14,13 +14,13 @@ public class LogIn : PageModel
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
 
-    public string message;
+    public string message = "mislukt";
     public void OnGet()
     {
         if (Request.Cookies["user"] == null)
         { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
         else
-        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); } 
+        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
     }
     
     public IActionResult OnPost([FromForm] string User, [FromForm] string WW)
@@ -36,12 +36,12 @@ public class LogIn : PageModel
             Response.Cookies.Append("user", json);
 
             currentUser = coockieUser;
-            message = "Welkom terug " + currentUser.Gebruikersnaam;
+            message = "Welkom, " + currentUser.Gebruikersnaam;
             return Page();
         }
         else
         {
-            message = "Invalid log-in gegevens.";
+            message = "Sorry, niet gelukt";
             return Page();
         }
     }
