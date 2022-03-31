@@ -83,38 +83,5 @@
     
     <div class="col-4 content">
         <h2>Aanbevelingen</h2>
-             <div class="accordion" id="stripboekAccordeon">
-                    @{
-                        int j = 0;
-                        foreach (myStripboek stripboek in Model.lil)
-                        {
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading_@i">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@i" aria-expanded="false" aria-controls="collapse_@i">
-                                        @stripboek.Titel
-                                    </button>
-                                </h2>
-                                <div id="collapse_@i" class="accordion-collapse collapse" aria-labelledby="heading_@i" data-bs-parent="#stripboekAccordeon">
-                                    <div class="accordion-body">
-                                        <p><b>Reeks:</b> @stripboek.Reeks</p>
-                                        <p><b>Jaar van uitgave:</b> @stripboek.Jaar_v_Uitgave</p>
-                                        <p><b>Uitgever:</b> @stripboek.Uitgever</p>
-                                        <span><a href="../stripboek/@stripboek.Boek_id">Meer Informatie..</a></span>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            j++;
-                        }
-                    }
-                </div>
-                <form method="post">
-                    <div class="btn-group" role="group">
-                        <button class="btn btn-outline-secondary" type="submit" name="Min" asp-page-handler="Min">Vorige</button>
-                        <button class="btn btn-outline-secondary" type="submit" name="Add" asp-page-handler="Add">Volgende</button>
-                        <button class="btn btn-outline-secondary" type="submit" name="Zero" asp-page-handler="Reset">Reset</button>
-                    </div>
-                    <input type="hidden" name="based" value="@Model.myBase"/>
-                </form>
-            </div>
     </div>
+</div>
