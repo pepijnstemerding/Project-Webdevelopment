@@ -7,19 +7,24 @@
   <component name="ChangeListManager">
     <list default="true" id="467364c9-f42c-4ac8-be29-8f1e05393c5a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Settings.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Settings.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Admin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Admin.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Profile.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Profile.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Stripboek.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Stripboek.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Repository/DBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Repository/DBConnection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.staticwebassets.runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

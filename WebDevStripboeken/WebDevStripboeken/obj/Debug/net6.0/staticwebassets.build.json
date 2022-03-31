@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0u8w4i37nqGNPsjvtQvua6xmkjjVb67VXj1rrUsJ5Hc=",
+  "Hash": "T4wf1AZhx4EwsCiYrhdeTcierWUvF3N3oxw05VB/I3k=",
   "Source": "WebDevStripboeken",
   "BasePath": "_content/WebDevStripboeken",
   "Mode": "Default",
@@ -35834,6 +35834,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\grayscale_transparent1.jpg"
+    },
+    {
+      "Identity": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\wwwroot\\Images\\profile pic.jpg",
+      "SourceId": "WebDevStripboeken",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\wwwroot\\",
+      "BasePath": "_content/WebDevStripboeken",
+      "RelativePath": "Images/profile pic.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\profile pic.jpg"
     },
     {
       "Identity": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\wwwroot\\js\\site.js",
