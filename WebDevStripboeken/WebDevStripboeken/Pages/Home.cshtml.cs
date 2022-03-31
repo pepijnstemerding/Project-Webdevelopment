@@ -35,7 +35,7 @@ public class Home : PageModel
         lil = HomeRepository.GetAll(myBase);
     }
 
-    public void OnPostMin([FromForm] int based)
+    public IActionResult OnPostMin([FromForm] int based)
     {
         if (based > 1)
         {
@@ -49,10 +49,11 @@ public class Home : PageModel
         }
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        return Redirect("../home");
     }
-    public void OnPostAdd([FromForm] int based)
+    public IActionResult OnPostAdd([FromForm] int based)
     {
-        if (HomeRepository.GetAll(based + defiation).Count == 0)
+        if (HomeRepository.GetAll(based + 5).Count == 0)
         {
             myBase = based;
             lil = HomeRepository.GetAll(myBase);
@@ -64,13 +65,15 @@ public class Home : PageModel
         }
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        return Redirect("../home");
     }
 
-    public void OnPostReset([FromForm] int based)
+    public IActionResult OnPostReset([FromForm] int based)
     {
         myBase = 1;
         lil = HomeRepository.GetAll(myBase);
         if (Request.Cookies["user"] != null)
-             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        return Redirect("../home");
     }
 }

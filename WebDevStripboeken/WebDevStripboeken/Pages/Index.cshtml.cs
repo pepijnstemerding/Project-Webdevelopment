@@ -19,7 +19,7 @@ public class IndexModel : PageModel
 
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public IActionResult OnGet()
+    public void OnGet()
     {
         #region MySQL stuff
         
@@ -250,7 +250,6 @@ public class IndexModel : PageModel
         }
         
         #endregion
-
-        return Redirect("../home");
+        
     }
 }

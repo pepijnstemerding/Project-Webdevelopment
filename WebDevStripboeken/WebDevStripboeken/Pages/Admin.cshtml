@@ -13,7 +13,7 @@
         @{
             foreach (var x in @Model.listUsers)
             {
-                <li>Gebruiker: @x.Gebruikersnaam -- @Strings.FormatDateTime(@x.Geboorte_datum) -- @x.Email
+                <li>@x.Gebruikersnaam -- @Strings.FormatDateTime(@x.Geboorte_datum) -- @x.Email
                     <form method="post">
                         <!--<button type="submit" name="promote"></button>-->
                         <input type="hidden" name="id" value="@x.Gebruiker_id"/>

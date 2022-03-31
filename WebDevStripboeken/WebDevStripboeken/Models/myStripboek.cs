@@ -5,10 +5,6 @@ namespace WebDevStripboeken.Models;
 public class myStripboek
 {
     public int Boek_id { get; set; }
-    
-    public List<myAuteur> MyAuteurs { get; set; }
-    
-    public List<myTekenaar> MyTekenaars { get; set; }
 
     [Required]
     public string Reeks { get; set; }
@@ -24,6 +20,12 @@ public class myStripboek
     [Required]
     [Range(1000,9999)]
     public int Jaar_v_Uitgave { get; set; }
+
+    //[Required]
+    public List<myAuteur> MyAuteurs { get; set; }
+    
+    //[Required]
+    public List<myTekenaar> MyTekenaars { get; set; }
 
     [Required]
     public string Uitgever { get; set; }

@@ -4,42 +4,44 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Sign-Up";
-    //ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+    // ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 } 
 
 <div class="row">
     <h2>Registreren</h2>
+    
     <form method="post" class="needs-validation" novalidate>
         <label for="gebruikersnaam" class="form-label">Je gebruikersnaam:</label>
-            <div class="input-group mb-3">
-                <input class="form-control" id="gebruikersnaam" asp-for="Account.gebruikersnaam" placeholder="Gebruikersnaam" min="2" max="30"/>
-                <span asp-validation-for="Account.gebruikersnaam"></span>
-            </div>
+        <div class="input-group mb-3">
+            <input class="form-control" id="gebruikersnaam" asp-for="Account.gebruikersnaam" placeholder="Gebruikersnaam" min="2" max="30"/>
+            <span asp-validation-for="Account.gebruikersnaam"></span>
+        </div>
         <label for="email" class="form-label">Je email:</label>
-            <div class="input-group mb-3">
-                <input class="form-control" id="email" asp-for="Account.email" placeholder="Email" min="8" max="50"/>
-                <span asp-validation-for="Account.email"></span>
-            </div>
+        <div class="input-group mb-3">
+            <input class="form-control" id="email" asp-for="Account.email" placeholder="Email" min="8" max="50"/>
+            <span asp-validation-for="Account.email"></span>
+        </div>
         <label for="wachtwoord" class="form-label">Je wachtwoord:</label>
-            <div class="input-group mb-3">
-                <input class="form-control" id="wachtwoord" asp-for="Account.wachtwoord" type="password" placeholder="Wachtwoord" min="8" max="32"/>
-                <span asp-validation-for="Account.wachtwoord"></span>
-            </div>
+        <div class="input-group mb-3">
+            <input class="form-control" id="wachtwoord" asp-for="Account.wachtwoord" type="password" placeholder="Wachtwoord" min="8" max="32"/>
+            <span asp-validation-for="Account.wachtwoord"></span>
+        </div>
         <label for="wachtwoord_bevestigen" class="form-label">Je wachtwoord bevestigen:</label>
-            <div class="input-group mb-3">
-                <input class="form-control" id="wachtwoord_bevestigen" asp-for="Account.wachtwoordbevestiging" type="password" placeholder="Wachtwoord bevestigen" min="8" max="32"/>
-                <span asp-validation-for="Account.wachtwoordbevestiging"></span>
-            </div>
+        <div class="input-group mb-3">
+            <input class="form-control" id="wachtwoord_bevestigen" asp-for="Account.wachtwoordbevestiging" type="password" placeholder="Wachtwoord bevestigen" min="8" max="32"/>
+            <span asp-validation-for="Account.wachtwoordbevestiging"></span>
+        </div>
         <label for="geboorte_datum" class="form-label">Je geboorte datum:</label>
-            <div class="input-group mb-3">
-                <input class="form-control" id="geboorte_datum" type="date" asp-for="Account.geboortedatum" asp-format="{0:yyyy-MM-dd}" placeholder="Geboortedatum" value="0"/>
-                <span asp-validation-for="Account.geboortedatum"></span>
-            </div>
+        <div class="input-group mb-3">
+            <input class="form-control" id="geboorte_datum" type="date" asp-for="Account.geboortedatum" asp-format="{0:yyyy-MM-dd}" placeholder="Geboortedatum" value="0"/>
+            <span asp-validation-for="Account.geboortedatum"></span>
+        </div>
         <label for="beveiligingsvraag" class="form-label">Beveiligingsvraag: wat is de naam van je laatste huisdier?</label>
-            <div class="input-group mb-3">
-                <input class="form-control" id="beveiligingsvraag" asp-for="Account.beveiligingsvraag" placeholder="Beveiligingsvraag antwoord" min="2" max="32"/>
-                <span asp-validation-for="Account.beveiligingsvraag"></span>
-            </div>
-      <button class="btn btn-outline-secondary" type="submit" asp-page-handler="SignUp"><i class="fa-solid fa-user-plus fa-fw"></i>Sign up</button>
+        <div class="input-group mb-3">
+            <input class="form-control" id="beveiligingsvraag" asp-for="Account.beveiligingsvraag" placeholder="Beveiligingsvraag antwoord" min="2" max="32"/>
+            <span asp-validation-for="Account.beveiligingsvraag"></span>
+        </div>
+        
+        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="SignUp"><i class="fa-solid fa-user-plus fa-fw"></i>Sign up</button>
     </form>
 </div>
