@@ -25,7 +25,7 @@ public class Toevoegen : PageModel
     public myStripboek SuggestStripboek { get; set; }
     public IActionResult OnPostToevoegen([FromForm] string AuteursString, string TekenaarsString)
     {
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             var errors = 
                 from value in ModelState.Values
