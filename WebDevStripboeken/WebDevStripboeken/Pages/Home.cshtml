@@ -15,7 +15,15 @@ ViewData["User"] = @Model.currentUser.Gebruikersnaam;
       <p>@Model.message</p>
    </div>
    <div class="col-4 content">
-      <h2>Alle Stripboeken</h2>
+      @switch (ViewData["User"])
+      {
+         case "Guest":
+            <h2>Alle Stripboeken</h2>
+            break;
+         default: 
+            <h2>Jou Stripboeken</h2>
+            break;
+      }
       <div class="accordion" id="stripboekAccordeon">
          @{
          int i = 0;

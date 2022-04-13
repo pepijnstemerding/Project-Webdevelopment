@@ -5,10 +5,16 @@ namespace WebDevStripboeken.Repository;
 
 public class HomeRepository : DBConnection
 {
-    public static List<myStripboek> GetAll(int min)
+    public static List<myStripboek> GetAll(params object[] args)
     {
-        //var Min = min;
-        //var Max = min + 5;
+        // Ik weet niet hoe ik het anders moet doen
+        // C# optionele variabelen zijn echt slecht te implementeren
+        var min = (int) args[0];
+        myUser? user;
+        if (args.Length == 1)
+            user = null;
+        else
+            user = (myUser) args[1];
         var parameters = new {Min = min, Max = min + 5};
         using var connection = Connect();
 

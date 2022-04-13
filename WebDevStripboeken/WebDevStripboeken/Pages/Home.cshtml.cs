@@ -32,7 +32,7 @@ public class Home : PageModel
             else
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
-        lil = HomeRepository.GetAll(myBase);
+        lil = HomeRepository.GetAll(myBase, currentUser);
     }
 
     public IActionResult OnPostMin([FromForm] int based)
@@ -40,15 +40,16 @@ public class Home : PageModel
         if (based > 1)
         {
             myBase = based - defiation;
-            lil = HomeRepository.GetAll(myBase);
         }
         else
         {
             myBase = based;
-            lil = HomeRepository.GetAll(myBase);
         }
+
+        currentUser = null;
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        lil = HomeRepository.GetAll(myBase, currentUser);
         return Redirect("../home");
     }
     public IActionResult OnPostAdd([FromForm] int based)
@@ -56,24 +57,25 @@ public class Home : PageModel
         if (HomeRepository.GetAll(based + 5).Count == 0)
         {
             myBase = based;
-            lil = HomeRepository.GetAll(myBase);
         }
         else
         {
             myBase = based + defiation;
-            lil = HomeRepository.GetAll(myBase);
         }
+        currentUser = null;
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        lil = HomeRepository.GetAll(myBase, currentUser);
         return Redirect("../home");
     }
 
     public IActionResult OnPostReset([FromForm] int based)
     {
         myBase = 1;
-        lil = HomeRepository.GetAll(myBase);
+        currentUser = null;
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        lil = HomeRepository.GetAll(myBase, currentUser);
         return Redirect("../home");
     }
 }
