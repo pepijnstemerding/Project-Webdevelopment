@@ -53,7 +53,6 @@ public class Home : PageModel
         }
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
-        return Redirect("../home");
     }
     
     /// <summary>
@@ -74,7 +73,6 @@ public class Home : PageModel
         }
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
-        return Redirect("../home");
     }
 
     /// <summary>
@@ -87,6 +85,5 @@ public class Home : PageModel
         lil = HomeRepository.GetAll(myBase);
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
-        return Redirect("../home");
     }
 }
