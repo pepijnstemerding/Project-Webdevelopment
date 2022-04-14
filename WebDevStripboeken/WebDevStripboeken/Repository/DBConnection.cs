@@ -11,8 +11,8 @@ public class DBConnection
         return new MySqlConnection(
             @"Server=localhost;
             Database=website;
-            Uid=website;
-            Pwd=Test12345;
+            Uid=root;
+            Pwd=Test@1234!;
             Port=3306");
     }
     //db jason uid: website, pwd Test12345

@@ -11,56 +11,59 @@
         <link rel="stylesheet" href="~/fontawesome/css/all.css">
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom p-0">
-                <div class="container">
-                    <!-- <a class="navbar-brand navbar-collapse collapse" href="../home"><img src="/Images/Comic Collector1.png" width="400" height="100" alt="logo"></img></a> -->
-                    
-                    <a class="navbar-brand navbar-collapse collapse" href="../home"><h1><i class="fa-solid fa-bookmark fa-fw"></i>Comic Collector</h1></a>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <header>
+        <!--Nav bar: is responsive-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom p-0">
+            <div class="container">
+                <!-- <a class="navbar-brand navbar-collapse collapse" href="../home"><img src="/Images/Comic Collector1.png" width="400" height="100" alt="logo"></img></a> -->
+
+                <a class="navbar-brand navbar-collapse collapse" href="../home">
+                    <h1><i class="fa-solid fa-bookmark fa-fw"></i>Comic Collector</h1></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse" id="navbarColor01">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../home"><i class="fa-solid fa-house fa-fw"></i>Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../collections"><i class="fa-solid fa-list fa-fw"></i>Collections</a>
-                            </li>
-                            <li>
-                                <form class="form-inline navbar-collapse collapse" id="navbarColor01">
-                                    <a href="../search">
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Doorzoek de database" aria-label="Search">
-                                    </a>
-                                    <!--<button class="btn btn-outline-primary my-2 my-sm-0 navbar-collapse collapse" type="submit"><i class="fa-solid fa-magnifying-glass fa-fw"></i>Zoek</button>-->
-                                </form>
-                            </li>
-                        </ul>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle button-text-color navbar-collapse collapse" type="button" id="navbarColor01" data-bs-toggle="dropdown" data-bs-target="navbarColor01" aria-expanded="false">
+                </button>
+                <div class="navbar-collapse collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../home"><i class="fa-solid fa-house fa-fw"></i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../collections"><i class="fa-solid fa-list fa-fw"></i>Collections</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="../search">Doorzoeken</a>
+                            <!--<form class="form-inline navbar-collapse collapse" id="navbarColor01">
+                                <a href="../search">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Doorzoek de database" aria-label="Search">
+                                </a>
+                                <button class="btn btn-outline-primary my-2 my-sm-0 navbar-collapse collapse" type="submit"><i class="fa-solid fa-magnifying-glass fa-fw"></i>Zoek</button>
+                            </form>-->
+                        </li>
+                    </ul>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle button-text-color navbar-collapse collapse" type="button" id="navbarColor01" data-bs-toggle="dropdown" data-bs-target="navbarColor01" aria-expanded="false">
                             Hello @ViewData["User"]
-                            </button>
-                            <ul class="dropdown-menu btn-black" aria-labelledby="navbarColor01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                @switch (ViewData["User"])
-                                {
+                        </button>
+                        <ul class="dropdown-menu btn-black" aria-labelledby="navbarColor01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @switch (ViewData["User"])
+                            {
                                 case "Guest":
-                                <li><a class="dropdown-item" id="navbarColor01"  href="../login"><i class="fa-solid fa-arrow-right-to-bracket fa-fw"></i>Log in</a></li>
-                                break;
+                                    <li><a class="dropdown-item" id="navbarColor01" href="../login"><i class="fa-solid fa-arrow-right-to-bracket fa-fw"></i>Log in</a></li>
+                                    break;
                                 default:
-                                <li><a class="dropdown-item" id="navbarColor01" href="../profile/@ViewData["User"]"><i class="fa-solid fa-user fa-fw"></i>Profiel</a></li>
-                                <li><a class="dropdown-item" id="navbarColor01" href="../settings"><i class="fa-solid fa-gear fa-fw"></i>Instellingen</a></li>
-                                <li><a class="dropdown-item" id="navbarColor01" href="../toevoegen"><i class="fa-solid fa-plus fa-fw"></i>Toevoegen..</a></li>
-                                <li><a class="dropdown-item" id="navbarColor01" href="../home?delete"><i class="fa-solid fa-arrow-right-from-bracket fa-fw"></i>Log uit</a></li>
-                                <!--Context.Response.Cookies.Delete("user")-->
-                                break;
-                                }
-                            </ul>
-                        </div>
+                                    <li><a class="dropdown-item" id="navbarColor01" href="../profile/@ViewData["User"]"><i class="fa-solid fa-user fa-fw"></i>Profiel</a></li>
+                                    <li><a class="dropdown-item" id="navbarColor01" href="../settings"><i class="fa-solid fa-gear fa-fw"></i>Instellingen</a></li>
+                                    <li><a class="dropdown-item" id="navbarColor01" href="../toevoegen"><i class="fa-solid fa-plus fa-fw"></i>Toevoegen..</a></li>
+                                    <li><a class="dropdown-item" id="navbarColor01" href="../home?delete"><i class="fa-solid fa-arrow-right-from-bracket fa-fw"></i>Log uit</a></li>
+                                    <!--Context.Response.Cookies.Delete("user")-->
+                                    break;
+                            }
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
         <div class="container">
             <main role="main" class="pb-3">
                 @RenderBody()

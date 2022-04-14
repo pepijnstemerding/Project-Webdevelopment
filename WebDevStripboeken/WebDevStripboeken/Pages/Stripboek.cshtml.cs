@@ -15,12 +15,12 @@ public class Stripboek : PageModel
 
     public void OnGet([FromRoute]int boekid)
     {
-        if (Request.Cookies["user"] == null)
+        if (Request.Cookies["user"] == null)        //Haalt Cookie op als deze bestaat, als deze niet besstaat dan wordt er een nieuwe aangemaakt.
         { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
         else
         { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         
         Boekid = boekid;
-        boek = StripboekRepository.GetOne(boekid);
+        boek = StripboekRepository.GetOne(boekid);  //Haalt data op van de database op basis van het Boek_id uit de route
     }
 }
