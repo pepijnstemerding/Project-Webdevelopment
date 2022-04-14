@@ -12,7 +12,7 @@ public class SignUpRepository : DBConnection
     public static void SignUp(Account account)
     {
         var par = new {gebruikersnaam = account.gebruikersnaam, email = account.email, wachtwoord = account.wachtwoord, geboortedatum = account.geboortedatum, beveiligingsvraag = account.beveiligingsvraag};
-        var sql = @"INSERT INTO website.gebruiker 
+        var sql = @"INSERT INTO gebruiker 
                         (Gebruikersnaam, 
                          Email, 
                          Wachtwoord, 

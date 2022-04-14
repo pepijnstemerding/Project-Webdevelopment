@@ -17,7 +17,7 @@ public class ProfileRepository : DBConnection
 
         myUser one = connnection.QuerySingle<myUser>(
             @"SELECT * 
-                FROM (website.gebruiker)
+                FROM (gebruiker)
                WHERE Gebruikersnaam = @Gebruikersnaam LIMIT 1;", parameters);
         return one;
     }

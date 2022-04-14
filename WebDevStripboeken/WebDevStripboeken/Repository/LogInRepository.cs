@@ -20,7 +20,7 @@ public class LogInRepository : DBConnection
         {
             var check = connection.QuerySingle<myUser>(
                 @"SELECT Gebruikersnaam, Wachtwoord
-                FROM (website.gebruiker)
+                FROM (gebruiker)
                 WHERE Gebruikersnaam = @Gebruikersnaam LIMIT 1;", parameters);
             if (check.Wachtwoord == b)
             { return true; }

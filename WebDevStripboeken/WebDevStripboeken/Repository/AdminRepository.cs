@@ -15,7 +15,7 @@ public class AdminRepository : DBConnection
 
         IEnumerable<myStripboek> all = connection.Query<myStripboek>(
             @"SELECT *
-                FROM (website.stripboek)
+                FROM (stripboek)
                 WHERE Goedgekeurd = 0;");
         return all.ToList();
     }
@@ -30,7 +30,7 @@ public class AdminRepository : DBConnection
         
         IEnumerable<myUser> all = connection.Query<myUser>(
             @"SELECT *
-                FROM (website.gebruiker);");
+                FROM (gebruiker);");
         return all.ToList();
     }
 
@@ -45,7 +45,7 @@ public class AdminRepository : DBConnection
 
         int x = connection.Execute(
             @"DELETE 
-                FROM website.gebruiker
+                FROM gebruiker
                 WHERE Gebruiker_id =@Gebruikerid;", param);
     }
 
@@ -60,7 +60,7 @@ public class AdminRepository : DBConnection
 
         int x = connection.Execute(
             @"DELETE
-                FROM website.stripboek
+                FROM stripboek
                 WHERE Boek_id = @Boekid", param);
     }
 
@@ -74,7 +74,7 @@ public class AdminRepository : DBConnection
         var param = new {Boekid = Boekid};
 
         int x = connection.Execute(
-            @"UPDATE website.stripboek
+            @"UPDATE stripboek
                 SET Goedgekeurd = 1
                 WHERE Boek_id = @Boekid", param);
     }

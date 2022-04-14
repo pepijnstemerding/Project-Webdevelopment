@@ -34,15 +34,15 @@ INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('10','Wishlist');
 INSERT INTO collectie (Collectie_id, Collectie_naam) VALUES ('11','Honors shelf');
 
 -- Dummy Data Gebruiker tabel
-INSERT INTO Gebruiker(Gebruiker_id,Gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(1,'honor','something@gmail.com','wachtwoord1',1,1,1,'1996-08-24','nee');
-INSERT INTO Gebruiker(Gebruiker_id,Gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(2,'jason','something@hotmail.com','wachtwoord9',0,0,1,'1995-09-24','nee');
-INSERT INTO Gebruiker(Gebruiker_id,Gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(3,'marten','something@outlook.com','wachtwoord8',1,0,1,'1994-12-24','veel');
-INSERT INTO Gebruiker(Gebruiker_id,gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(4,'pepijn','something@yahoo.com','wachtwoord7',1,0,1,'1993-11-24','ik');
-INSERT INTO Gebruiker(Gebruiker_id,gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(5,'nigel','something1@gmail.com','wachtwoord6',1,1,0,'1997-09-24','weet');
-INSERT INTO Gebruiker(Gebruiker_id,gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(6,'tsjabbe','something2@gmail.com','wachtwoord5',0,1,1,'1993-07-24','wij');
-INSERT INTO Gebruiker(Gebruiker_id,gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(7,'lutsche','something3@gmail.com','wachtwoord4',0,1,1,'1994-05-24','zij');
-INSERT INTO Gebruiker(Gebruiker_id,gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(8,'bas','something4@gmail.com','wachtwoord3',1,1,0,'1995-06-24','hij');
-INSERT INTO Gebruiker(Gebruiker_id,gebruikersnaam, email, wachtwoord, is_admin, profiel_zichtbaarheid, collectie_zichtbaarheid, geboorte_datum, beveiligingsvraag) VALUES(9,'joris','something5@gmail.com','wachtwoord2',1,0,1,'1997-07-24','ja');
+INSERT INTO Gebruiker(Gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('honor','something@gmail.com','wachtwoord1','1996-08-24','nee');
+INSERT INTO Gebruiker(Gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('jason','something@hotmail.com','wachtwoord9','1995-09-24','nee');
+INSERT INTO Gebruiker(Gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('marten','something@outlook.com','wachtwoord8','1994-12-24','veel');
+INSERT INTO Gebruiker(gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('pepijn','something@yahoo.com','wachtwoord7','1993-11-24','ik');
+INSERT INTO Gebruiker(gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('nigel','something1@gmail.com','wachtwoord6','1997-09-24','weet');
+INSERT INTO Gebruiker(gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('tsjabbe','something2@gmail.com','wachtwoord5','1993-07-24','wij');
+INSERT INTO Gebruiker(gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('lutsche','something3@gmail.com','wachtwoord4','1994-05-24','zij');
+INSERT INTO Gebruiker(gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('bas','something4@gmail.com','wachtwoord3','1995-06-24','hij');
+INSERT INTO Gebruiker(gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('joris','something5@gmail.com','wachtwoord2','1997-07-24','ja');
 
 -- Dummy Data Stripboek tabel 
 INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (1, 'Donald Duck', 'Donald Duck: The duckiest book1', 112030405060, '1',  '1996', 'comicbookstore', 'www', 1010);
@@ -83,7 +83,6 @@ INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (4, 4);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (5, 5);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (6, 6);
 INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (7, 7);
--- INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (8, 8); Cannot add or update a child row: a foreign key constraint fails (`website`.`geschreven_door`, CONSTRAINT `geschreven_door_ibfk_2` FOREIGN KEY (`Auteur_id`) REFERENCES `auteur` (`Auteur_id`))
 
 -- dummy data voor de getekend door tabel 
 INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES (1,1);
