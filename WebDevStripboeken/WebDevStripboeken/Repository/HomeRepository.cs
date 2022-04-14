@@ -5,6 +5,11 @@ namespace WebDevStripboeken.Repository;
 
 public class HomeRepository : DBConnection
 {
+    /// <summary>
+    /// Haalt op alle stripboeken binnen de megegeven min en max
+    /// </summary>
+    /// <param name="min">megegeven min</param>
+    /// <returns>Lijst van stripboeken</returns>
     public static List<myStripboek> GetAll(int min)
     {
         //var Min = min;
@@ -14,7 +19,7 @@ public class HomeRepository : DBConnection
 
         IEnumerable<myStripboek> all = connection.Query<myStripboek>(
             @"SELECT *
-                FROM (website.stripboek)
+                FROM (stripboek)
                 WHERE Boek_id >= @Min AND Boek_id < @Max AND Goedgekeurd = 1;", parameters);
         return all.ToList();
     }

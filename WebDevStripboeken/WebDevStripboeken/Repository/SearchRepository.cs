@@ -10,7 +10,7 @@ public class SearchRepository : DBConnection
         var parameters = new {Query = b};
         using var connection = Connect();
         //controle a
-        if (a.Contains('-') || a.Contains('"') || a.Contains(' ') || a.Contains("'"))
+        if (a.Contains("--") || a.Contains('"') || a.Contains(' ') || a.Contains("'"))
         {
             return new List<myStripboek>();
         }
@@ -18,7 +18,7 @@ public class SearchRepository : DBConnection
         {
             IEnumerable<myStripboek> results = connection.Query<myStripboek>(
                 $@"SELECT *
-                FROM (website.stripboek)
+                FROM (stripboek)
                 WHERE {a} LIKE CONCAT('%', @Query, '%');", parameters);
             // ----> param voor category pruimt ie niet?? <----
             return results.ToList();
@@ -27,10 +27,10 @@ public class SearchRepository : DBConnection
         {
             IEnumerable<myStripboek> results = connection.Query<myStripboek>(
                 @"SELECT *
-                    FROM (website.stripboek)
-                    JOIN (website.geschreven_door)
+                    FROM (stripboek)
+                    JOIN (geschreven_door)
                     ON (geschreven_door.Boek_id) = (stripboek.Boek_id)
-                    JOIN (website.auteur)
+                    JOIN (auteur)
                     ON (auteur.Auteur_id) = (geschreven_door.Auteur_id)
                     WHERE Naam_Auteur LIKE CONCAT('%', @Query, '%')", parameters);
             return results.ToList();
@@ -39,10 +39,10 @@ public class SearchRepository : DBConnection
         {
             IEnumerable<myStripboek> results = connection.Query<myStripboek>(
                 @"SELECT *
-                    FROM (website.stripboek)
-                    JOIN (website.getekend_door)
+                    FROM (stripboek)
+                    JOIN (getekend_door)
                     ON (getekend_door.Boek_id) = (stripboek.Boek_id)
-                    JOIN (website.tekenaar)
+                    JOIN (tekenaar)
                     ON (tekenaar.Tekenaar_id) = (getekend_door.Tekenaar_id)
                     WHERE Naam_Tekenaar LIKE CONCAT('%', @Query, '%');", parameters);
             return results.ToList();

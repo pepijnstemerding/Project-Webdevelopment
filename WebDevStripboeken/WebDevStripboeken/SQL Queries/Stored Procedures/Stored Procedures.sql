@@ -60,7 +60,7 @@ BEGIN
                 SET Naam_Tekenaar =
                         #haalt array uit elkaar    
                         substring_index(
-                                substring_index(tekenaar_naamARRAY, ',', counter)
+                                substring_index(naam_tekenaarARRAY, ',', counter)
                             , ',', -1)
 
                     #zorgt voor correct tekenaar per boek
@@ -104,7 +104,7 @@ BEGIN
                 SET Naam_Auteur =
                         #haalt array uit elkaar    
                         substring_index(
-                                substring_index(auteur_naamARRAY, ',', counter)
+                                substring_index(naam_auteurARRAY, ',', counter)
                             , ',', -1)
 
                     #zorgt voor correct tekenaar per boek
