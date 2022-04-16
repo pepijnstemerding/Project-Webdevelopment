@@ -7,22 +7,20 @@
     ViewData["Title"] = "Profile";
     ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 }
-
+<!--Admin heeft extra rechten--> 
 <div class="row">
-    <div class="col-6 content">
-        <h2>Gebruikers</h2>
-        <ul>
-            @{
-                foreach (var x in @Model.listUsers)
-                {
-                    <li>@x.Gebruikersnaam -- @Strings.FormatDateTime(@x.Geboorte_datum) -- @x.Email
-                        <form method="post">
-                            <!--<button type="submit" name="promote"></button>-->
-                            <input type="hidden" name="id" value="@x.Gebruiker_id"/>
-                            <button class="btn btn-outline-secondary" type="submit" asp-page-handler="DelUser"><i class="fa-solid fa-xmark fa-fw"></i>Verwijder gebruiker</button>
-                        </form>
-                    </li>
-                }
+<div class="col-lg-6">
+    <ul>
+        @{
+            foreach (var x in @Model.listUsers)
+            {
+                <li>@x.Gebruikersnaam -- @Strings.FormatDateTime(@x.Geboorte_datum) -- @x.Email
+                    <form method="post">
+                        <!--<button type="submit" name="promote"></button>-->
+                        <input type="hidden" name="id" value="@x.Gebruiker_id"/>
+                        <button type="submit" asp-page-handler="DelUser">Verwijder Gebruiker</button>
+                    </form>
+                </li>
             }
         </ul>
     </div>
@@ -43,6 +41,6 @@
                     </li>
                 }
             }
-        </ul>
-    </div>
+    </ul>
+</div>
 </div>

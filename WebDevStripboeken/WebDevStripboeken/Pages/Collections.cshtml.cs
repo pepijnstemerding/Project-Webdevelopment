@@ -10,7 +10,8 @@ public class Collections : PageModel
 {
 
     [BindProperty(SupportsGet = true)] //global get
-    public myCollectie currentUser { get; set; }
+    public myUser currentUserCookie { get; set; }
+    public myUser currentUser { get; set; }
     public int myBase = 1;
     private const int defiation = 5;
     public List<myStripboek> lil1;
@@ -18,19 +19,19 @@ public class Collections : PageModel
 
     public void OnGet()
     {
-        if (Request.Query.ContainsKey("delete"))
+        if (Request.Query.ContainsKey("delete"))                //Wordt aangeroepen als de gebruiker op de knop "Uitloggen" klikt in de header
         {
             Console.WriteLine("yay");
             HttpContext.Response.Cookies.Delete("user");
             //myUser.delCookies();
-            currentUser = new myCollectie();
+            currentUser = new myUser();
         }
         else
         {
             if (Request.Cookies["user"] == null)
             { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
             else
-            { currentUser = JsonConvert.DeserializeObject<myCollectie>(Request.Cookies["user"]); }
+            { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
         lil1 = HomeRepository.GetAll(myBase);
     }

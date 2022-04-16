@@ -34,12 +34,12 @@
         </div>
         <label for="auteur" class="form-label">De auteur(s):</label>
         <div class="input-group mb-3">
-            <input class="form-control" id="auteur" asp-for="SuggestStripboek.MyAuteurs" placeholder="Bijvoorbeeld Carl Barks"/>
+            <input class="form-control" id="auteur" name="AuteursString" asp-for="SuggestStripboek.MyAuteurs" placeholder="Bijvoorbeeld Carl Barks"/>
             <span asp-validation-for="SuggestStripboek.MyAuteurs"></span> <!-- why no work -->
         </div>
         <label for="tekenaar" class="form-label">De illustrator(s):</label>
         <div class="input-group mb-3">
-            <input class="form-control" id="tekenaar" asp-for="SuggestStripboek.MyTekenaars" placeholder="Bijvoorbeeld Carl Barks"/>
+            <input class="form-control" id="tekenaar" name="TekenaarsString" asp-for="SuggestStripboek.MyTekenaars" placeholder="Bijvoorbeeld Carl Barks"/>
             <span asp-validation-for="SuggestStripboek.MyTekenaars"></span> <!-- why no work -->
         </div>
         <label for="uitgever" class="form-label">De uitgever:</label>

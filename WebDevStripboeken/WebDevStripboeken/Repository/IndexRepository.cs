@@ -13,7 +13,7 @@ public class IndexRepository : DBConnection
 
         IEnumerable<myStripboek> all3 = connection.Query<myStripboek>(
             @"SELECT *
-                FROM (website.stripboek)
+                FROM (stripboek)
                 WHERE Boek_id >= @Min AND Boek_id < @Max;", parameters);
         return all3.ToList();
     }

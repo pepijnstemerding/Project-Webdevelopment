@@ -14,12 +14,10 @@ public class SignUp : PageModel
     public myUser currentUser { get; set; }
     public void OnGet()
     {
-        string jsonUser = Request.Cookies["user"];
-        if (jsonUser == null) //sets first cookie
-        {
-            jsonUser = myUser.setCookies();
-        }
-        currentUser = JsonConvert.DeserializeObject<myUser>(jsonUser);
+        if (Request.Cookies["user"] == null)            //Haalt Cookie op als deze bestaat, als deze niet besstaat dan wordt er een nieuwe aangemaakt.
+        { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
+        else
+        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
     }
     
     [BindProperty]
@@ -42,7 +40,7 @@ public class SignUp : PageModel
         {
             SignUpRepository.SignUp(Account);
         }
-        return Page();
+        return RedirectToPage("index");
     }
     
 

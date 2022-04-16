@@ -5,6 +5,11 @@ namespace WebDevStripboeken.Repository;
 
 public class HomeRepository : DBConnection
 {
+    /// <summary>
+    /// Haalt op alle stripboeken binnen de megegeven min en max
+    /// </summary>
+    /// <param name="min">megegeven min</param>
+    /// <returns>Lijst van stripboeken</returns>
     public static List<myStripboek> GetAll(params object[] args)
     {
         // Ik weet niet hoe ik het anders moet doen
