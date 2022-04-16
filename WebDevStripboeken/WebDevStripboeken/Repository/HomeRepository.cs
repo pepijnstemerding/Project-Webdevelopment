@@ -18,14 +18,14 @@ public class HomeRepository : DBConnection
 
         if (user != null)
         {
-            IEnumerable<myStripboek> all = connection.Query<myStripboek>(
+            IEnumerable<myStripboek> from_user = connection.Query<myStripboek>(
                 @"SELECT stripboek.*
                  FROM (bezit)
                   INNER JOIN stripboek ON bezit.Boek_id = stripboek.Boek_id
                  WHERE stripboek.Goedgekeurd = 1
                   AND bezit.Gebruiker_id = 4
                  LIMIT @Min, 5;", parameters);
-            return all.ToList(); 
+            return from_user.ToList(); 
         }
         else
         {
