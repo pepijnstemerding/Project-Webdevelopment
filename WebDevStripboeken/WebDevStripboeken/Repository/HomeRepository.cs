@@ -20,7 +20,6 @@ public class HomeRepository : DBConnection
             user = (myUser) args[1];
         var parameters = new {Min = min};
         using var connection = Connect();
-
         if (user != null)
         {
             IEnumerable<myStripboek> from_user = connection.Query<myStripboek>(
