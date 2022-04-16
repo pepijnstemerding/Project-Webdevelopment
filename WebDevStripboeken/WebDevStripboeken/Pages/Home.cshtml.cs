@@ -10,7 +10,7 @@ public class Home : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public int myBase = 1;
+    public int myBase = 0;
     private const int defiation = 5;
     public List<myStripboek> lil;
     public string message;
@@ -42,19 +42,14 @@ public class Home : PageModel
     public void OnPostMin([FromForm] int based)
     {
         if (based > 1)
-        {
             myBase = based - defiation;
-        }
         else
-        {
             myBase = based;
-        }
 
         currentUser = null;
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         lil = HomeRepository.GetAll(myBase, currentUser);
-        return Redirect("../home");
     }
     
     /// <summary>
@@ -64,18 +59,13 @@ public class Home : PageModel
     public void OnPostAdd([FromForm] int based)
     {
         if (HomeRepository.GetAll(based + 5).Count == 0)
-        {
             myBase = based;
-        }
         else
-        {
             myBase = based + defiation;
-        }
         currentUser = null;
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         lil = HomeRepository.GetAll(myBase, currentUser);
-        return Redirect("../home");
     }
 
     /// <summary>
@@ -89,6 +79,5 @@ public class Home : PageModel
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         lil = HomeRepository.GetAll(myBase, currentUser);
-        return Redirect("../home");
     }
 }
