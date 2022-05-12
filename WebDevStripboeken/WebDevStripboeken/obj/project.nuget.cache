@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ll4WbaNsOCuQENhm3HM2sMeW7kcd2ub5Ymf2Otr1M3F/CUrgFdYdqUkrk7VLKHsSM4h3LD87ABgpSV1bihJU3A==",
+  "dgSpecHash": "qEwOKHKC9x1JWOD3Jt0D3jX9olppBUOe08o4mrR5I65+fIdAa50UPMcG9uC4S30IiHb1Z9W6TRU9vQ0hIPwoCA==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
+  "projectFilePath": "C:\\Users\\pepij\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pepij\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\pepij\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",

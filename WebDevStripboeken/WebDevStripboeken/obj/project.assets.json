@@ -3525,27 +3525,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pepij\\.nuget\\packages\\": {}
+    "C:\\Users\\pepij\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
+      "projectUniqueName": "C:\\Users\\pepij\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
       "projectName": "WebDevStripboeken",
-      "projectPath": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
+      "projectPath": "C:\\Users\\pepij\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\WebDevStripboeken.csproj",
       "packagesPath": "C:\\Users\\pepij\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\",
+      "outputPath": "C:\\Users\\pepij\\Programming\\School\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+      ],
       "configFilePaths": [
         "C:\\Users\\pepij\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\pepij\\.nuget\\packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3595,7 +3599,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

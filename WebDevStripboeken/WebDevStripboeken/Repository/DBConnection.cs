@@ -12,13 +12,14 @@ public class DBConnection
             @"Server=localhost;
             Database=website;
             Uid=root;
-            Pwd=j9muMb2002;
-            Port=3306");
+            Pwd=admin;
+            Port=3306"
+        );
     }
     //db jason uid: website, pwd Test12345
     //db honor uid: website1, pwd Password123
     //db marten uid: root, pwd Test@1234!
-    //db pepijn uid: root, pwd j9muMb2002
+    //db pepijn uid: root, pwd admin
     
     //please god volgende keer neemt iedereen dezelfde uid en pwd XD
 }

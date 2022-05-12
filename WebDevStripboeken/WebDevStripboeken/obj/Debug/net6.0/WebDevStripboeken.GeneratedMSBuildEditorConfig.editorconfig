@@ -8,77 +8,81 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebDevStripboeken
 build_property.RootNamespace = WebDevStripboeken
-build_property.ProjectDir = D:\Programming\School\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\
+build_property.ProjectDir = C:\Users\pepij\Programming\School\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Programming\School\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken
+build_property.MSBuildProjectDirectory = C:\Users\pepij\Programming\School\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Admin.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Collections.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Collections.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVjdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Error.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Home.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Index.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/LogIn.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Privacy.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Profile.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Search.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Settings.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Settings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/SignUp.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnblVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Stripboek.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Stripboek.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RyaXBib2VrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Toevoegen.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Toevoegen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9ldm9lZ2VuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/_ViewImports.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/_ViewStart.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_Layout.cshtml]
+[C:/Users/pepij/Programming/School/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9lq1p8kyhi
