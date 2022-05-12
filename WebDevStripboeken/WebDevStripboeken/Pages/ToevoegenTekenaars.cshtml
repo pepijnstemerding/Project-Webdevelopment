@@ -1,0 +1,27 @@
+﻿@page
+@model WebDevStripboeken.Pages.ToevoegenTekenaars
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Toevoegen";
+}
+
+
+
+<div class="row">
+    <label for="tekenaar" class="form-label">De illustrator(s):</label>
+    @{
+        for (int i = 0; i < @Model.aantalTekenaars; i++)
+        {
+            <div class="input-group mb-3">
+                <input class="form-control" id="tekenaar" name="TekenaarsString" asp-for="SuggestStripboek.MyTekenaars" placeholder="Bijvoorbeeld Carl Barks"/>
+                <span asp-validation-for="SuggestStripboek.MyTekenaars"></span> <!-- why no work -->
+            </div>
+        }
+    }
+    <form method="post" id="tekenaarVelden">
+        <input type="hidden" name="TempValue" value="@Model.tempValue">
+        <button name="AddTekenaarField" id="AddTekenaarField" type="submit" asp-page-handler="AddTekenaarField"> - </button>
+        <button name="RemoveTekenaarField" id="RemoveTekenaarField" type="submit" asp-page-handler="RemoveTekenaarField"> + </button>
+    </form>
+</div>
