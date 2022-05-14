@@ -18,21 +18,24 @@ public class HomeRepository : DBConnection
         myUser? user = null;
         if (args.Length == 2)
             user = (myUser) args[1];
-        var parameters = new {Min = min};
         using var connection = Connect();
-        if (user != null)
-        {
+        if (user != null && user.Gebruikersnaam != "Guest")
+        {   
+            Console.WriteLine("Wel ingelogd");
+            var parameters = new {Min = min, Gebruiker_id = user.Gebruiker_id};
             IEnumerable<myStripboek> from_user = connection.Query<myStripboek>(
                 @"SELECT stripboek.*
                  FROM (bezit)
                   INNER JOIN stripboek ON bezit.Boek_id = stripboek.Boek_id
                  WHERE stripboek.Goedgekeurd = 1
-                  AND bezit.Gebruiker_id = 4
+                  AND bezit.Gebruiker_id = @Gebruiker_id
                  LIMIT @Min, 5;", parameters);
-            return from_user.ToList(); 
+            return from_user.ToList();
         }
         else
         {
+            Console.WriteLine("Niet ingelogd");
+            var parameters = new {Min = min};
             IEnumerable<myStripboek> all = connection.Query<myStripboek>(
                 @"SELECT *
                 FROM (stripboek)
