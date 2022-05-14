@@ -18,11 +18,20 @@ public class HomeRepository : DBConnection
         myUser? user = null;
         if (args.Length == 2)
             user = (myUser) args[1];
+
         using var connection = Connect();
         if (user != null && user.Gebruikersnaam != "Guest")
-        {   
-            Console.WriteLine("Wel ingelogd");
-            var parameters = new {Min = min, Gebruiker_id = user.Gebruiker_id};
+        {
+            // Om de gebruikers ID te krijgen met de Gebruikersnaam uit de cookie
+            int gebruiker_id = connection.QueryFirst<int>(
+                @"SELECT Gebruiker_id
+                FROM gebruiker
+                WHERE Gebruikersnaam = @Gebruiker_naam",
+                new {Gebruiker_naam = user.Gebruikersnaam}
+            );
+            
+            // Alleen de stripboeken van de ingelogde gebruiker krijgen
+            var parameters = new {Min = min, Gebruiker_id = gebruiker_id};
             IEnumerable<myStripboek> from_user = connection.Query<myStripboek>(
                 @"SELECT stripboek.*
                  FROM (bezit)
@@ -33,13 +42,13 @@ public class HomeRepository : DBConnection
             return from_user.ToList();
         }
         else
-        {
-            Console.WriteLine("Niet ingelogd");
+        {            
             var parameters = new {Min = min};
             IEnumerable<myStripboek> all = connection.Query<myStripboek>(
                 @"SELECT *
                 FROM (stripboek)
                 LIMIT @Min, 5;", parameters);
+
             return all.ToList();
         }
     }
