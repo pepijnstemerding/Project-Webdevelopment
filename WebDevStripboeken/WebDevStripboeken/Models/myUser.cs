@@ -21,7 +21,6 @@ public class myUser
     
     public static string setCookies()
     {
-        using var connection = Connect();
         myUser currentUser = new myUser();
         string jsonUser = JsonConvert.SerializeObject(currentUser);
         Cookie user = new Cookie("user", jsonUser);
