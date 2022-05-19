@@ -52,4 +52,8 @@ public class Collections : PageModel
         myBase = 1;
         lil1 = HomeRepository.GetAll(myBase);
     }
+    public void OnPostCollectieAanMaken (string CollectieNaam)
+    {
+        CollectieRepository.CollectieAanMaken(CollectieNaam);
+    }
 }
