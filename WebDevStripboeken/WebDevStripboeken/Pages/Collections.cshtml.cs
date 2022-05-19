@@ -15,11 +15,11 @@ public class Collections : PageModel
     public int myBase = 1;
     private const int defiation = 5;
     public List<myStripboek> lil1;
-    
+    public List<myCollectie> lil2;
 
     public void OnGet()
     {
-        if (Request.Query.ContainsKey("delete"))                //Wordt aangeroepen als de gebruiker op de knop "Uitloggen" klikt in de header
+        if (Request.Query.ContainsKey("delete"))   //Wordt aangeroepen als de gebruiker op de knop "Uitloggen" klikt in de header
         {
             Console.WriteLine("yay");
             HttpContext.Response.Cookies.Delete("user");
@@ -34,6 +34,7 @@ public class Collections : PageModel
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
         lil1 = HomeRepository.GetAll(myBase);
+        //lil2 = CollectieRepository.giveCollecties(currentUser.Gebruiker_id);
     }
     public void OnPostMin([FromForm] int based)
     {
