@@ -19,4 +19,12 @@ public class CollectieRepository : DBConnection
                 WHERE Gebruikersnaam = @Gebruikersnaam LIMIT 1;", parameters);
         return all1.ToList();
     }
+
+    /*public static maakCollectieAan(myCollectie)
+    {
+        var sql = @"INSERT INTO collectie 
+            (Collectie_id, Collectie_naam) 
+            VALUES (@Collectie_id, @Collectie_naam)";
+        
+    }*/
 }

@@ -126,7 +126,6 @@ C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeke
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\WebDevStripboeken.deps.json
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\WebDevStripboeken.runtimeconfig.json
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\WebDevStripboeken.dll
-C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\ref\WebDevStripboeken.dll
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\WebDevStripboeken.pdb
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\Dapper.dll
@@ -168,3 +167,4 @@ C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeke
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\obj\Debug\net6.0\WebDevStripboeken.pdb
 C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\obj\Debug\net6.0\WebDevStripboeken.genruntimeconfig.cache
 D:\Programming\School\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\hhbwr\OneDrive\Documents\GitHub\Project-Webdevelopment\WebDevStripboeken\WebDevStripboeken\obj\Debug\net6.0\refint\WebDevStripboeken.dll
