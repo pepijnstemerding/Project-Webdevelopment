@@ -34,23 +34,7 @@ public class Collections : PageModel
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
         lil1 = HomeRepository.GetAll(myBase);
-        //lil2 = CollectieRepository.giveCollecties(currentUser.Gebruiker_id);
-    }
-    public void OnPostMin([FromForm] int based)
-    {
-        myBase = based - defiation;
-        lil1 = HomeRepository.GetAll(myBase);
-    }
-    public void OnPostAdd([FromForm] int based)
-    {
-        myBase = based + defiation;
-        lil1 = HomeRepository.GetAll(myBase);
-    }
-
-    public void OnPostReset([FromForm] int based)
-    {
-        myBase = 1;
-        lil1 = HomeRepository.GetAll(myBase);
+        lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
     }
     public void OnPostCollectieAanMaken (string CollectieNaam)
     {
