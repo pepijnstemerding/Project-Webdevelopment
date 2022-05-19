@@ -19,7 +19,7 @@ public class IndexModel : PageModel
 
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public void OnGet()
+    public IActionResult OnGet()
     {
         if (Request.Cookies["user"] == null)                                        //Haalt Cookie op als deze bestaat, als deze niet besstaat dan wordt er een nieuwe aangemaakt.
         { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
@@ -28,5 +28,6 @@ public class IndexModel : PageModel
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
             currentUser = ProfileRepository.GetOne(currentUser.Gebruikersnaam);     //Haalt data op van de gebruiker gedefineerd in de cookie uit de database. 
         }
+        return Redirect("/home"); //hoef je zelf niet meer te navigeren naar home page
     }
 }
