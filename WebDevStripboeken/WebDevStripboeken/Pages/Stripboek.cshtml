@@ -11,7 +11,8 @@
     <div class="col-lg-4 content" style="display: flex; flex-wrap: wrap">
         <img src="@Model.boek.Afbeelding_urls" style="width: fit-content"> <!-- picture's hebben white borders, dunno hoe te centeren -->
     </div>
-    <div class="col-lg-8 content">
+    <div class="col-lg-4 content">
+        <h2>Stripboek Informatie</h2>
         <p><b>Titel:</b> @Model.boek.Titel</p>
         <p><b>Reeks:</b> @Model.boek.Reeks</p>
         <p><b>Schrijver(s):</b> </p>
@@ -41,16 +42,25 @@
         <p><b>Jaar van uitgave:</b> @Model.boek.Jaar_v_Uitgave</p>
         <p><b>ISBN:</b> @Model.boek.ISBN</p>
         <p><b>Geschatte Waarde:</b> €@Model.boek.Waarde_schatting</p>
+    </div>
+    <div class="col-lg-4 content">
         @{
-            switch (@Model.currentUser.Gebruikersnaam)
+            if (ViewData["User"] != "Guest" && ViewData["User"] != null)
             {
-                case "Guest":
-                    <p>Wil je dit werk toevoegen aan een van jouw collecties? <a href="../login">Log hier in!</a></p>
-                    break;
-                default:
-                    <p><b>Toevoegen aan collectie:</b></p>
-                    <ul class="dropdown-menu"></ul>
-                    break;
+                <h2>Jou Informatie</h2>
+                
+                @{
+                    switch (@Model.currentUser.Gebruikersnaam)
+                    {
+                        case "Guest":
+                            <p>Wil je dit werk toevoegen aan een van jouw collecties? <a href="../login">Log hier in!</a></p>
+                            break;
+                        default:
+                            <p><b>Toevoegen aan collectie:</b></p>
+                            <ul class="dropdown-menu"></ul>
+                            break;
+                    }
+                }
             }
         }
     </div>

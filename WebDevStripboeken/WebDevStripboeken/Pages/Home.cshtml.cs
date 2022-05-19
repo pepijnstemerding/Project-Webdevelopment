@@ -33,6 +33,7 @@ public class Home : PageModel
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
         lil = HomeRepository.GetAll(myBase, currentUser);
+        userSpecific = 
     }
 
     /// <summary>
