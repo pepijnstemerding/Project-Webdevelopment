@@ -19,7 +19,7 @@ public class CollectieRepository : DBConnection
         dynamic gebrId;
         using var connection = Connect();
         {
-            gebrId = connection.QuerySingle(sqlGebrId, parameters);
+            gebrId = connection.QuerySingle<int>(sqlGebrId, parameters);
         }
         
         var parameters1 = new {gebruikersid = gebrId};
@@ -27,10 +27,10 @@ public class CollectieRepository : DBConnection
                     FROM zit_in
                     WHERE gebruiker_id = @gebruikersid";
 
-        dynamic collId;
+        IEnumerable<int> collId;
         using var connection1 = Connect();
         {
-            collId = connection1.QueryFirstOrDefault(sqlCollectieId, parameters1);
+            collId = connection1.QueryFirstOrDefault<>(sqlCollectieId, parameters1);
 
             foreach (var collectionid in collId)
             {
