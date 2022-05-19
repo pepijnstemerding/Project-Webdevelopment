@@ -34,7 +34,7 @@ public class Collections : PageModel
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
         lil1 = HomeRepository.GetAll(myBase);
-        //lil2 = CollectieRepository.giveCollecties(currentUser.Gebruiker_id);
+        lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
     }
     public void OnPostMin([FromForm] int based)
     {
