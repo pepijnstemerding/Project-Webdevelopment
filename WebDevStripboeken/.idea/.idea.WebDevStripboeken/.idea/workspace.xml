@@ -7,18 +7,34 @@
   <component name="ChangeListManager">
     <list default="true" id="467364c9-f42c-4ac8-be29-8f1e05393c5a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Settings.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Settings.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Models/myCollectie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Models/myCollectie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Repository/CollectieRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Repository/CollectieRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Repository/DBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Repository/DBConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/WebDevStripboeken.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/WebDevStripboeken.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.exe" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.staticwebassets.runtime.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +52,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1f6f390bc246f43f64a19835b0d7e69c2d8f7cd17815f5fcbb145b665bab8/IActionResult.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -153,6 +168,15 @@
       <workItem from="1648634573121" duration="3256000" />
       <workItem from="1648644582183" duration="923000" />
       <workItem from="1648652799422" duration="1230000" />
+      <workItem from="1652344662011" duration="1851000" />
+      <workItem from="1652346814699" duration="566000" />
+      <workItem from="1652347407339" duration="217000" />
+      <workItem from="1652347692395" duration="139000" />
+      <workItem from="1652347855838" duration="3000" />
+      <workItem from="1652347895227" duration="180000" />
+      <workItem from="1652348434572" duration="1427000" />
+      <workItem from="1652433388067" duration="669000" />
+      <workItem from="1652788476296" duration="203000" />
     </task>
     <task id="LOCAL-00001" summary="Logo?">
       <created>1647944743330</created>

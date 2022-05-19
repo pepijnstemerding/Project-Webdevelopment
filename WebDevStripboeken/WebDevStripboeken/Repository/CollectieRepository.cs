@@ -24,4 +24,12 @@ public class CollectieRepository : DBConnection
         //return all1.ToList();   
         return null;
     }
+
+    /*public static maakCollectieAan(myCollectie)
+    {
+        var sql = @"INSERT INTO collectie 
+            (Collectie_id, Collectie_naam) 
+            VALUES (@Collectie_id, @Collectie_naam)";
+        
+    }*/
 }
