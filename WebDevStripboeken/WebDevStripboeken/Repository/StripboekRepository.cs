@@ -14,7 +14,7 @@ public class StripboekRepository : DBConnection
         var IBegSqlIsGood =
             @"SELECT (stripboek.Afbeelding_urls), (stripboek.Titel), (stripboek.Reeks), (auteur.Naam_Auteur), (tekenaar.Naam_Tekenaar), (stripboek.Jaar_v_Uitgave), (stripboek.ISBN), (stripboek.Waarde_schatting) 
             FROM (stripboek, auteur, tekenaar, geschreven_door, getekend_door)
-            WHERE (geschreven_door.Boek_id = @Boekid && geschreven_door.Auteur_id = auteur.Auteur_id) && (getekend_door.Boek_id = @Boekid && getekend_door.Tekenaar_id = tekenaar.Tekenaar_id)";
+            WHERE (geschreven_door.Boek_id = @Boekid AND geschreven_door.Auteur_id = auteur.Auteur_id) AND (getekend_door.Boek_id = @Boekid AND getekend_door.Tekenaar_id = tekenaar.Tekenaar_id)";
 
         var sqlAuteur = @"SELECT Naam_Auteur
                         FROM (geschreven_door)
