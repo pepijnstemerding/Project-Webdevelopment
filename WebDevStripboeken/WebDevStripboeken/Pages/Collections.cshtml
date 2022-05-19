@@ -21,40 +21,6 @@ ViewData["User"] = @Model.currentUser.Gebruikersnaam;
       </ul>
    </div>
    <div class="col-4 content">
-      <h2>Activiteiten</h2>
-      <ul>
-         <li>Activiteit 1</li>
-         <li>Activiteit 2</li>
-      </ul>
-      
-      <div class="col-4 content">
-         <div class="card">
-            <div class="row">
-               @* 
-               <div class="col-2"> <img src="~/Images/profile pic.jpg" height="200" width="400" class="rounded-circle mt-2"> </div>
-               profile picture doesn't fit well *@
-               <div class="col-10">
-                  <div class="comment-box ml-2">
-                     <h4>Review a book</h4>
-                     <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
-                     <div class="comment-area"> <textarea class="form-control" placeholder="Wat vind je er van?" rows="4"></textarea> </div>
-                     <div class="comment-btns mt-2">
-                        <div class="row">
-                           <div class="col-4">
-                              <div class="btn-group" role="group">
-                                 <button class="btn btn-outline-secondary"><i class="fa-solid fa-xmark fa-fw"></i>Close</button>
-                                 <button class="btn btn-outline-secondary"><i class="fa fa-long-arrow-right ml-1 fa-fw"></i>Submit</button>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="col-4 content">
       <h2>Suggesties</h2>
       <div class="accordion" id="stripboekAccordeon">
          @{
@@ -72,7 +38,7 @@ ViewData["User"] = @Model.currentUser.Gebruikersnaam;
                   <p><b>Reeks:</b> @stripboek.Reeks</p>
                   <p><b>Jaar van uitgave:</b> @stripboek.Jaar_v_Uitgave</p>
                   <p><b>Uitgever:</b> @stripboek.Uitgever</p>
-                  <span><a href="../stripboek/@stripboek.Boek_id">Meer Informatie..</a></span>
+                  <span><a class="link-info" href="../stripboek/@stripboek.Boek_id">Meer Informatie..</a></span>
                </div>
             </div>
          </div>

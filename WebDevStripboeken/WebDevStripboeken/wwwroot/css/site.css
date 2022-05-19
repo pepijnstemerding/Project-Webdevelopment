@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 
+i {
+    margin-right: 5px;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;

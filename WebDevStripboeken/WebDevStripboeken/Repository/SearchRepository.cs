@@ -14,7 +14,7 @@ public class SearchRepository : DBConnection
         {
             return new List<myStripboek>();
         }
-        if (a == "Reeks" || a == "Titel" || a == "Uitgever" || a == "Jaar")
+        if (a == "Reeks" || a == "Titel" || a == "Uitgever" || a == "Jaar van Uitgave")
         {
             IEnumerable<myStripboek> results = connection.Query<myStripboek>(
                 $@"SELECT *

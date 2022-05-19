@@ -12,6 +12,7 @@ public class Stripboek : PageModel
     public myUser currentUser { get; set; }
     public int Boekid { get; set; }
     public myStripboek boek { get; set; }
+    public myBezit userspecific { get; set; }
 
     public void OnGet([FromRoute]int boekid)
     {
@@ -22,5 +23,8 @@ public class Stripboek : PageModel
         
         Boekid = boekid;
         boek = StripboekRepository.GetOne(boekid);  //Haalt data op van de database op basis van het Boek_id uit de route
+        
+        // Current user nog gebruiken om user ID te krijgen om bezit op te halen
+        userspecific = BezitRepository.UserSpecificStripboekData(boekid);
     }
 }
