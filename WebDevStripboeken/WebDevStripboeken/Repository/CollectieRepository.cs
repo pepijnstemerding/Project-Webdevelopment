@@ -10,6 +10,8 @@ public class CollectieRepository : DBConnection
     {
         var parameters = new {Gebruikersnaam = b};
         
+        List<myCollectie> all1 = new List<myCollectie>();
+
         var sqlGebrId = @"SELECT gebruiker_id
                     FROM gebruiker
                     WHERE Gebruikersnaam = @gebruikersnaam";
@@ -17,11 +19,28 @@ public class CollectieRepository : DBConnection
         dynamic gebrId;
         using var connection = Connect();
         {
-            gebrId = connection.QuerySingle(sqlGebrId);
+            gebrId = connection.QuerySingle(sqlGebrId, parameters);
         }
         
         var parameters1 = new {gebruikersid = gebrId};
-        //return all1.ToList();   
-        return null;
+        var sqlCollectieId = @"SELECT DISTINCT collectie_id
+                    FROM zit_in
+                    WHERE gebruiker_id = @gebruikersid";
+
+        dynamic collId;
+        using var connection1 = Connect();
+        {
+            collId = connection1.QueryFirstOrDefault(sqlCollectieId, parameters1);
+
+            foreach (var collectionid in collId)
+            {
+                var parameters2 = new {collectieId = collectionid};
+                var sqlCollectieNamen = @"SELECT collectie_naam
+                                        FROM collectie
+                                        WHERE collectie_id = @collectieId";
+                all1.Add(connection1.QuerySingle(sqlCollectieNamen, parameters2));  
+            }
+        }
+        return all1;
     }
 }

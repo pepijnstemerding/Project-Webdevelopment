@@ -19,8 +19,10 @@ public class IndexModel : PageModel
 
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public void OnGet()
+    public IActionResult OnGet()
     {
+        return Redirect("/home"); //hoef je zelf niet meer te navigeren naar home page
+        
         #region MySQL stuff
         
         //using MySqlConnection connection = DbConnection.connect();
