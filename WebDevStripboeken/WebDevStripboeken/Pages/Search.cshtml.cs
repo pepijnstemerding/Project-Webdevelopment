@@ -11,10 +11,7 @@ public class Search : PageModel
     [BindProperty(SupportsGet = true)]
     public myUser currentUser { get; set; }
 
-    public List<myStripboek> getResults;
-    public List<myStripboek> showResults1 = new List<myStripboek>();
-    public List<myStripboek> showResults2 = new List<myStripboek>();
-    public List<myStripboek> showResults3 = new List<myStripboek>();
+    public List<myStripboek> getResults = new List<myStripboek>();
     public bool PostMethod;
     private int Count;
     public string message;
@@ -35,37 +32,8 @@ public class Search : PageModel
     /// <param name="query">De zoekterm waarop gezocht zal worden</param>
     public void OnPost([FromForm] string catagorie, string query)
     {
-        
+        Console.WriteLine(catagorie);
         getResults = (SearchRepository.SearchSubmit(catagorie, query)); //Stuurt parameters naar repository, verwacht een List<myStripboeken> terug.
         PostMethod = true;
-        
-        if (getResults.Count != 0)                                          //Splits de verkregen lijst naar kleinere lijsten.
-        {
-            foreach (myStripboek x in getResults)
-            {
-                if (getResults.Count != 0)
-                {
-                    if (Count < 5)
-                    {
-                        showResults1.Add(x);
-                        Count++;
-                    }
-                    else if (Count >= 5 && Count < 10)
-                    {
-                        showResults2.Add(x);
-                        Count++;
-                    }
-                    else if (Count >= 10 && Count < 15)
-                    {
-                        showResults3.Add(x);
-                        Count++;
-                    }
-                }
-            }
-        }
-        else        //Message die wordt weergeven als er niks gevonden word in de database met de meegegeven parameters.
-        {
-            message = "Niks gevonden..";
-        }
     }
 }
