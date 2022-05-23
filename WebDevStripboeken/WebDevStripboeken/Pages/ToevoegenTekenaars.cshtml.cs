@@ -37,7 +37,7 @@ public class ToevoegenTekenaars : PageModel
 
     public void OnPostRemoveTekenaarField([FromForm] int tempValue)
     {
-        if (aantalTekenaars > 1)
+        if (tempValue > 1)
         {
             aantalTekenaars = tempValue - 1;
             this.tempValue = aantalTekenaars;
