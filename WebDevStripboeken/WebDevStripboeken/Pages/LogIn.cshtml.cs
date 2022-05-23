@@ -36,7 +36,6 @@ public class LogIn : PageModel
             Response.Cookies.Append("user", json);
 
             currentUser = coockieUser;
-            message = "Welkom, " + currentUser.Gebruikersnaam;
             return RedirectToPage("index");
         }
         else                                                //Als het inloggen niet lukt, verschijnt er een message box bovenaan de pagina en wordt de cookie niet verandert.

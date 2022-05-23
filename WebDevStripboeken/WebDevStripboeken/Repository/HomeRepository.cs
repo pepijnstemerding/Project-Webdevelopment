@@ -6,7 +6,7 @@ namespace WebDevStripboeken.Repository;
 public class HomeRepository : DBConnection
 {
     /// <summary>
-    /// Haalt op alle stripboeken binnen de megegeven min en max
+    /// Haalt op alle stripboeken binnen de meegegeven min en max
     /// </summary>
     /// <param name="min">megegeven min</param>
     /// <returns>Lijst van stripboeken</returns>
