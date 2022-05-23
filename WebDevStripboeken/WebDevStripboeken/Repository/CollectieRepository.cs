@@ -44,11 +44,14 @@ public class CollectieRepository : DBConnection
         return all1;
     }
 
-    /*public static maakCollectieAan(myCollectie)
+    public static void  CollectieAanMaken(string x)
     {
-        var sql = @"INSERT INTO collectie 
-            (Collectie_id, Collectie_naam) 
-            VALUES (@Collectie_id, @Collectie_naam)";
-        
-    }*/
+        var parameters = new {Collectie_naam = x};
+        var sql = @"INSERT INTO collectie (Collectie_naam) VALUES (@Colectie_naam)";
+            
+        using var connection = Connect();
+        {
+            connection.Execute(sql, parameters);
+        }
+    }
 }
