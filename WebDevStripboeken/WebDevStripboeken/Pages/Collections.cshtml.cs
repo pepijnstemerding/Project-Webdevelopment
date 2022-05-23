@@ -14,8 +14,9 @@ public class Collections : PageModel
     public myUser currentUser { get; set; }
     public int myBase = 1;
     private const int defiation = 5;
-    public List<myStripboek> lil1;
+    public List<myStripboek> lil1 = new List<myStripboek>();
     public List<myCollectie> lil2;
+    public List<myCollectie> lil3 = new List<myCollectie>();
 
     public void OnGet()
     {
@@ -33,11 +34,37 @@ public class Collections : PageModel
             else
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
+        Rest();
+    }
+    public void OnPostCollectieAanMaken ([FromForm] string CollectieNaam)
+    {
+        Console.WriteLine(CollectieNaam);
+        if (CollectieNaam != null)
+        {
+            //CollectieRepository.CollectieAanMaken(CollectieNaam);
+        }
+
+        Rest();
+    }
+
+    public void Rest()
+    {
         lil1 = HomeRepository.GetAll(myBase);
         lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
-    }
-    public void OnPostCollectieAanMaken (string CollectieNaam)
-    {
-        CollectieRepository.CollectieAanMaken(CollectieNaam);
+        //lil3 = lil2.Distinct<myCollectie>().ToList();
+        foreach (myCollectie collectie in lil2)
+        {
+            if (lil3.Count == 0)
+            {
+                lil3.Add(collectie);
+            }
+            else
+            {
+                if (lil3.Last().Collectie_id != collectie.Collectie_id)
+                {
+                    lil3.Add(collectie);
+                }
+            }
+        }
     }
 }
