@@ -4,7 +4,7 @@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Your Collections";
-    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+    //ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 }
 
 <div class="row">
@@ -14,7 +14,7 @@
         <form method="post" id="CollectieAanMaken" class="needs-validation" novalidate>
                 <label for="naam" class="form-label">Collectienaam</label>
                 <div class="input-group mb-3">
-                    <input name="Naam" type="text" class="form-control" id="Collectienaam" placeholder="Collectienaam"/>
+                    <input name="CollectieNaam" type="text" class="form-control" id="Collectienaam" placeholder="Collectienaam"/>
                 </div>
             <button name="action" class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-arrow-right-to-bracket fa-fw"></i>Maak collectie aan</button>
             </form>
