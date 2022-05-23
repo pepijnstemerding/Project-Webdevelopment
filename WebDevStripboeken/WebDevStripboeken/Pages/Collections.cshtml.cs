@@ -15,7 +15,7 @@ public class Collections : PageModel
     public int myBase = 1;
     private const int defiation = 5;
     public List<myStripboek> lil1;
-    //public List<myCollectie> lil2;
+    public List<myCollectie> lil2;
 
     public void OnGet()
     {
@@ -34,7 +34,7 @@ public class Collections : PageModel
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
         lil1 = HomeRepository.GetAll(myBase);
-        //lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
+        lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
     }
     public void OnPostCollectieAanMaken (string CollectieNaam)
     {

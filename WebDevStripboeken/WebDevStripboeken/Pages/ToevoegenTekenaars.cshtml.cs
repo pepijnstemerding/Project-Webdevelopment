@@ -43,4 +43,17 @@ public class ToevoegenTekenaars : PageModel
             this.tempValue = aantalTekenaars;
         }
     }
+
+    public IActionResult OnPostToevoegenTekenaars()
+    {
+        if (!ModelState.IsValid)
+        {
+            var errors = 
+                from value in ModelState.Values
+                where value.ValidationState == ModelValidationState.Invalid
+                select value;
+            return Page();
+        }
+        return null;
+    }
 }
