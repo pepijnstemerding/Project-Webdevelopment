@@ -10,7 +10,7 @@ public class CollectieRepository : DBConnection
     {
         var parameters = new {Gebruikersnaam = b};
         
-        List<myCollectie> all1 = new List<myCollectie>();
+        /*List<myCollectie> all1 = new List<myCollectie>();
 
         var sqlGebrId = @"SELECT gebruiker_id
                     FROM gebruiker
@@ -30,7 +30,7 @@ public class CollectieRepository : DBConnection
         IEnumerable<int> collId;
         using var connection1 = Connect();
         {
-            collId = connection1.QueryFirstOrDefault<>(sqlCollectieId, parameters1);
+            collId = connection1.QueryFirstOrDefault(sqlCollectieId, parameters1);
 
             foreach (var collectionid in collId)
             {
@@ -41,14 +41,25 @@ public class CollectieRepository : DBConnection
                 all1.Add(connection1.QuerySingle(sqlCollectieNamen, parameters2));  
             }
         }
-        return all1;
+        return all1;*/
+
+        using var connection = Connect();
+        IEnumerable<myCollectie> all = connection.Query<myCollectie>(
+            @"SELECT c.Collectie_id, c.Collectie_naam
+                FROM collectie c
+                JOIN zit_in z 
+                ON c.Collectie_id = z.Collectie_id
+                JOIN gebruiker g on z.Gebruiker_id = g.Gebruiker_id
+                WHERE g.Gebruikersnaam = @Gebruikersnaam", parameters);
+
+        return all.ToList();
     }
 
-    /*public static maakCollectieAan(myCollectie)
+    public static void maakCollectieAan (myCollectie x)
     {
         var sql = @"INSERT INTO collectie 
             (Collectie_id, Collectie_naam) 
             VALUES (@Collectie_id, @Collectie_naam)";
         
-    }*/
+    }
 }
