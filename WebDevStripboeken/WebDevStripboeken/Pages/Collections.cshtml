@@ -20,13 +20,19 @@
             </form>
         <ul>
             @{
-                foreach (myCollectie x in Model.lil2)
+                if (Model.lil2.Count > 0)
                 {
-                    <li><a href="../collectie/@x.Collectie_id">@x.Collectie_naam</a></li> <!--Link naar een gebruiker zijn collecties-->
+                    foreach (myCollectie x in Model.lil2)
+                    {
+                        <li><a href="../collectie/@x.Collectie_id">@x.Collectie_naam</a></li>
+                        <!--Link naar een gebruiker zijn collecties-->
+                    }
+                }
+                else
+                {
+                    <p>U heeft geen collecties</p>
                 }
             }
-            <li>Collectie 1</li> 
-            <li>Wenslijst 1</li>
         </ul>
     </div>
     
