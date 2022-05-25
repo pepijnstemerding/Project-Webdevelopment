@@ -14,17 +14,17 @@ public class Stripboek : PageModel
     public myStripboek boek { get; set; }
     public myBezit userspecific { get; set; }
 
-    public void OnGet([FromRoute]int boekid)
+    public void OnGet([FromRoute]int Boekid)
     {
-        if (Request.Cookies["user"] == null)        //Haalt Cookie op als deze bestaat, als deze niet besstaat dan wordt er een nieuwe aangemaakt.
-        { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
-        else
-        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
+        if (Request.Cookies["user"] == null) //Haalt Cookie op als deze bestaat, als deze niet besstaat dan wordt er een nieuwe aangemaakt.
+        {
+            HttpContext.Response.Cookies.Append("user", myUser.setCookies());
+        } else {
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        } 
         
-        Boekid = boekid;
-        boek = StripboekRepository.GetOne(boekid);  //Haalt data op van de database op basis van het Boek_id uit de route
-        
-        // Current user nog gebruiken om user ID te krijgen om bezit op te halen
-        userspecific = BezitRepository.UserSpecificStripboekData(boekid);
+        boek = StripboekRepository.GetOne(Boekid);  //Haalt data op van de database op basis van het Boek_id uit de route
+        userspecific = BezitRepository.UserSpecificStripboekData(Boekid, currentUser.Gebruikersnaam); // Haalt data op van de database die specifiek is aan de ingelogde gebruiker
+        Console.WriteLine(userspecific);
     }
 }

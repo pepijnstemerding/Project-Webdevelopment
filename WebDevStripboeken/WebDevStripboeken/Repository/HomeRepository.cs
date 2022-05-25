@@ -29,6 +29,7 @@ public class HomeRepository : DBConnection
                 WHERE Gebruikersnaam = @Gebruiker_naam",
                 new {Gebruiker_naam = user.Gebruikersnaam}
             );
+            Console.WriteLine(gebruiker_id);
             
             // Alleen de stripboeken van de ingelogde gebruiker krijgen
             var parameters = new {Min = min, Gebruiker_id = gebruiker_id};
@@ -42,7 +43,7 @@ public class HomeRepository : DBConnection
             return from_user.ToList();
         }
         else
-        {            
+        {
             var parameters = new {Min = min};
             IEnumerable<myStripboek> all = connection.Query<myStripboek>(
                 @"SELECT *

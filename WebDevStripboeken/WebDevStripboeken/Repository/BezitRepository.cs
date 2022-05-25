@@ -6,15 +6,21 @@ namespace WebDevStripboeken.Repository;
 
 public class BezitRepository : DBConnection
 {
-    public static myBezit UserSpecificStripboekData(int Boek_id, int Gebruiker_id)
+    public static myBezit UserSpecificStripboekData(int Boek_id, string gebruiker_naam)
     {
-        var parameters = new { Boek_id = Boek_id, Gebruiker_id = Gebruiker_id };
         using var connection = Connect();
+
+        int gebruiker_id = connection.QueryFirst<int>(
+            @"SELECT Gebruiker_id
+                FROM gebruiker
+                WHERE Gebruikersnaam = @gebruiker_naam",
+            new {gebruiker_naam = gebruiker_naam}
+        );
         return connection.QueryFirstOrDefault<myBezit>(
             @"SELECT *
                  FROM bezit
-                 WHERE Gebruiker_id = @Gebruiker_id AND Boek_id = @Boek_id",
-            parameters
+                 WHERE gebruiker_id = @gebruiker_id AND Boek_id = @Boek_id",
+            new { Boek_id = Boek_id, gebruiker_id = gebruiker_id }
         );
     }
 }

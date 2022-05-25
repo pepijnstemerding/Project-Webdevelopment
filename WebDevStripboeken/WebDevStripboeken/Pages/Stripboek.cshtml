@@ -48,18 +48,18 @@
             if (ViewData["User"] != "Guest" && ViewData["User"] != null)
             {
                 <h2>Jou Informatie</h2>
-                
-                @{
-                    switch (@Model.currentUser.Gebruikersnaam)
-                    {
-                        case "Guest":
-                            <p>Wil je dit werk toevoegen aan een van jouw collecties? <a href="../login">Log hier in!</a></p>
-                            break;
-                        default:
-                            <p><b>Toevoegen aan collectie:</b></p>
-                            <ul class="dropdown-menu"></ul>
-                            break;
-                    }
+                <p><b>Gekocht voor:</b>@Model.userspecific.Gekocht_voor</p>
+                <p><b>Locatie:</b> @Model.userspecific.Locatie</p>
+                <p><b>Status:</b> @Model.userspecific.Status_exemplaar</p>
+                switch (@Model.currentUser.Gebruikersnaam)
+                {
+                    case "Guest":
+                        <p>Wil je dit werk toevoegen aan een van jouw collecties? <a href="../login">Log hier in!</a></p>
+                        break;
+                    default:
+                        <p><b>Toevoegen aan collectie:</b></p>
+                        <ul class="dropdown-menu"></ul>
+                        break;
                 }
             }
         }
