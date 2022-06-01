@@ -9,7 +9,7 @@ public class BezitRepository : DBConnection
     public static myBezit UserSpecificStripboekData(int Boek_id, string gebruiker_naam)
     {
         using var connection = Connect();
-
+        Console.WriteLine($"Boek ID {Boek_id} Gebruiker: {gebruiker_naam}");
         int gebruiker_id = connection.QueryFirst<int>(
             @"SELECT Gebruiker_id
                 FROM gebruiker
