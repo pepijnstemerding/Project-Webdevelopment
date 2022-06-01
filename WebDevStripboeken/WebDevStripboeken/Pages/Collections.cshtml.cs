@@ -10,16 +10,17 @@ public class Collections : PageModel
 {
 
     [BindProperty(SupportsGet = true)] //global get
-    public myUser currentUserCookie { get; set; }
+    //public myUser currentUserCookie { get; set; }
     public myUser currentUser { get; set; }
     public int myBase = 1;
     private const int defiation = 5;
-    public List<myStripboek> lil1;
-    
+    public List<myStripboek> lil1 = new List<myStripboek>();
+    public List<myCollectie> lil2;
+    public List<myCollectie> lil3 = new List<myCollectie>();
 
     public void OnGet()
     {
-        if (Request.Query.ContainsKey("delete"))                //Wordt aangeroepen als de gebruiker op de knop "Uitloggen" klikt in de header
+        if (Request.Query.ContainsKey("delete"))   //Wordt aangeroepen als de gebruiker op de knop "Uitloggen" klikt in de header
         {
             Console.WriteLine("yay");
             HttpContext.Response.Cookies.Delete("user");
@@ -33,22 +34,37 @@ public class Collections : PageModel
             else
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
-        lil1 = HomeRepository.GetAll(myBase);
+        Rest();
     }
-    public void OnPostMin([FromForm] int based)
+    public void OnPostCollectieAanMaken ([FromForm] string CollectieNaam)
     {
-        myBase = based - defiation;
-        lil1 = HomeRepository.GetAll(myBase);
-    }
-    public void OnPostAdd([FromForm] int based)
-    {
-        myBase = based + defiation;
-        lil1 = HomeRepository.GetAll(myBase);
+        Console.WriteLine(CollectieNaam);
+        if (CollectieNaam != null)
+        {
+            //CollectieRepository.CollectieAanMaken(CollectieNaam);
+        }
+
+        Rest();
     }
 
-    public void OnPostReset([FromForm] int based)
+    public void Rest()
     {
-        myBase = 1;
         lil1 = HomeRepository.GetAll(myBase);
+        lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
+        //lil3 = lil2.Distinct<myCollectie>().ToList();
+        foreach (myCollectie collectie in lil2)
+        {
+            if (lil3.Count == 0)
+            {
+                lil3.Add(collectie);
+            }
+            else
+            {
+                if (lil3.Last().Collectie_id != collectie.Collectie_id)
+                {
+                    lil3.Add(collectie);
+                }
+            }
+        }
     }
 }
