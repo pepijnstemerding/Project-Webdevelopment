@@ -14,9 +14,7 @@ public class ForgotPassword : PageModel
 {
     [BindProperty(SupportsGet = true)] //global get
     public myUser currentUser { get; set; }
-
-    public string message1 = "mislukt";
-
+    
     public void OnGet()
     {
         if (Request.Cookies["user"] == null)
@@ -27,5 +25,10 @@ public class ForgotPassword : PageModel
         {
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         }
+    }
+
+    public void OnPost([FromForm] string User, [FromForm] string WW, [FromForm] string beveiligingsVraag)
+    {
+        Console.WriteLine($"{User} {WW} {beveiligingsVraag}");
     }
 }

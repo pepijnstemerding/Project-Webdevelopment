@@ -10,17 +10,47 @@ public class HomeRepository : DBConnection
     /// </summary>
     /// <param name="min">megegeven min</param>
     /// <returns>Lijst van stripboeken</returns>
-    public static List<myStripboek> GetAll(int min)
+    public static List<myStripboek> GetAll(params object[] args)
     {
-        //var Min = min;
-        //var Max = min + 5;
-        var parameters = new {Min = min, Max = min + 5};
-        using var connection = Connect();
+        // Ik weet niet hoe ik het anders moet doen
+        // C# optionele variabelen zijn echt slecht te implementeren
+        var min = (int) args[0];
+        myUser? user = null;
+        if (args.Length == 2)
+            user = (myUser) args[1];
 
-        IEnumerable<myStripboek> all = connection.Query<myStripboek>(
-            @"SELECT *
+        using var connection = Connect();
+        if (user != null && user.Gebruikersnaam != "Guest")
+        {
+            // Om de gebruikers ID te krijgen met de Gebruikersnaam uit de cookie
+            int gebruiker_id = connection.QueryFirst<int>(
+                @"SELECT Gebruiker_id
+                FROM gebruiker
+                WHERE Gebruikersnaam = @Gebruiker_naam",
+                new {Gebruiker_naam = user.Gebruikersnaam}
+            );
+            Console.WriteLine(gebruiker_id);
+            
+            // Alleen de stripboeken van de ingelogde gebruiker krijgen
+            var parameters = new {Min = min, Gebruiker_id = gebruiker_id};
+            IEnumerable<myStripboek> from_user = connection.Query<myStripboek>(
+                @"SELECT stripboek.*
+                 FROM (bezit)
+                  INNER JOIN stripboek ON bezit.Boek_id = stripboek.Boek_id
+                 WHERE stripboek.Goedgekeurd = 1
+                  AND bezit.Gebruiker_id = @Gebruiker_id
+                 LIMIT @Min, 5;", parameters);
+            return from_user.ToList();
+        }
+        else
+        {
+            var parameters = new {Min = min};
+            IEnumerable<myStripboek> all = connection.Query<myStripboek>(
+                @"SELECT *
                 FROM (stripboek)
-                WHERE Boek_id >= @Min AND Boek_id < @Max AND Goedgekeurd = 1;", parameters);
-        return all.ToList();
+                LIMIT @Min, 5;", parameters);
+
+            return all.ToList();
+        }
     }
 }
