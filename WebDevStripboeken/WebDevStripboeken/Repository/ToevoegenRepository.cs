@@ -5,99 +5,89 @@ namespace WebDevStripboeken.Repository;
 
 public class ToevoegenRepository : DBConnection
 {
-    public static void AddOne(myStripboek x)
+    public static void AddOne(myStripboek x, List<string> y, List<string> z)
     {
         var par = new
         {
             Reeks = x.Reeks, Titel = x.Titel, ISBN = x.ISBN, Jaar = x.Jaar_v_Uitgave, Uitgever = x.Uitgever,
             Afbeelding = x.Afbeelding_urls, Waarde = x.Waarde_schatting
         };
-
+        
         var sql = @"INSERT INTO stripboek 
             (Reeks, Titel, ISBN, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) 
             VALUES (@Reeks, @Titel, @ISBN, @Jaar, @Uitgever, @Afbeelding, @Waarde)";
-        
-        
-        using var connection = Connect();
-        {
-            connection.Execute(sql, par);
-        }
-    }
 
-    public static void ToevoegenTekenaars(List<string> z)
-    {
+        
+        var sqlAuteur = @"INSERT INTO auteur
+                        (Naam_Auteur)
+                        VALUE (@Auteur);";
+
         var sqlTekenaar = @"INSERT INTO tekenaar
                             (Naam_Tekenaar)
                             VALUE (@Tekenaar);";
         
+        var sqlSelectAuteurID = @"SELECT auteur.auteur_id FROM auteur WHERE Naam_Auteur = @Auteur;";
+        
         var sqlSelectTekenaarID = @"SELECT tekenaar.Tekenaar_id FROM tekenaar WHERE Naam_Tekenaar = @Tekenaar;";
             
-        var sqlTekenaarStripID = @"INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES ((SELECT MAX(Boek_id) FROM Stripboek), @Tekenaarid);";
-
-        using var connectionTekenaar = Connect();
-        {
-            if (z.Count > 0)
-            {
-                foreach (string tekenaar in z)
-                {
-                    var parTekenaar = new {Tekenaar = tekenaar};
-                    connectionTekenaar.Execute(sqlTekenaar, parTekenaar);
-                }
-            }
-        }
-
-        using var connectionTekenaar2 = Connect();
-        {
-            if (z.Count > 0)
-            {
-                foreach (string tekenaar in z)
-                {
-                    var parTekenaar = new {Tekenaar = tekenaar};
-                    var id_t = connectionTekenaar2.QuerySingle<int>(sqlSelectTekenaarID, parTekenaar);
-
-                    var parids = new {Tekenaarid = id_t};
-                    connectionTekenaar2.Execute(sqlTekenaarStripID, parids);
-                }
-            }
-        }
-    }
-
-    public static void toevoegenAuteurs(List<string> y)
-    {
-        var sqlAuteur = @"INSERT INTO auteur
-                        (Naam_Auteur)
-                        VALUE (@Auteur);";
+        var sqlTekenaarStripID = @"INSERT INTO getekend_door (Boek_id, Tekenaar_id) VALUES (@Stripid, @Tekenaarid);";
         
-        var sqlSelectAuteurID = @"SELECT auteur.auteur_id FROM auteur WHERE Naam_Auteur = @Auteur;";
+        var sqlAuteurStripID = @"INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES (@Stripid, @Auteurid);";
+
+        
+        using var connection = Connect();
+        {
+            connection.Execute(sql, par);
+            if (y.Count > 0)
+            {
+                foreach (string auteur in y)
+                {
+                    var parAuteur = new {Auteur = auteur};
+                    connection.Execute(sqlAuteur, parAuteur);
+                }
+            }
+
+            if (z.Count > 0)
+            {
+                foreach (string tekenaar in z)
+                {
+                    var parTekenaar = new {Tekenaar = tekenaar};
+                    connection.Execute(sqlTekenaar, parTekenaar);
+                }
+            }
+        }
+        
+        using var connection2 = Connect();
+        {
+            var id_s = connection2.QuerySingle<int>(
+                @"SELECT stripboek.Boek_id FROM stripboek WHERE ISBN = @ISBN AND Titel = @Titel", par);
             
-        var sqlAuteurStripID = @"INSERT INTO geschreven_door (Boek_id, Auteur_id) VALUES ((SELECT MAX(Boek_id) FROM Stripboek), @Auteurid);";
+            if (y.Count > 0)
+            {
+                foreach (string auteur in y)
+                {
+                    var parAuteur = new {Auteur = auteur};
+                    var id_a = connection2.QuerySingle<int>(sqlSelectAuteurID, parAuteur);
+                    
+                    var parids = new {Auteurid = id_a, Stripid = id_s};
+                    connection2.Execute(sqlAuteurStripID, parids);
+                }
+            }
+            
+            if (z.Count > 0)
+            {
+                foreach (string tekenaar in z)
+                {
+                    var parTekenaar = new {Tekenaar = tekenaar};
+                    var id_t = connection2.QuerySingle<int>(sqlSelectTekenaarID, parTekenaar);
+                    
+                    var parids = new {Tekenaarid = id_t, Stripid = id_s};
+                    connection2.Execute(sqlTekenaarStripID, parids);
+                }
+            }
+        }
         
-        using var connectionAuteur = Connect();
-        {
-            if (y.Count > 0)
-            {
-                foreach (string auteur in y)
-                {
-                    var parAuteur = new {Auteur = auteur};
-                    connectionAuteur.Execute(sqlAuteur, parAuteur);
-                }
-            }
-        }
-
-        using var connectionAuteur2 = Connect();
-        {
-            if (y.Count > 0)
-            {
-                foreach (string auteur in y)
-                {
-                    var parAuteur = new {Auteur = auteur};
-                    var id_a = connectionAuteur2.QuerySingle<int>(sqlSelectAuteurID, parAuteur);
-
-                    var parids = new {Auteurid = id_a};
-                    connectionAuteur2.Execute(sqlAuteurStripID, parids);
-                }
-            }
-
-        }
     }
+    
+    //public static void 
 }

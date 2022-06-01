@@ -7,19 +7,9 @@
 }
 
 <div class="row">
-    <label for="auteur" class="form-label">De Auteur(s):</label>
-    <form method="post">
-        @{
-            <div class="input-group mb-3">
-                <input class="form-control" id="auteur" name="Naam_Auteur1" placeholder="Bijvoorbeeld Carl Barks"/>
-            </div>
-            <div class="input-group mb-3">
-                <input class="form-control" id="auteur" name="Naam_Auteur2" placeholder="Bijvoorbeeld Carl Barks"/>
-            </div>
-            <div class="input-group mb-3">
-                <input class="form-control" id="auteur" name="Naam_Auteur3" placeholder="Bijvoorbeeld Carl Barks"/>
-            </div>
-        }
-        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="ToevoegenAuteurs"> Toevoegen </button>
-    </form>
+    <label for="auteur" class="form-label">De auteur(s):</label>
+    <div class="input-group mb-3">
+        <input class="form-control" id="auteur" name="AuteursString" asp-for="SuggestStripboek.MyAuteurs" placeholder="Bijvoorbeeld Carl Barks"/>
+        <span asp-validation-for="SuggestStripboek.MyAuteurs"></span> <!-- why no work -->
+    </div>
 </div>

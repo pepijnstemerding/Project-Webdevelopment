@@ -11,53 +11,49 @@ namespace WebDevStripboeken.Pages;
 
 public class ToevoegenTekenaars : PageModel
 {
+    public int aantalTekenaars { set; get; } = 1;
     public int tempValue { set; get; } = 1;
     public myUser currentUser { get; set; }
-
     public void OnGet()
     {
         if (Request.Cookies["user"] == null)
-        {
-            HttpContext.Response.Cookies.Append("user", myUser.setCookies());
-        }
+        { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
         else
-        {
-            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
-        }
+        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); } 
     }
-
-    [BindProperty] public myTekenaar SuggestTekenaar { get; set; }
+    [BindProperty]
+    public myStripboek SuggestStripboek { get; set; }
 
     public void OnPost()
     {
 
     }
 
-    public IActionResult OnPostToevoegenTekenaars([FromForm] string Naam_Tekenaar1, [FromForm] string Naam_Tekenaar2,
-        [FromForm] string Naam_Tekenaar3)
+    public void OnPostAddTekenaarField([FromForm] int tempValue)
     {
-        List<string> alleTekenaars = new List<string>();
+        aantalTekenaars = tempValue + 1;
+        this.tempValue = aantalTekenaars;
+    }
 
-        if (Naam_Tekenaar1 != null)
+    public void OnPostRemoveTekenaarField([FromForm] int tempValue)
+    {
+        if (tempValue > 1)
         {
-            alleTekenaars.Add(Naam_Tekenaar1);
+            aantalTekenaars = tempValue - 1;
+            this.tempValue = aantalTekenaars;
         }
+    }
 
-        if (Naam_Tekenaar2 != null)
+    public IActionResult OnPostToevoegenTekenaars()
+    {
+        if (!ModelState.IsValid)
         {
-            alleTekenaars.Add(Naam_Tekenaar2);
+            var errors = 
+                from value in ModelState.Values
+                where value.ValidationState == ModelValidationState.Invalid
+                select value;
+            return Page();
         }
-
-        if (Naam_Tekenaar3 != null)
-        {
-            alleTekenaars.Add(Naam_Tekenaar3);
-        }
-
-        if (alleTekenaars != null)
-        {
-            ToevoegenRepository.ToevoegenTekenaars(alleTekenaars);
-            return Redirect("/ToevoegenAuteurs");
-        }
-        return Page();
+        return null;
     }
 }
