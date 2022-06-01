@@ -24,7 +24,10 @@ public class Stripboek : PageModel
         } 
         
         boek = StripboekRepository.GetOne(Boekid);  //Haalt data op van de database op basis van het Boek_id uit de route
-        userspecific = BezitRepository.UserSpecificStripboekData(Boekid, currentUser.Gebruikersnaam); // Haalt data op van de database die specifiek is aan de ingelogde gebruiker
-        Console.WriteLine(userspecific);
+        if (currentUser.Gebruikersnaam != "Guest")
+        {
+            userspecific = BezitRepository.UserSpecificStripboekData(Boekid, currentUser.Gebruikersnaam); // Haalt data op van de database die specifiek is aan de ingelogde gebruiker
+            Console.WriteLine($"{userspecific.Boek_id}, {userspecific.Gebruiker_id}, {userspecific.Gekocht_voor}, {userspecific.Locatie}, {userspecific.Status_exemplaar}");   
+        }
     }
 }
