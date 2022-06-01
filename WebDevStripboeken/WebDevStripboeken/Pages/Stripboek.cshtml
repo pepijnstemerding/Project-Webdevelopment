@@ -48,7 +48,7 @@
             if (ViewData["User"] != "Guest" && ViewData["User"] != null)
             {
                 <h2>Jou Informatie</h2>
-                <p><b>Gekocht voor:</b>@Model.userspecific.Gekocht_voor</p>
+                <p><b>Gekocht voor:</b> €@Model.userspecific.Gekocht_voor</p>
                 <p><b>Locatie:</b> @Model.userspecific.Locatie</p>
                 <p><b>Status:</b> @Model.userspecific.Status_exemplaar</p>
                 switch (@Model.currentUser.Gebruikersnaam)
