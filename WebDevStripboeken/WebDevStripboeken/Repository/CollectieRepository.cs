@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using WebDevStripboeken.Models;
+using WebDevStripboeken.Pages;
 
 namespace WebDevStripboeken.Repository;
 
@@ -51,6 +52,20 @@ public class CollectieRepository : DBConnection
                 JOIN gebruiker g on z.Gebruiker_id = g.Gebruiker_id
                 WHERE g.Gebruikersnaam = @Gebruikersnaam", parameters);
 
+        return all.ToList();
+    }
+
+    public static List<myStripboek> giveBooks(int CollectionID)
+    {
+        var par = new {id = CollectionID};
+        using var connection = Connect();
+        
+        IEnumerable<myStripboek> all = connection.Query<myStripboek>(
+            @"SELECT *
+                FROM stripboek s
+                JOIN zit_in z
+                ON s.Boek_id = z.Boek_id
+                WHERE z.Collectie_id = @id;", par);
         return all.ToList();
     }
 

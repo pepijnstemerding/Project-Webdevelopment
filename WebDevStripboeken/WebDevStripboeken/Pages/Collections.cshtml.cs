@@ -18,7 +18,7 @@ public class Collections : PageModel
     public List<myCollectie> lil2;
     public List<myCollectie> lil3 = new List<myCollectie>();
 
-    public void OnGet()
+    public void OnGet([FromRoute] int Collid)
     {
         if (Request.Query.ContainsKey("delete"))   //Wordt aangeroepen als de gebruiker op de knop "Uitloggen" klikt in de header
         {
@@ -35,6 +35,7 @@ public class Collections : PageModel
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
         Rest();
+        CollectieRepository.giveBooks(Collid);
     }
     public void OnPostCollectieAanMaken ([FromForm] string CollectieNaam)
     {
