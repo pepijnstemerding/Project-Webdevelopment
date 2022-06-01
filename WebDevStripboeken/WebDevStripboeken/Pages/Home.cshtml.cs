@@ -10,7 +10,7 @@ public class Home : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public int myBase = 1;
+    public int myBase = 0;
     private const int defiation = 5;
     public List<myStripboek> lil;
     public string message;
@@ -32,7 +32,7 @@ public class Home : PageModel
             else
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
-        lil = HomeRepository.GetAll(myBase);
+        lil = HomeRepository.GetAll(myBase, currentUser);
     }
 
     /// <summary>
@@ -42,17 +42,14 @@ public class Home : PageModel
     public void OnPostMin([FromForm] int based)
     {
         if (based > 1)
-        {
             myBase = based - defiation;
-            lil = HomeRepository.GetAll(myBase);
-        }
         else
-        {
             myBase = based;
-            lil = HomeRepository.GetAll(myBase);
-        }
+
+        currentUser = null;
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        lil = HomeRepository.GetAll(myBase, currentUser);
     }
     
     /// <summary>
@@ -62,17 +59,13 @@ public class Home : PageModel
     public void OnPostAdd([FromForm] int based)
     {
         if (HomeRepository.GetAll(based + 5).Count == 0)
-        {
             myBase = based;
-            lil = HomeRepository.GetAll(myBase);
-        }
         else
-        {
             myBase = based + defiation;
-            lil = HomeRepository.GetAll(myBase);
-        }
+        currentUser = null;
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        lil = HomeRepository.GetAll(myBase, currentUser);
     }
 
     /// <summary>
@@ -82,8 +75,9 @@ public class Home : PageModel
     public void OnPostReset([FromForm] int based)
     {
         myBase = 1;
-        lil = HomeRepository.GetAll(myBase);
+        currentUser = null;
         if (Request.Cookies["user"] != null)
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        lil = HomeRepository.GetAll(myBase, currentUser);
     }
 }

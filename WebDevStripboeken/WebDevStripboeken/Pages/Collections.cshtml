@@ -1,12 +1,10 @@
 ﻿@page "{Collid?}"
 @model WebDevStripboeken.Pages.Collections
-
 @{
-    Layout = "_Layout";
-    ViewData["Title"] = "Your Collections";
-    ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+Layout = "_Layout";
+ViewData["Title"] = "Your Collections";
+ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 }
-
 <div class="row">
     <div class="col-4 content">
         <h2>Collecties</h2>
