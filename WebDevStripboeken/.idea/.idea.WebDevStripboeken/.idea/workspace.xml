@@ -4,22 +4,43 @@
     <projectFile profileName="WebDevStripboeken">WebDevStripboeken/WebDevStripboeken.csproj</projectFile>
     <projectFile profileName="IIS Express">WebDevStripboeken/WebDevStripboeken.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="467364c9-f42c-4ac8-be29-8f1e05393c5a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebDevStripboeken/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Collections.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Repository/CollectieRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Repository/CollectieRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Privacy.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Privacy.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/Toevoegen.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/Toevoegen.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/ToevoegenAuteurs.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/ToevoegenAuteurs.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/ToevoegenAuteurs.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/ToevoegenAuteurs.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/ToevoegenTekenaars.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/ToevoegenTekenaars.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Pages/ToevoegenTekenaars.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Pages/ToevoegenTekenaars.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Repository/DBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Repository/DBConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/Repository/ToevoegenRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/Repository/ToevoegenRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.exe" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/bin/Debug/net6.0/WebDevStripboeken.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/WebDevStripboeken.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/ref/WebDevStripboeken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/refint/WebDevStripboeken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/refint/WebDevStripboeken.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/WebDevStripboeken.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/WebDevStripboeken/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
@@ -37,7 +58,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4708639776589f5ac2739f6fcbfc67343b1f9dac51cc1dbfdb003eef77cc1c/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebDevStripboeken/Pages/Home.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/jason/Desktop/GitHubRepos/Project-Webdevelopment/WebDevStripboeken/WebDevStripboeken/Repository/ToevoegenRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,17 +73,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="RunConfigurationTargetLRU" value="e3497a85-3dec-4d26-aaa9-ede92fd33374&#10;e3497a85-3dec-4d26-aaa9-ede92fd33374/schema/&quot;website&quot;" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
-    <property name="settings.editor.selected.configurable" value="HotReloadSettingsPage" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "MySQL"
+    ]
+  }
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebDevStripboeken">
     <configuration name="CreateQuerys.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/WebDevStripboeken/SQL Queries/CreateQuerys.sql" />
@@ -164,6 +192,8 @@
       <workItem from="1652433388067" duration="669000" />
       <workItem from="1652788476296" duration="203000" />
       <workItem from="1652955332610" duration="1899000" />
+      <workItem from="1653298930538" duration="2111000" />
+      <workItem from="1654068453470" duration="12003000" />
     </task>
     <task id="LOCAL-00001" summary="Logo?">
       <created>1647944743330</created>

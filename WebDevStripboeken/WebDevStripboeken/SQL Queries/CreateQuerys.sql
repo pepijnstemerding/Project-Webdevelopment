@@ -24,11 +24,11 @@ CREATE TABLE IF NOT EXISTS `Stripboek` (
 `Titel`            TINYTEXT NOT NULL,                  -- Titel van boek, bijvoorbeeld '24 uur voor de planeet aarde'
 `ISBN`             VARCHAR(17),                        -- Internationaal Standaard Boeknummer van boek 
 `Goedgekeurd`      BOOLEAN NOT NULL DEFAULT FALSE,     -- Goedgekeurd door een admin 
-`Jaar_v_Uitgave`   INT,                            -- Jaar wanneer het stripboek werd uitgegeven
+`Jaar_v_Uitgave`   INT,                                -- Jaar wanneer het stripboek werd uitgegeven
 `Uitgever`         TINYTEXT,                           -- De uitgever van het boek
 -- Combineren door middel van Json?
-`Afbeelding_urls`  TEXT,                        -- Directe links naar afbeeldingen van het boek (met comma gesepareerd)
-`Waarde_schatting` DECIMAL(10, 2),              -- Schatting van de waarde van het stripboek
+`Afbeelding_urls`  TEXT,                               -- Directe links naar afbeeldingen van het boek (met comma gesepareerd)
+`Waarde_schatting` DECIMAL(10, 2),                     -- Schatting van de waarde van het stripboek
 PRIMARY KEY (`Boek_id`));
 
 CREATE TABLE IF NOT EXISTS `Auteur` (

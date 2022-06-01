@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7qo/OysNtatI2CtXcQkXRV9zoPDWqL2vHyjRwlXfzJc=",
+  "Hash": "guiALR7U+xtZ2BJoYyVXW0YadhZXutmMpXk8Xh33qJw=",
   "Source": "WebDevStripboeken",
   "BasePath": "_content/WebDevStripboeken",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebDevStripboeken\\wwwroot",
       "Source": "WebDevStripboeken",
-      "ContentRoot": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\jason\\Desktop\\GitHubRepos\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\wwwroot\\",
       "BasePath": "_content/WebDevStripboeken",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebDevStripboeken.styles.css",
+      "Identity": "C:\\Users\\jason\\Desktop\\GitHubRepos\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebDevStripboeken.styles.css",
       "SourceId": "WebDevStripboeken",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\jason\\Desktop\\GitHubRepos\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/WebDevStripboeken",
       "RelativePath": "WebDevStripboeken.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebDevStripboeken.styles.css"
+      "OriginalItemSpec": "C:\\Users\\jason\\Desktop\\GitHubRepos\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebDevStripboeken.styles.css"
     },
     {
-      "Identity": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebDevStripboeken.bundle.scp.css",
+      "Identity": "C:\\Users\\jason\\Desktop\\GitHubRepos\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebDevStripboeken.bundle.scp.css",
       "SourceId": "WebDevStripboeken",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\jason\\Desktop\\GitHubRepos\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/WebDevStripboeken",
       "RelativePath": "WebDevStripboeken.bundle.scp.css",
       "AssetKind": "All",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\hhbwr\\OneDrive\\Documents\\GitHub\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebDevStripboeken.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\jason\\Desktop\\GitHubRepos\\Project-Webdevelopment\\WebDevStripboeken\\WebDevStripboeken\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebDevStripboeken.bundle.scp.css"
     }
   ]
 }
