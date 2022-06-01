@@ -59,14 +59,14 @@ public class CollectieRepository : DBConnection
     public static List<myStripboek> giveBooks(int CollectionID)
     {
         var par = new {id = CollectionID};
-        using var connection = Connect();
-        
-        IEnumerable<myStripboek> all = connection.Query<myStripboek>(
-            @"SELECT *
+        string sql = @"SELECT *
                 FROM stripboek s
                 JOIN zit_in z
                 ON s.Boek_id = z.Boek_id
-                WHERE z.Collectie_id = @id;", par);
+                WHERE z.Collectie_id = @id AND s.Goedgekeurd = 1;";
+        using var connection = Connect();
+        
+        IEnumerable<myStripboek> all = connection.Query<myStripboek>(sql, par);
         return all.ToList();
     }
 

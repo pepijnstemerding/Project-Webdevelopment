@@ -30,4 +30,9 @@ public class Stripboek : PageModel
             Console.WriteLine($"{userspecific.Boek_id}, {userspecific.Gebruiker_id}, {userspecific.Gekocht_voor}, {userspecific.Locatie}, {userspecific.Status_exemplaar}");   
         }
     }
+
+    public void OnPostCollectionSelect([FromForm] string collection)
+    {
+        //adds boek to selected category
+    }
 }

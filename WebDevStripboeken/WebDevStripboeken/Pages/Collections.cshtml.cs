@@ -17,6 +17,7 @@ public class Collections : PageModel
     public List<myStripboek> lil1 = new List<myStripboek>();
     public List<myCollectie> lil2;
     public List<myCollectie> lil3 = new List<myCollectie>();
+    public List<myStripboek> giveBooksResult = new List<myStripboek>();
 
     public void OnGet([FromRoute] int Collid)
     {
@@ -34,8 +35,12 @@ public class Collections : PageModel
             else
             { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
         }
+        if (Collid != 0)
+        {
+            giveBooksResult = CollectieRepository.giveBooks(Collid);
+        }
         Rest();
-        CollectieRepository.giveBooks(Collid);
+        
     }
     public void OnPostCollectieAanMaken ([FromForm] string CollectieNaam)
     {
