@@ -6,6 +6,11 @@ a[b-9lq1p8kyhi] {
   color: #0077cc;
 }
 
+.container[b-9lq1p8kyhi] {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 /* #region Old stuff */
 /*a.navbar-brand {
   white-space: normal;

@@ -22,23 +22,26 @@
                     </form>
                 </li>
             }
-        }
-    </ul>
-</div>
-<div class="col-lg-6">
-    <ul>
-        @{
-            foreach (var x in @Model.listStripboek)
-            {
-                <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a>
-                    <form method="post">
-                        <button type="submit" asp-page-handler="AccBoek">Accepteer stripboek</button>
-                        <input type="hidden" name="id" value="@x.Boek_id"/>
-                        <button type="submit" asp-page-handler="DelBoek">Verwijder stripboek</button>
-                    </form>
-                </li>
+        } 
+        </ul>
+    </div>
+    <div class="col-6 content">
+        <h2>Stripboek verwijderen of accepteren</h2>
+        <ul>
+            @{
+                foreach (var x in @Model.listStripboek)
+                {
+                    <li><a href="../stripboek/@x.Boek_id">@x.Reeks -- @x.Titel</a>
+                        <form method="post">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-outline-secondary" type="submit" asp-page-handler="AccBoek"><i class="fa-solid fa-check fa-fw"></i>Accepteer stripboek</button>
+                                <button class="btn btn-outline-secondary" type="submit" asp-page-handler="DelBoek"><i class="fa-solid fa-xmark fa-fw"></i>Verwijder stripboek</button>
+                            </div>
+                            <input type="hidden" name="id" value="@x.Boek_id"/>
+                        </form>
+                    </li>
+                }
             }
-        }
-    </ul>
+        </ul>
 </div>
 </div>

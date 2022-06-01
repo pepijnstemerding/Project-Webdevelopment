@@ -14,11 +14,15 @@ public class ProfileRepository : DBConnection
     {
         var parameters = new {Gebruikersnaam = x};
         using var connnection = Connect();
-
-        myUser one = connnection.QuerySingle<myUser>(
-            @"SELECT * 
+        if (x != "Guest")
+        {
+            myUser one = connnection.QuerySingle<myUser>(
+                @"SELECT * 
                 FROM (gebruiker)
                WHERE Gebruikersnaam = @Gebruikersnaam LIMIT 1;", parameters);
-        return one;
+            return one;   
+        }
+
+        return null;
     }
 }

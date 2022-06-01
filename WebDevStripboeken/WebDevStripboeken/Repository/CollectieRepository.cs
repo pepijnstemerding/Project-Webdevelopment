@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using System.Collections;
+using Dapper;
 using WebDevStripboeken.Models;
 
 namespace WebDevStripboeken.Repository;
@@ -29,7 +30,7 @@ public class CollectieRepository : DBConnection
         List<int> collId = new List<int>();
         using var connection1 = Connect();
         {
-            collId.Add(connection1.QueryFirstOrDefault<int>(sqlCollectieId, parameters1));
+            collId = connection1.QueryFirstOrDefault<IEnumerable<int>>(sqlCollectieId, parameters1);
 
             foreach (var collectionid in collId)
             {
