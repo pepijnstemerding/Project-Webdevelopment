@@ -29,7 +29,7 @@ public class StripboekRepository : DBConnection
                             WHERE getekend_door.Boek_id = @Boekid;";
 
         using var connection = Connect();
-        myStripboek one = connection.QueryFirst<myStripboek>(IBegSqlIsGood, parameters);
+        myStripboek one = connection.QueryFirst<myStripboek>(IBegSqlIsGood, parameters); //System.InvalidOperationException: Sequence contains no elements
         one.MyAuteurs = connection.Query<myAuteur>(sqlAuteur, parameters).ToList(); 
         one.MyTekenaars = connection.Query<myTekenaar>(sqlTekenaar, parameters).ToList();
 

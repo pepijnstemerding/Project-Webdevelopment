@@ -10,8 +10,9 @@ public class CollectieRepository : DBConnection
 {
     public static List<myCollectie> giveCollecties (string b)
     {
+        List<myCollectie> methodresult = new List<myCollectie>();
+
         var parameters = new {Gebruikersnaam = b};
-        
         /*List<myCollectie> all1 = new List<myCollectie>();
 
         var sqlGebrId = @"SELECT gebruiker_id
@@ -45,15 +46,31 @@ public class CollectieRepository : DBConnection
         return all1;*/
 
         using var connection = Connect();
-        IEnumerable<myCollectie> all = connection.Query<myCollectie>(
+        IEnumerable<myCollectie> dbresult = connection.Query<myCollectie>(
             @"SELECT c.Collectie_id, c.Collectie_naam
                 FROM collectie c
                 JOIN zit_in z 
                 ON c.Collectie_id = z.Collectie_id
                 JOIN gebruiker g on z.Gebruiker_id = g.Gebruiker_id
                 WHERE g.Gebruikersnaam = @Gebruikersnaam", parameters);
-
-        return all.ToList();
+        dbresult.ToList();
+        
+        //Filtering of douplicates out of list given by db
+        foreach (myCollectie collectie in dbresult)
+        {
+            if (methodresult.Count == 0)
+            {
+                methodresult.Add(collectie);
+            }
+            else
+            {
+                if (methodresult.Last().Collectie_id != collectie.Collectie_id)
+                {
+                    methodresult.Add(collectie);
+                }
+            }
+        }
+        return methodresult;
     }
 
     public static List<myStripboek> giveBooks(int CollectionID)

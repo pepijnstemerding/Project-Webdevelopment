@@ -60,13 +60,14 @@
                         <p><b>Toevoegen aan collectie:</b></p>
                         <form method="post" id="CollectionSelect">  
                             <select id="categorie" class="form-select" name="collection" required="required">
-                                <option value="Reeks">Reeks</option>
-                                <option value="Titel">Titel</option>
-                                <option value="Uitgever">Uitgever</option>
-                                <option value="ISBN">ISBN</option>
-                                <option value="Jaar">Jaar van Uitgave</option>
-                                <option value="Auteur">Auteur</option>
-                                <option value="Tekenaar">Tekenaar</option>
+                                <option value="">Kies een collectie</option>
+                                @{
+                                    foreach (myCollectie coll in Model.UserspecificCollecties)
+                                    {
+                                        <option value="@coll.Collectie_id">@coll.Collectie_naam</option>
+                                    }
+                                }
+                                <!--<option value=""><a href="../Collections">Nieuwe collectie aanmaken</a></option>-->
                             </select>
                             <button class="btn btn-outline-secondary" type="submit" asp-page-handler="CollectionSelect"><i class="fa-solid fa-magnifying-glass"></i>Toevoegen</button>
                         </form>

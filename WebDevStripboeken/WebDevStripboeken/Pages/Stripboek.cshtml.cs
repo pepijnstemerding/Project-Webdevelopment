@@ -10,9 +10,10 @@ public class Stripboek : PageModel
 {
     [BindProperty(SupportsGet = true)]  //global get
     public myUser currentUser { get; set; }
-    public int Boekid { get; set; }
+    //public int Boekid { get; set; }
     public myStripboek boek { get; set; }
     public myBezit userspecific { get; set; }
+    public List<myCollectie> UserspecificCollecties { get; set; }
 
     public void OnGet([FromRoute]int Boekid)
     {
@@ -27,12 +28,21 @@ public class Stripboek : PageModel
         if (currentUser.Gebruikersnaam != "Guest")
         {
             userspecific = BezitRepository.UserSpecificStripboekData(Boekid, currentUser.Gebruikersnaam); // Haalt data op van de database die specifiek is aan de ingelogde gebruiker
-            Console.WriteLine($"{userspecific.Boek_id}, {userspecific.Gebruiker_id}, {userspecific.Gekocht_voor}, {userspecific.Locatie}, {userspecific.Status_exemplaar}");   
+            //Console.WriteLine($"{userspecific.Boek_id}, {userspecific.Gebruiker_id}, {userspecific.Gekocht_voor}, {userspecific.Locatie}, {userspecific.Status_exemplaar}");
+
+            UserspecificCollecties = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
         }
     }
 
-    public void OnPostCollectionSelect([FromForm] string collection)
+    public void OnPostCollectionSelect([FromForm] string collection, [FromRoute] int Boekid)
     {
+        OnGet(Boekid);
         //adds boek to selected category
+        Console.WriteLine(collection);
+        Console.WriteLine(Boekid);
+        Console.WriteLine(currentUser.Gebruikersnaam);
+        //Console.WriteLine(currentUser.Gebruiker_id);
+        //OnGet(boek.Boek_id);
+        //boek = StripboekRepository.GetOne(Boekid);
     }
 }

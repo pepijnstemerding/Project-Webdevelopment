@@ -39,7 +39,8 @@ public class Collections : PageModel
         {
             giveBooksResult = CollectieRepository.giveBooks(Collid);
         }
-        Rest();
+        lil1 = HomeRepository.GetAll(myBase);
+        lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
         
     }
     public void OnPostCollectieAanMaken ([FromForm] string CollectieNaam)
@@ -50,27 +51,7 @@ public class Collections : PageModel
             //CollectieRepository.CollectieAanMaken(CollectieNaam);
         }
 
-        Rest();
-    }
-
-    public void Rest()
-    {
         lil1 = HomeRepository.GetAll(myBase);
         lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
-        //lil3 = lil2.Distinct<myCollectie>().ToList();
-        foreach (myCollectie collectie in lil2)
-        {
-            if (lil3.Count == 0)
-            {
-                lil3.Add(collectie);
-            }
-            else
-            {
-                if (lil3.Last().Collectie_id != collectie.Collectie_id)
-                {
-                    lil3.Add(collectie);
-                }
-            }
-        }
     }
 }
