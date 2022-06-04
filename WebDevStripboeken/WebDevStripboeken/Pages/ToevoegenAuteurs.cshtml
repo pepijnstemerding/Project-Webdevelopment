@@ -1,0 +1,25 @@
+﻿@page
+@model WebDevStripboeken.Pages.ToevoegenAuteurs
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Toevoegen";
+}
+
+<div class="row">
+    <label for="auteur" class="form-label">De Auteur(s):</label>
+    <form method="post">
+        @{
+            <div class="input-group mb-3">
+                <input class="form-control" id="auteur" name="Naam_Auteur1" placeholder="Bijvoorbeeld Carl Barks"/>
+            </div>
+            <div class="input-group mb-3">
+                <input class="form-control" id="auteur" name="Naam_Auteur2" placeholder="Bijvoorbeeld Carl Barks"/>
+            </div>
+            <div class="input-group mb-3">
+                <input class="form-control" id="auteur" name="Naam_Auteur3" placeholder="Bijvoorbeeld Carl Barks"/>
+            </div>
+        }
+        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="ToevoegenAuteurs"> Toevoegen </button>
+    </form>
+</div>
