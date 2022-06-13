@@ -55,7 +55,7 @@ public class CollectieRepository : DBConnection
                 WHERE g.Gebruikersnaam = @Gebruikersnaam", parameters);
         dbresult.ToList();
         
-        //Filtering of douplicates out of list given by db
+        //Filtering of duplicates out of list given by db
         foreach (myCollectie collectie in dbresult)
         {
             if (methodresult.Count == 0)

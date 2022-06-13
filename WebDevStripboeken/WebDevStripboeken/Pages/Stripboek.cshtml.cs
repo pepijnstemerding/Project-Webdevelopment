@@ -38,11 +38,9 @@ public class Stripboek : PageModel
     {
         OnGet(Boekid);
         //adds boek to selected category
-        Console.WriteLine(collection);
-        Console.WriteLine(Boekid);
-        Console.WriteLine(currentUser.Gebruikersnaam);
-        //Console.WriteLine(currentUser.Gebruiker_id);
-        //OnGet(boek.Boek_id);
-        //boek = StripboekRepository.GetOne(Boekid);
+        int collectionId = Convert.ToInt32(collection);
+        
+        StripboekRepository.addToCollection(collectionId, Boekid, currentUser.Gebruikersnaam);
+        
     }
 }

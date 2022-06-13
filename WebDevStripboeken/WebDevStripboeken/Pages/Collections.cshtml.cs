@@ -17,7 +17,7 @@ public class Collections : PageModel
     public List<myStripboek> lil1 = new List<myStripboek>();
     public List<myCollectie> lil2;
     public List<myCollectie> lil3 = new List<myCollectie>();
-    public List<myStripboek> giveBooksResult = new List<myStripboek>();
+    public List<myStripboek> giveBooksResult { get; set; } = new List<myStripboek>();
 
     public void OnGet([FromRoute] int Collid)
     {
@@ -40,7 +40,7 @@ public class Collections : PageModel
             giveBooksResult = CollectieRepository.giveBooks(Collid);
         }
         lil1 = HomeRepository.GetAll(myBase);
-        lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
+        lil3 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
         
     }
     public void OnPostCollectieAanMaken ([FromForm] string CollectieNaam)
@@ -52,6 +52,6 @@ public class Collections : PageModel
         }
 
         lil1 = HomeRepository.GetAll(myBase);
-        lil2 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
+        lil3 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
     }
 }

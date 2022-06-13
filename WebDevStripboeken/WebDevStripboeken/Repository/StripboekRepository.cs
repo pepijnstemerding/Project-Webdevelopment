@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto.Operators;
 using WebDevStripboeken.Models;
 using WebDevStripboeken.Pages;
 
@@ -34,5 +35,19 @@ public class StripboekRepository : DBConnection
         one.MyTekenaars = connection.Query<myTekenaar>(sqlTekenaar, parameters).ToList();
 
         return one;
+    }
+
+    public static void addToCollection(int collId, int BoekId, string Gebruikersnaam)
+    {
+        var par = new { Boekid = BoekId, Collid = collId, Gebruiker = Gebruikersnaam };
+        var sql = @"INSERT INTO zit_in (boek_id, collectie_id, gebruiker_id)
+                    VALUES (@Boekid, @Collid, (
+                        SELECT Gebruiker_id FROM gebruiker WHERE Gebruikersnaam = @Gebruiker));";
+
+        using var connection = Connect();
+        {
+            connection.Execute(sql, par);
+        }
+        
     }
 }
