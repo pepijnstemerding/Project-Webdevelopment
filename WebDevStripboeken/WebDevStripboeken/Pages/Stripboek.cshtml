@@ -53,6 +53,9 @@
                 <p><b>Locatie:</b> @Model.userspecific.Locatie</p>
                 <p><b>Status:</b> @Model.userspecific.Status_exemplaar</p>
             }
+            <div id="dialog" title="Basic dialog">
+                <p>@Model.message</p>
+            </div>
             switch (@Model.currentUser.Gebruikersnaam)
             {
                 case "Guest":

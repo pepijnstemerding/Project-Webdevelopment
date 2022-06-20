@@ -14,8 +14,10 @@ public class Collections : PageModel
     public myUser currentUser { get; set; }
     public int myBase = 1;
     private const int defiation = 5;
+
+    public string collName;
     public List<myStripboek> lil1 = new List<myStripboek>();
-    public List<myCollectie> lil2;
+    //public List<myCollectie> lil2;
     public List<myCollectie> lil3 = new List<myCollectie>();
     public List<myStripboek> giveBooksResult { get; set; } = new List<myStripboek>();
 
@@ -38,6 +40,7 @@ public class Collections : PageModel
         if (Collid != 0)
         {
             giveBooksResult = CollectieRepository.giveBooks(Collid);
+            collName = CollectieRepository.giveName(Collid);
         }
         lil1 = HomeRepository.GetAll(myBase);
         lil3 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);

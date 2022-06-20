@@ -70,11 +70,20 @@ ViewData["User"] = @Model.currentUser.Gebruikersnaam;
     </div>
     
     <div class="col-4 content">
-        <h2>Suggesties</h2>
+        @{
+            if (Model.giveBooksResult.Count > 0)
+            {
+                <h2>@Model.collName</h2>
+            }
+            else
+            {
+                <h2>Suggesties</h2>
+            }
+        }
         <div class="accordion" id="stripboekAccordeon">
             @{
                 int i = 0;
-                
+
                 if (Model.giveBooksResult.Count > 0)
                 {
                     foreach (myStripboek stripboek in Model.giveBooksResult)

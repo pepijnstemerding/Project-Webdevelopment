@@ -14,6 +14,7 @@ public class Stripboek : PageModel
     public myStripboek boek { get; set; }
     public myBezit userspecific { get; set; }
     public List<myCollectie> UserspecificCollecties { get; set; }
+    public string message;
 
     public void OnGet([FromRoute]int Boekid)
     {
@@ -39,8 +40,16 @@ public class Stripboek : PageModel
         OnGet(Boekid);
         //adds boek to selected category
         int collectionId = Convert.ToInt32(collection);
-        
-        StripboekRepository.addToCollection(collectionId, Boekid, currentUser.Gebruikersnaam);
-        
+
+        if (StripboekRepository.addToCollection(collectionId, Boekid, currentUser.Gebruikersnaam))
+        {
+            message = "Stripboek toegevoegd :)";
+        }
+        else
+        {
+            message = "Dit stripboek zit al in deze collectie"; 
+        }
+
+
     }
 }

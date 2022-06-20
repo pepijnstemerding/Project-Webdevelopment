@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Dapper;
+using Org.BouncyCastle.Math.EC;
 using WebDevStripboeken.Models;
 using WebDevStripboeken.Pages;
 
@@ -85,6 +86,21 @@ public class CollectieRepository : DBConnection
         
         IEnumerable<myStripboek> all = connection.Query<myStripboek>(sql, par);
         return all.ToList();
+    }
+
+    public static string giveName(int collID)
+    {
+        string name;
+        
+        var par = new {id = collID};
+        string sql = @"SELECT Collectie_naam 
+                FROM collectie
+                WHERE Collectie_id = @id;";
+        using var connection = Connect();
+        {
+            name = connection.QuerySingle<string>(sql, par);
+        }
+        return name;
     }
 
     public static void  CollectieAanMaken(string x)
