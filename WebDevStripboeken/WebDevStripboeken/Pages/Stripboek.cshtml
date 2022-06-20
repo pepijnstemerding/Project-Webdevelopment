@@ -45,34 +45,35 @@
     </div>
     <div class="col-lg-4 content">
         @{
-            if (ViewData["User"] != "Guest" && ViewData["User"] != null)
+            Console.WriteLine(@Model.userspecific);
+            if (ViewData["User"] != "Guest" && ViewData["User"] != null && @Model.userspecific != null)
             {
                 <h2>Jou Informatie</h2>
                 <p><b>Gekocht voor:</b> €@Model.userspecific.Gekocht_voor</p>
                 <p><b>Locatie:</b> @Model.userspecific.Locatie</p>
                 <p><b>Status:</b> @Model.userspecific.Status_exemplaar</p>
-                switch (@Model.currentUser.Gebruikersnaam)
-                {
-                    case "Guest":
-                        <p>Wil je dit werk toevoegen aan een van jouw collecties? <a href="../login">Log hier in!</a></p>
-                        break;
-                    default:
-                        <p><b>Toevoegen aan collectie:</b></p>
-                        <form method="post" id="CollectionSelect">  
-                            <select id="categorie" class="form-select" name="collection" required="required">
-                                <option value="">Kies een collectie</option>
-                                @{
-                                    foreach (myCollectie coll in Model.UserspecificCollecties)
-                                    {
-                                        <option value="@coll.Collectie_id">@coll.Collectie_naam</option>
-                                    }
+            }
+            switch (@Model.currentUser.Gebruikersnaam)
+            {
+                case "Guest":
+                    <p>Wil je dit werk toevoegen aan een van jouw collecties? <a href="../login">Log hier in!</a></p>
+                    break;
+                default:
+                    <p><b>Toevoegen aan collectie:</b></p>
+                    <form method="post" id="CollectionSelect">
+                        <select id="categorie" class="form-select" name="collection" required="required">
+                            <option value="">Kies een collectie</option>
+                            @{
+                                foreach (myCollectie coll in Model.UserspecificCollecties)
+                                {
+                                    <option value="@coll.Collectie_id">@coll.Collectie_naam</option>
                                 }
-                                <!--<option value=""><a href="../Collections">Nieuwe collectie aanmaken</a></option>-->
-                            </select>
-                            <button class="btn btn-outline-secondary" type="submit" asp-page-handler="CollectionSelect"><i class="fa-solid fa-magnifying-glass"></i>Toevoegen</button>
-                        </form>
-                        break;
-                }
+                            }
+                            <!--<option value=""><a href="../Collections">Nieuwe collectie aanmaken</a></option>-->
+                        </select>
+                        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="CollectionSelect"><i class="fa-solid fa-magnifying-glass"></i>Toevoegen</button>
+                    </form>
+                    break;
             }
         }
     </div>
