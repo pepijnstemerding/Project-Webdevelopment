@@ -45,6 +45,7 @@ public class ToevoegenAuteurs : PageModel
         if (alleAuteurs != null)
         {
             ToevoegenRepository.toevoegenAuteurs(alleAuteurs);
+            
             return Redirect("/Home");
         }
         return Page();

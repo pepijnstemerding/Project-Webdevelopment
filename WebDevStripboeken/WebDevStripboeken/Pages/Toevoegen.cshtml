@@ -32,16 +32,6 @@
             <input class="form-control" id="jaar_v_uitgave" asp-for="SuggestStripboek.Jaar_v_Uitgave" placeholder="Bijvoorbeeld 1953"/>
             <span asp-validation-for="SuggestStripboek.Jaar_v_Uitgave"></span>
         </div>
-        <label for="auteur" class="form-label">De auteur(s):</label>
-        <div class="input-group mb-3">
-            <input class="form-control" id="auteur" name="AuteursString" asp-for="SuggestStripboek.MyAuteurs" placeholder="Bijvoorbeeld Carl Barks"/>
-            <span asp-validation-for="SuggestStripboek.MyAuteurs"></span> <!-- why no work -->
-        </div>
-        <label for="tekenaar" class="form-label">De illustrator(s):</label>
-        <div class="input-group mb-3">
-            <input class="form-control" id="tekenaar" name="TekenaarsString" asp-for="SuggestStripboek.MyTekenaars" placeholder="Bijvoorbeeld Carl Barks"/>
-            <span asp-validation-for="SuggestStripboek.MyTekenaars"></span> <!-- why no work -->
-        </div>
         <label for="uitgever" class="form-label">De uitgever:</label>
         <div class="input-group mb-3">
             <input class="form-control" id="uitgever" asp-for="SuggestStripboek.Uitgever" placeholder="Bijvoorbeeld Walt Disney"/>
@@ -59,6 +49,6 @@
             <span asp-validation-for="SuggestStripboek.Waarde_schatting"></span>
         </div>
 
-        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="Toevoegen"><i class="fa-solid fa-plus fa-fw"></i>Maak suggestie</button>
+        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="Toevoegen"><i class="fa-solid fa-plus fa-fw"></i> Volgende </button>
     </form>
 </div>

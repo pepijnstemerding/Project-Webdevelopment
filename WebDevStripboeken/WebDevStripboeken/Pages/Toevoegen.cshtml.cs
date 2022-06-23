@@ -25,7 +25,13 @@ public class Toevoegen : PageModel
     public myStripboek SuggestStripboek { get; set; }
     public IActionResult OnPostToevoegen()
     {
-        ToevoegenRepository.AddOne(SuggestStripboek);
-        return Redirect("/ToevoegenTekenaars");
+        if (SuggestStripboek.Reeks != null && SuggestStripboek.Titel != null && SuggestStripboek.ISBN != null
+            && SuggestStripboek.Jaar_v_Uitgave != null && SuggestStripboek.Uitgever != null
+            && SuggestStripboek.Afbeelding_urls != null && SuggestStripboek.Waarde_schatting != null)
+        {
+            ToevoegenRepository.AddOne(SuggestStripboek);
+            return Redirect("/ToevoegenTekenaars");
+        }
+        else return Page();
     }
 }

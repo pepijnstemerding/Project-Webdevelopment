@@ -31,30 +31,31 @@ INSERT INTO Gebruiker(Gebruikersnaam, email, wachtwoord, geboorte_datum, beveili
 INSERT INTO Gebruiker(Gebruikersnaam, email, wachtwoord, geboorte_datum, beveiligingsvraag) VALUES('pepijn','something@outlook.com','wachtwoord3','1994-12-24','veel');
 
 -- Dummy Data Stripboek tabel 
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (1, 'Donald Duck', 'Donald Duck op zoek naar het magisch oog
+INSERT INTO stripboek(boek_id, reeks, titel, isbn, goedgekeurd, jaar_v_uitgave, uitgever, afbeelding_urls, waarde_schatting) VALUES (1, 'niet', 'weghalen', 4759347859855, 0, 2010, 'belangrijk', 'dit is voor collecties', 1111);
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (2, 'Donald Duck', 'Donald Duck op zoek naar het magisch oog
 ', 112030405060, '1',  '1996', 'comicbookstore', 'www', 1010);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (2, 'Donald Duck', 'Oom dagobert en de halvemaan munten
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (3, 'Donald Duck', 'Oom dagobert en de halvemaan munten
 ', 122030405060, '0', '1997', 'comicbookstore', 'www', 11);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (3, 'Donald Duck', '', 132030405060, '1', '1998', 'comicbookstore', 'www', 90);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (4, 'Donald Duck', 'Mickey Mouse als superspeurder
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (4, 'Donald Duck', 'titel', 132030405060, '1', '1998', 'comicbookstore', 'www', 90);
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (5, 'Donald Duck', 'Mickey Mouse als superspeurder
 ', 142030405060, '0', '1999', 'comicbookstore', 'www', 5);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (5, 'Donald Duck', 'Een eend met veel noten op zijn zang
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (6, 'Donald Duck', 'Een eend met veel noten op zijn zang
 ', 152030405060, '1', '1992', 'comicbookstore', 'www', 2);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (6, 'Donald Duck', 'Donald Duck en de achtervolgers
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (7, 'Donald Duck', 'Donald Duck en de achtervolgers
 ', 162030405060, '0', '1993', 'comicbookstore', 'www',900);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (7, 'Donald Duck', 'Donald Duck in het Zuidzeegebied
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (8, 'Donald Duck', 'Donald Duck in het Zuidzeegebied
 ', 172030405060, '1', '1994', 'comicbookstore', 'www', 750);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (8, 'Donald Duck', 'Donald Duck kiest het luchtruim
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (9, 'Donald Duck', 'Donald Duck kiest het luchtruim
 ', 182030405060, '0', '1995', 'comicbookstore', 'www', 600);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (9, 'Donald Duck', 'Donald Duck in het oude China
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (10, 'Donald Duck', 'Donald Duck in het oude China
 ', 192030405060, '1', '1991', 'comicbookstore', 'www', 400);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (10, 'Donald Duck', 'Paniek om het geldpakhuis
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (11, 'Donald Duck', 'Paniek om het geldpakhuis
 ', 101030405060, '0', '1990', 'comicbookstore', 'www', 300);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (11, 'Donald Duck', 'Rumoer in Duckstad
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (12, 'Donald Duck', 'Rumoer in Duckstad
 ', 103030405060, '1', '1989', 'comicbookstore', 'www',20);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (12, 'Donald Duck', 'Het magische sterrenstof
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (13, 'Donald Duck', 'Het magische sterrenstof
 ', 104030405060, '0', '1986', 'comicbookstore', 'www', 10);
-INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (13, 'Donald Duck', 'Oom Dagobert en de geldkoorts
+INSERT INTO Stripboek(Boek_id, Reeks, Titel, ISBN, Goedgekeurd, Jaar_v_Uitgave, Uitgever, Afbeelding_urls, Waarde_schatting) VALUES (14, 'Donald Duck', 'Oom Dagobert en de geldkoorts
 ', 105030405060, '1', '1987', 'comicbookstore', 'www', 12);
 
 -- Koppel tabellen

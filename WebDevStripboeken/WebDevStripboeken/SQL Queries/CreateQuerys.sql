@@ -26,7 +26,6 @@ CREATE TABLE IF NOT EXISTS `Stripboek` (
 `Goedgekeurd`      BOOLEAN NOT NULL DEFAULT FALSE,     -- Goedgekeurd door een admin 
 `Jaar_v_Uitgave`   INT,                                -- Jaar wanneer het stripboek werd uitgegeven
 `Uitgever`         TINYTEXT,                           -- De uitgever van het boek
--- Combineren door middel van Json?
 `Afbeelding_urls`  TEXT,                               -- Directe links naar afbeeldingen van het boek (met comma gesepareerd)
 `Waarde_schatting` DECIMAL(10, 2),                     -- Schatting van de waarde van het stripboek
 PRIMARY KEY (`Boek_id`));
@@ -53,7 +52,7 @@ FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`) ON DELETE CASCADE,
 FOREIGN KEY (`Gebruiker_id`) REFERENCES `Gebruiker`(`Gebruiker_id`) ON DELETE CASCADE);
 
 CREATE TABLE IF NOT EXISTS `Zit_in` (
-`Boek_id`       INT,
+`Boek_id`       INT UNIQUE,
 `Collectie_id`  INT NOT NULL,
 `Gebruiker_id`  INT NOT NULL, 
 PRIMARY KEY (`Boek_id`, `Collectie_id`, `Gebruiker_id`),

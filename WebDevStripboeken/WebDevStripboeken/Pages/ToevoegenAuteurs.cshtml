@@ -20,6 +20,11 @@
                 <input class="form-control" id="auteur" name="Naam_Auteur3" placeholder="Bijvoorbeeld Carl Barks"/>
             </div>
         }
-        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="ToevoegenAuteurs"> Toevoegen </button>
+        <button onclick="succesnotif()" class="btn btn-outline-secondary" type="submit" asp-page-handler="ToevoegenAuteurs"> Toevoegen </button>
     </form>
+    <script>
+    function succesnotif(){
+        alert("Succesvol toegevoegd!")
+        }
+    </script>
 </div>
