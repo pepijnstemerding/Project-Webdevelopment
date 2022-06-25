@@ -1,0 +1,32 @@
+﻿@page
+@model WebDevStripboeken.Pages.Bezit
+
+@{
+Layout = "_Layout";
+ViewData["Title"] = "Your Collections";
+ViewData["User"] = @Model.currentUser.Gebruikersnaam;
+}
+
+<div class="row">
+    <h2>Een stripboek aan je account toevoegen</h2>
+    
+    <form>
+        <div class="input-group mb-3">
+            <input class="form=control" id="locatie", asp-for="toevoegenboek.Locatie" placeholder="Waar bewaart u het stripboek?"/>
+        </div>
+        <div class="input-group mb-3">
+            <input class="form=control" id="status", asp-for="toevoegenboek.Status_exemplaar" placeholder="In welke status is het exemplaar?"/>
+        </div>
+        <div class="input-group mb-3">
+            <input class="form=control" id="gekochtvoor", asp-for="toevoegenboek.Gekocht_voor" placeholder="Hoeveel heeft u er voor betaalt?"/>
+        </div>
+    </form>
+    
+</div>
+
+
+
+@* <div class="input-group mb-3"> *@
+@*     <input class="form-control" id="afbeelding_url" asp-for="SuggestStripboek.Afbeelding_urls" placeholder="Bijvoorbeeld https://static.wikia.nocookie.net/disney/images/3/3c/Donald_Duck_Finds_Pirate_Gold.jpg/revision/latest/scale-to-width-down/400"/> *@
+@*     <span asp-validation-for="SuggestStripboek.Afbeelding_urls"></span> *@
+@* </div> *@

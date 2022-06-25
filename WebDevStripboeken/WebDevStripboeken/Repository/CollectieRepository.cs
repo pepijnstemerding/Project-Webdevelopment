@@ -49,11 +49,12 @@ public class CollectieRepository : DBConnection
         using var connection = Connect();
         IEnumerable<myCollectie> dbresult = connection.Query<myCollectie>(
             @"SELECT c.Collectie_id, c.Collectie_naam
-                FROM collectie c
-                JOIN zit_in z 
-                ON c.Collectie_id = z.Collectie_id
-                JOIN gebruiker g on z.Gebruiker_id = g.Gebruiker_id
-                WHERE g.Gebruikersnaam = @Gebruikersnaam", parameters);
+                            FROM collectie c
+                            JOIN zit_in z 
+                            ON c.Collectie_id = z.Collectie_id 
+                            JOIN gebruiker g on z.Gebruiker_id = g.Gebruiker_id
+                            WHERE g.Gebruikersnaam = @Gebruikersnaam
+                            ORDER BY Collectie_id", parameters);
         dbresult.ToList();
         
         //Filtering of duplicates out of list given by db
