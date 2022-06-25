@@ -48,14 +48,19 @@ public class Collections : PageModel
     }
     public void OnPostCollectieAanMaken ([FromForm] string CollectieNaam)
     {
+        
+        if (Request.Cookies["user"] == null)
+        { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }
+        else
+        { currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]); }
+        
         Console.WriteLine(CollectieNaam);
         if (CollectieNaam != null)
         {
-            CollectieRepository.CollectieAanMaken(CollectieNaam, currentUser.Gebruikersnaam); // ook alleen maar guest 
+            CollectieRepository.CollectieAanMaken(CollectieNaam, currentUser.Gebruikersnaam);
         }
-        if (Request.Cookies["user"] != null)
-        {currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);}
+        
         lil1 = HomeRepository.GetAll(myBase);
-        lil3 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam); // geeft alleen maar guest mee, anders werkte die gw
+        lil3 = CollectieRepository.giveCollecties(currentUser.Gebruikersnaam);
     }
 }
