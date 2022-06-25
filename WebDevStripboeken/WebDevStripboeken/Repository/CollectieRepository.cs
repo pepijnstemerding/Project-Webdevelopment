@@ -114,6 +114,14 @@ public class CollectieRepository : DBConnection
         {
             connection.Execute(sql, parameters);
         }
+        var zit_inSQL = @"INSERT INTO zit_in (Boek_id, Collectie_id, Gebruiker_id) VALUES (1, LAST_INSERT_ID(), 
+                            (SELECT Gebruiker_id FROM gebruiker WHERE Gebruikersnaam = @gebruikersnaam))";
+        using var connection2 = Connect();
+        {
+            connection2.Execute(zit_inSQL, naam);
+        }
+        //var par = new {}
+        /*
         var gebridsql = @"SELECT Gebruiker_id FROM gebruiker WHERE Gebruikersnaam = @gebruikersnaam";
         var collectiesql =
             @"INSERT INTO zit_in (Boek_id, Collectie_id, Gebruiker_id) VALUES (1, LAST_INSERT_ID(), @id)"; 
@@ -122,6 +130,7 @@ public class CollectieRepository : DBConnection
             int gebrid = connection2.Execute(gebridsql, naam); //deze doet t nu niet goed
             var userid = new {id = gebrid};
             connection2.Execute(collectiesql, userid);
-        }
+        }*/
+
     }
 }
