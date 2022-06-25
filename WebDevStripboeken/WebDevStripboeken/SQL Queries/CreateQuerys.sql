@@ -52,7 +52,7 @@ FOREIGN KEY (`Boek_id`) REFERENCES `Stripboek`(`Boek_id`) ON DELETE CASCADE,
 FOREIGN KEY (`Gebruiker_id`) REFERENCES `Gebruiker`(`Gebruiker_id`) ON DELETE CASCADE);
 
 CREATE TABLE IF NOT EXISTS `Zit_in` (
-`Boek_id`       INT UNIQUE,
+`Boek_id`       INT,
 `Collectie_id`  INT NOT NULL,
 `Gebruiker_id`  INT NOT NULL, 
 PRIMARY KEY (`Boek_id`, `Collectie_id`, `Gebruiker_id`),
