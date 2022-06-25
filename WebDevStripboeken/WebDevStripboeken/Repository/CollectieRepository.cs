@@ -107,21 +107,21 @@ public class CollectieRepository : DBConnection
     {
     
         var parameters = new {Collectie_naam = x};
-        var naam = new {gebrnaam = gebrnaam};
+        var naam = new {gebruikersnaam = gebrnaam};
         var sql = @"INSERT INTO Collectie (Collectie_naam) VALUES (@Collectie_naam)";
             
         using var connection = Connect();
         {
             connection.Execute(sql, parameters);
         }
-        var gebridsql = @"SELECT gebruiker_id FROM gebruiker WHERE Gebruikersnaam = @gebrnaam";
+        var gebridsql = @"SELECT Gebruiker_id FROM gebruiker WHERE Gebruikersnaam = @gebruikersnaam";
         var collectiesql =
-            @"INSERT INTO zit_in (Boek_id, Collectie_id, Gebruiker_id) VALUES (1, LAST_INSERT_ID(), @id)"; // een default boek (id = 1) toevoegen zodat de collectie weergeven wordt
+            @"INSERT INTO zit_in (Boek_id, Collectie_id, Gebruiker_id) VALUES (1, LAST_INSERT_ID(), @id)"; 
         using var connection2 = Connect();
         {
-            int userid = connection2.Execute(gebridsql, naam);
-            var id = new {id = userid};
-            connection2.Execute(collectiesql, id);
+            int gebrid = connection2.Execute(gebridsql, naam); //deze doet t nu niet goed
+            var userid = new {id = gebrid};
+            connection2.Execute(collectiesql, userid);
         }
     }
 }
