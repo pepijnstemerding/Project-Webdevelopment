@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{Boekid}"
 @model WebDevStripboeken.Pages.Bezit
 
 @{
@@ -10,16 +10,19 @@ ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 <div class="row">
     <h2>Een stripboek aan je account toevoegen</h2>
     
-    <form>
+    <form method="post" id="BoekToevoegen" name="BoekToevoegen">
         <div class="input-group mb-3">
-            <input class="form=control" id="locatie", asp-for="toevoegenboek.Locatie" placeholder="Waar bewaart u het stripboek?"/>
+            <input type="text" class="form=control" id="locatie" name="Locatie" asp-for="toevoegenboek.Locatie" value="" placeholder="Waar bewaart u het stripboek?"/>
         </div>
         <div class="input-group mb-3">
-            <input class="form=control" id="status", asp-for="toevoegenboek.Status_exemplaar" placeholder="In welke status is het exemplaar?"/>
+            <input type="text" class="form=control" id="status" name="Status_exemplaar" asp-for="toevoegenboek.Status_exemplaar" value="" placeholder="In welke status is het exemplaar?"/>
         </div>
         <div class="input-group mb-3">
-            <input class="form=control" id="gekochtvoor", asp-for="toevoegenboek.Gekocht_voor" placeholder="Hoeveel heeft u er voor betaalt?"/>
+            <input type="double" class="form=control" id="gekochtvoor" name="Gekocht_voor" asp-for="toevoegenboek.Gekocht_voor" value="" placeholder="Hoeveel heeft u er voor betaalt?"/>
         </div>
+        <input type="hidden" id="Gebruiker" name="Gebruiker" asp-for="toevoegenboek.Gebruiker" value="@Model.currentUser.Gebruikersnaam"/>
+        <input type="hidden" id="Boek_id" name="Boek_id" asp-for="toevoegenboek.Boek_id" value="@Model.currentBoek.Boek_id"/>
+        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="BoekToevoegen"><i class="fa-solid fa-magnifying-glass"></i>Toevoegen</button>
     </form>
     
 </div>

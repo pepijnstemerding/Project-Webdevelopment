@@ -54,6 +54,10 @@
                 <p><b>Locatie:</b> @Model.userspecific.Locatie</p>
                 <p><b>Status:</b> @Model.userspecific.Status_exemplaar</p>
             }
+            else if (ViewData["User"] != "Guest" && ViewData["User"] != null)
+            {
+                <a class="link-info" href="../bezit/@Model.boek.Boek_id">../bezit/@Model.boek.Boek_id</a>
+            }
             <div id="dialog" title="Basic dialog">
                 <p>@Model.message</p>
             </div>

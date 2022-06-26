@@ -12,7 +12,7 @@ public class Profile : PageModel
     public myUser currentUser { get; set; }
 
     public string routeUser;
-    public void OnGet([FromRoute] string bla)           //why tf u null
+    public void OnGet([FromRoute] string bla)           //why tf u null, moet wss routeUser zijn ipv bla
     {
         if (Request.Cookies["user"] == null)            //Haalt Cookie op als deze bestaat, als deze niet besstaat dan wordt er een nieuwe aangemaakt.
         { HttpContext.Response.Cookies.Append("user", myUser.setCookies()); }

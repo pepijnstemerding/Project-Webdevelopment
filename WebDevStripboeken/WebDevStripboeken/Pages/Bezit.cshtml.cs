@@ -9,27 +9,28 @@ namespace WebDevStripboeken.Pages;
 public class Bezit : PageModel
 {
     public myUser currentUser {set; get;}
+    public myStripboek currentBoek { get; set; }
     public myBezit toevoegenboek { set; get; }
-    public void OnGet()
+    public void OnGet([FromRoute] int Boekid)
     {
-        if (Request.Query
-            .ContainsKey("delete")) //Wordt aangeroepen als de gebruiker op de knop "Uitloggen" klikt in de header
+        if (Request.Cookies["user"] == null)
         {
-            Console.WriteLine("yay");
-            HttpContext.Response.Cookies.Delete("user");
-            //myUser.delCookies();
-            currentUser = new myUser();
+            HttpContext.Response.Cookies.Append("user", myUser.setCookies());
         }
         else
         {
-            if (Request.Cookies["user"] == null)
-            {
-                HttpContext.Response.Cookies.Append("user", myUser.setCookies());
-            }
-            else
-            {
-                currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
-            }
+            currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         }
+
+        currentBoek = StripboekRepository.GetOne(Boekid);
+    }
+
+    public void OnPostBoekToevoegen([FromForm] myBezit bezit)
+    {
+        Console.WriteLine(bezit.Boek_id);
+        currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        currentBoek = StripboekRepository.GetOne(bezit.Boek_id);
+        
+        Console.WriteLine("called");
     }
 }
