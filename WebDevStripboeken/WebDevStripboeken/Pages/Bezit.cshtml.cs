@@ -31,6 +31,8 @@ public class Bezit : PageModel
         currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         currentBoek = StripboekRepository.GetOne(bezit.Boek_id);
         
+        GebruikerBezitRepository.BoekToevoegen(bezit);
+        
         Console.WriteLine("called");
     }
 }
