@@ -9,22 +9,25 @@ ViewData["User"] = @Model.currentUser.Gebruikersnaam;
 
 <div class="row">
     <h2>Een stripboek aan je account toevoegen</h2>
-    
     <form method="post" id="BoekToevoegen" name="BoekToevoegen">
         <div class="input-group mb-3">
-            <input type="text" class="form=control" id="locatie" name="Locatie" asp-for="toevoegenboek.Locatie" value="" placeholder="Waar bewaart u het stripboek?"/>
+            <input type="text" class="form-control" id="locatie" name="Locatie" asp-for="toevoegenboek.Locatie" value="" placeholder="Waar bewaart u het stripboek?"/>
         </div>
         <div class="input-group mb-3">
-            <input type="text" class="form=control" id="status" name="Status_exemplaar" asp-for="toevoegenboek.Status_exemplaar" value="" placeholder="In welke status is het exemplaar?"/>
+            <input type="text" class="form-control" id="status" name="Status_exemplaar" asp-for="toevoegenboek.Status_exemplaar" value="" placeholder="In welke status is het exemplaar?"/>
         </div>
         <div class="input-group mb-3">
-            <input type="double" class="form=control" id="gekochtvoor" name="Gekocht_voor" asp-for="toevoegenboek.Gekocht_voor" value="" placeholder="Hoeveel heeft u er voor betaalt?"/>
+            <input type="double" class="form-control" id="gekochtvoor" name="Gekocht_voor" asp-for="toevoegenboek.Gekocht_voor" value="" placeholder="Hoeveel heeft u er voor betaalt?"/>
         </div>
-        <input type="hidden" id="Gebruiker" name="Gebruiker" asp-for="toevoegenboek.Gebruiker" value="@Model.currentUser.Gebruikersnaam"/>
+        <input type="hidden" id="Gebruiker" name="Gebruiker" value="@Model.currentUser.Gebruikersnaam"/>
         <input type="hidden" id="Boek_id" name="Boek_id" asp-for="toevoegenboek.Boek_id" value="@Model.currentBoek.Boek_id"/>
-        <button class="btn btn-outline-secondary" type="submit" asp-page-handler="BoekToevoegen"><i class="fa-solid fa-magnifying-glass"></i>Toevoegen</button>
+        <button onclick="succesnotif()" class="btn btn-outline-secondary" type="submit" asp-page-handler="BoekToevoegen"><i class="fa-solid fa-magnifying-glass"></i>Toevoegen</button>
+        <script>
+            function succesnotif(){
+                alert("Succesvol toegevoegd aan account!")
+                }
+        </script>
     </form>
-    
 </div>
 
 

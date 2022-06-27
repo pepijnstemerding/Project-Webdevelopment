@@ -25,14 +25,14 @@ public class Bezit : PageModel
         currentBoek = StripboekRepository.GetOne(Boekid);
     }
 
-    public void OnPostBoekToevoegen([FromForm] myBezit bezit)
+    public IActionResult OnPostBoekToevoegen([FromForm] myBezit bezit, [FromForm] string Gebruiker, [FromRoute] int boekid)
     {
         Console.WriteLine(bezit.Boek_id);
         currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         currentBoek = StripboekRepository.GetOne(bezit.Boek_id);
         
-        GebruikerBezitRepository.BoekToevoegen(bezit);
-        
-        Console.WriteLine("called");
+        GebruikerBezitRepository.BoekToevoegen(bezit, Gebruiker);
+
+        return Redirect("/stripboek/" + boekid);
     }
 }
