@@ -53,6 +53,8 @@
                 <p><b>Gekocht voor:</b> €@Model.userspecific.Gekocht_voor</p>
                 <p><b>Locatie:</b> @Model.userspecific.Locatie</p>
                 <p><b>Status:</b> @Model.userspecific.Status_exemplaar</p>
+                
+                <a class="link-info" href="../bezit/@Model.boek.Boek_id">Klik hier om je informatie te updaten</a>
             }
             else if (ViewData["User"] != "Guest" && ViewData["User"] != null)
             {

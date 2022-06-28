@@ -8,7 +8,9 @@ public class BezitRepository : DBConnection
 {
     public static myBezit UserSpecificStripboekData(int Boek_id, string gebruiker_naam)
     {
-        using var connection = Connect();
+        //try
+        {
+            using var connection = Connect();
         Console.WriteLine($"Boek ID {Boek_id} Gebruiker: {gebruiker_naam}");
         int gebruiker_id = connection.QueryFirst<int>(
             @"SELECT Gebruiker_id
@@ -22,5 +24,15 @@ public class BezitRepository : DBConnection
                  WHERE gebruiker_id = @gebruiker_id AND Boek_id = @Boek_id",
             new { Boek_id = Boek_id, gebruiker_id = gebruiker_id }
         );
+        }
+        /*catch (NullReferenceException e)
+        {
+            myBezit rtn = new myBezit()
+            {
+                Locatie = "",
+                Status_exemplaar = "",
+            };
+            return rtn;
+        }*/
     }
 }

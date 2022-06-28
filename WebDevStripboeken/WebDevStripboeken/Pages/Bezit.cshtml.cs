@@ -11,6 +11,7 @@ public class Bezit : PageModel
     public myUser currentUser {set; get;}
     public myStripboek currentBoek { get; set; }
     public myBezit toevoegenboek { set; get; }
+    public bool status { get; set; }
     public void OnGet([FromRoute] int Boekid)
     {
         if (Request.Cookies["user"] == null)
@@ -21,7 +22,8 @@ public class Bezit : PageModel
         {
             currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         }
-
+        
+        toevoegenboek = BezitRepository.UserSpecificStripboekData(Boekid, currentUser.Gebruikersnaam);
         currentBoek = StripboekRepository.GetOne(Boekid);
     }
 
@@ -31,8 +33,18 @@ public class Bezit : PageModel
         currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
         currentBoek = StripboekRepository.GetOne(bezit.Boek_id);
         
-        GebruikerBezitRepository.BoekToevoegen(bezit, Gebruiker);
+        status = GebruikerBezitRepository.BoekToevoegen(bezit, Gebruiker);
 
         return Redirect("/stripboek/" + boekid);
+    }
+
+    public IActionResult OnPostBoekUpdate([FromForm] myBezit bezit, [FromForm] string Gebruiker)
+    {
+        currentUser = JsonConvert.DeserializeObject<myUser>(Request.Cookies["user"]);
+        currentBoek = StripboekRepository.GetOne(bezit.Boek_id);
+
+        status = GebruikerBezitRepository.BoekUpdate(bezit, Gebruiker);
+        
+        return Redirect("/stripboek/" + bezit.Boek_id);
     }
 }
